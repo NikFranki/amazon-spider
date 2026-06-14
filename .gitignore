@@ -1,6 +1,3 @@
-# 爬取输出数据（本地生成，不提交）
-output/
-
 # Python 缓存
 __pycache__/
 *.pyc
