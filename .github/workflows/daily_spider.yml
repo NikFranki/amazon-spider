@@ -1,9 +1,10 @@
 name: Daily Amazon MX Spider
 
 on:
-  schedule:
-    - cron: '0 15 * * *'   # UTC 15:00 = 墨西哥城 09:00 (CST, UTC-6)
-  workflow_dispatch:         # 允许手动触发
+  # schedule:
+  #   - cron: '0 15 * * *'   # UTC 15:00 = 墨西哥城 09:00 (CST, UTC-6)
+  # 暂时关闭定时触发（GitHub Actions IP 被亚马逊拦截），等本地机器就位后改用本地 cron
+  workflow_dispatch:         # 保留手动触发入口
 
 jobs:
   run-spider:
