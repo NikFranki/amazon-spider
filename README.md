@@ -36,6 +36,132 @@ python3 amazon_mx_bestsellers_spider_of_dog.py <URL> -o ./data --review-rate 0.0
 | 配送方式 | 亚马逊自营配送 / FBA / FBM（基于卖家链接 isAmazonFulfilled 标志 + 发货方） |
 | 完整详情 | 详情页抓取失败时为 False（字段由榜单页兜底） |
 
+---
+
+## Agent 自动化部署流程
+
+每天自动抓取 → 变化检测 → 推送 GitHub → Telegram 通知 → 前端页面展示。
+
+### 整体架构
+
+```
+GitHub Actions (每天 UTC 15:00 = 墨西哥城 09:00)
+        ↓
+  agent.py 运行爬虫 + 变化检测
+        ↓
+  更新 output/history.json（前端数据源）
+        ↓
+  git commit + push 到 GitHub
+        ↓
+  Telegram Bot 推送每日摘要
+        ↓
+  GitHub Pages 前端页面（web/index.html）自动读取最新数据
+```
+
+---
+
+### 第一步：创建 Telegram Bot
+
+1. 打开 Telegram，搜索 **@BotFather**
+2. 发送 `/newbot`，按提示取一个 bot 名称（任意）
+3. BotFather 会返回一串 **Token**，格式如 `1234567890:AAFxxxxxxxxxxxxxxxx`，保存好
+4. 找到刚创建的 bot，给它发任意一条消息（如 `hello`）
+5. 浏览器访问以下地址获取你的 `chat_id`：
+   ```
+   https://api.telegram.org/bot<你的TOKEN>/getUpdates
+   ```
+   返回 JSON 中 `result[0].message.chat.id` 的值就是 **Chat ID**（纯数字）
+
+> ⚠️ Token 和 Chat ID 都不要提交到代码里，只存在 GitHub Secrets 中。
+
+---
+
+### 第二步：配置 GitHub Secrets
+
+进入仓库页面 → **Settings → Secrets and variables → Actions → New repository secret**，添加两条：
+
+| Secret 名称 | 值 |
+|---|---|
+| `TELEGRAM_BOT_TOKEN` | BotFather 给的 Token |
+| `TELEGRAM_CHAT_ID` | getUpdates 拿到的 chat.id |
+
+---
+
+### 第三步：启用 GitHub Pages（前端页面）
+
+1. 仓库页面 → **Settings → Pages**
+2. Source 选 **Deploy from a branch**
+3. Branch 选 `main`，目录选 `/web`
+4. 保存后等约 1 分钟，页面地址为：
+   ```
+   https://<你的用户名>.github.io/<仓库名>/
+   ```
+
+> 前端页面从 `output/history.json` 读取数据。首次部署后需等 agent 跑完一次才有数据。
+
+---
+
+### 第四步：手动触发测试
+
+1. 进入仓库 → **Actions → Daily Amazon MX Spider**
+2. 点击 **Run workflow** 手动触发一次
+3. 等待约 15 分钟（爬虫全量抓取耗时），检查：
+   - Actions 日志是否显示绿色 ✓
+   - `output/` 目录是否新增了 CSV + JSON 文件
+   - `output/history.json` 是否已生成
+   - Telegram 是否收到推送消息
+   - 前端页面是否显示数据
+
+---
+
+### 定时调度说明
+
+`.github/workflows/daily_spider.yml` 中的 cron 配置：
+
+```yaml
+schedule:
+  - cron: '0 15 * * *'   # UTC 15:00 = 墨西哥城 09:00 (CST, UTC-6)
+```
+
+如需修改时间，注意 GitHub Actions 使用 UTC 时区，墨西哥城比 UTC 慢 6 小时（冬令时）或 5 小时（夏令时）。
+
+---
+
+### 每日 Telegram 通知格式示例
+
+```
+🐾 Amazon MX 宠物狗畅销榜 · 2026-06-15
+共 100 款商品
+
+🆕 新上榜 3 款
+  #47 Collar táctico ajustable para perro… MXN 188.0
+  ...
+
+📈 排名上升 TOP5
+  ↑12  #35→#23  MESVIER Arnés para Perro…
+  ...
+
+💰 价格变动
+  ↓8.3%  MXN 299→274  Cama para Perro…
+  ...
+```
+
+---
+
+### 文件说明
+
+| 文件 | 用途 |
+|---|---|
+| `amazon_mx_bestsellers_spider_of_dog.py` | 核心爬虫，可单独运行 |
+| `agent.py` | Agent 调度脚本，供 GitHub Actions 调用 |
+| `.github/workflows/daily_spider.yml` | GitHub Actions 定时任务配置 |
+| `web/index.html` | 前端可视化页面（表格 + sparkline 趋势图） |
+| `output/history.json` | 所有历史数据聚合文件，前端数据源 |
+| `output/bestsellers_*.csv` | 每次抓取的原始 CSV，可直接用 Excel 打开 |
+| `output/bestsellers_*.json` | 每次抓取的原始 JSON |
+
+---
+
 ## 已知限制
 
 - 请求量约 100 个详情页 + 去重后的第三方卖家页，带 1.2-2.8s 随机延迟；
