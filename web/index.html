@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Amazon MX 宠物狗畅销榜</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 13px;
+      background: #f5f6fa;
+      color: #1a1a2e;
+    }
+
+    /* ── 顶栏 ── */
+    header {
+      background: #1a1a2e;
+      color: #fff;
+      padding: 14px 24px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    header h1 { font-size: 16px; font-weight: 600; letter-spacing: .3px; }
+    #last-updated { margin-left: auto; font-size: 12px; color: #aab; }
+
+    /* ── 摘要卡片 ── */
+    #summary {
+      display: flex;
+      gap: 12px;
+      padding: 16px 24px;
+      flex-wrap: wrap;
+    }
+    .card {
+      background: #fff;
+      border-radius: 8px;
+      padding: 12px 18px;
+      flex: 1;
+      min-width: 140px;
+      box-shadow: 0 1px 4px rgba(0,0,0,.07);
+    }
+    .card .label { font-size: 11px; color: #888; margin-bottom: 4px; }
+    .card .value { font-size: 22px; font-weight: 700; color: #1a1a2e; }
+
+    /* ── 表格容器 ── */
+    #table-wrap {
+      margin: 0 24px 24px;
+      background: #fff;
+      border-radius: 8px;
+      box-shadow: 0 1px 4px rgba(0,0,0,.07);
+      overflow-x: auto;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      min-width: 1400px;
+    }
+    thead th {
+      background: #1a1a2e;
+      color: #c8cad4;
+      font-weight: 600;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: .5px;
+      padding: 10px 10px;
+      position: sticky;
+      top: 0;
+      white-space: nowrap;
+      cursor: pointer;
+      user-select: none;
+    }
+    thead th:hover { color: #fff; }
+    thead th.sorted-asc::after  { content: " ▲"; }
+    thead th.sorted-desc::after { content: " ▼"; }
+
+    tbody tr { border-bottom: 1px solid #f0f1f5; }
+    tbody tr:hover { background: #f7f8fc; }
+    tbody td { padding: 8px 10px; vertical-align: middle; white-space: nowrap; }
+
+    .rank { font-weight: 700; color: #1a1a2e; text-align: center; }
+    .rank-badge {
+      display: inline-block;
+      width: 28px; height: 28px; line-height: 28px;
+      border-radius: 50%; text-align: center;
+      font-size: 12px; font-weight: 700;
+    }
+    .rank-badge.gold   { background: #ffd700; color: #5a4000; }
+    .rank-badge.silver { background: #c0c0c0; color: #444; }
+    .rank-badge.bronze { background: #cd7f32; color: #fff; }
+    .rank-badge.normal { background: #e8eaf0; color: #444; }
+
+    .title-cell {
+      max-width: 220px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .title-cell a { color: #2563eb; text-decoration: none; }
+    .title-cell a:hover { text-decoration: underline; }
+
+    .asin { font-family: monospace; font-size: 11px; color: #666; }
+
+    .rating { color: #f59e0b; font-weight: 600; }
+    .reviews { color: #888; }
+
+    .price { font-weight: 600; color: #059669; }
+
+    .tag {
+      display: inline-block;
+      padding: 2px 7px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 500;
+    }
+    .tag-amazon  { background: #fff3cd; color: #856404; }
+    .tag-cn      { background: #fde8e8; color: #c53030; }
+    .tag-brand   { background: #e8f4fd; color: #1a56db; }
+    .tag-local   { background: #e6fffa; color: #047857; }
+    .tag-fba     { background: #ede9fe; color: #5b21b6; }
+    .tag-fbm     { background: #f3f4f6; color: #6b7280; }
+
+    /* ── 趋势 sparkline ── */
+    .sparkline-cell { cursor: pointer; }
+    .sparkline-cell svg { display: block; }
+    .no-trend { color: #ccc; font-size: 11px; }
+
+    /* ── 弹出详情图 ── */
+    #modal-overlay {
+      display: none;
+      position: fixed; inset: 0;
+      background: rgba(0,0,0,.45);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+    }
+    #modal-overlay.show { display: flex; }
+    #modal-box {
+      background: #fff;
+      border-radius: 12px;
+      padding: 24px;
+      width: 680px;
+      max-width: 95vw;
+      box-shadow: 0 20px 60px rgba(0,0,0,.25);
+      position: relative;
+    }
+    #modal-title {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 4px;
+      max-width: 90%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    #modal-sub { font-size: 12px; color: #888; margin-bottom: 16px; }
+    #modal-close {
+      position: absolute; top: 16px; right: 16px;
+      background: none; border: none;
+      font-size: 20px; cursor: pointer; color: #888;
+    }
+    #modal-close:hover { color: #1a1a2e; }
+    #modal-chart-wrap { position: relative; height: 280px; }
+
+    /* ── 加载 / 错误 ── */
+    #loading {
+      text-align: center; padding: 60px;
+      color: #888; font-size: 14px;
+    }
+    #error {
+      display: none;
+      margin: 24px;
+      background: #fde8e8;
+      border-left: 4px solid #c53030;
+      padding: 12px 16px;
+      border-radius: 4px;
+      color: #c53030;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>🐾 Amazon MX · 宠物狗畅销榜</h1>
+  <span id="last-updated">加载中…</span>
+</header>
+
+<div id="summary">
+  <div class="card"><div class="label">商品总数</div><div class="value" id="s-total">—</div></div>
+  <div class="card"><div class="label">追踪天数</div><div class="value" id="s-days">—</div></div>
+  <div class="card"><div class="label">亚马逊自营占比</div><div class="value" id="s-amz">—</div></div>
+  <div class="card"><div class="label">中国卖家占比</div><div class="value" id="s-cn">—</div></div>
+  <div class="card"><div class="label">均价 (MXN)</div><div class="value" id="s-price">—</div></div>
+</div>
+
+<div id="error"></div>
+<div id="loading">数据加载中，请稍候…</div>
+
+<div id="table-wrap" style="display:none">
+  <table id="main-table">
+    <thead>
+      <tr>
+        <th data-col="rank">排名</th>
+        <th data-col="asin">ASIN</th>
+        <th data-col="title" style="min-width:200px">商品名称</th>
+        <th data-col="brand">品牌</th>
+        <th data-col="rating">评分</th>
+        <th data-col="reviews">评论数</th>
+        <th data-col="price">价格(MXN)</th>
+        <th data-col="monthly_sales">月销量估算</th>
+        <th data-col="listed_date">上架时间</th>
+        <th data-col="months_listed">在售月数</th>
+        <th data-col="variants">变体数量</th>
+        <th data-col="seller">卖家</th>
+        <th data-col="seller_type">卖家类型</th>
+        <th data-col="seller_country">卖家所在地</th>
+        <th data-col="fulfillment">配送方式</th>
+        <th data-col="trend" style="min-width:100px">趋势(月销量)</th>
+      </tr>
+    </thead>
+    <tbody id="tbody"></tbody>
+  </table>
+</div>
+
+<!-- 详情图弹窗 -->
+<div id="modal-overlay">
+  <div id="modal-box">
+    <button id="modal-close">✕</button>
+    <div id="modal-title"></div>
+    <div id="modal-sub"></div>
+    <div id="modal-chart-wrap">
+      <canvas id="modal-canvas"></canvas>
+    </div>
+  </div>
+</div>
+
+<script>
+const HISTORY_URL = 'https://raw.githubusercontent.com/NikFranki/amazon-spider/main/output/history.json';
+
+let historyData = null;
+let modalChart  = null;
+let sortState   = { col: 'rank', asc: true };
+
+// ── 数据加载
+async function loadData() {
+  try {
+    const resp = await fetch(HISTORY_URL + '?t=' + Date.now());
+    if (!resp.ok) throw new Error(`HTTP ${resp.status}`);
+    historyData = await resp.json();
+    renderPage();
+  } catch (e) {
+    document.getElementById('loading').style.display = 'none';
+    const el = document.getElementById('error');
+    el.style.display = 'block';
+    el.textContent = '数据加载失败：' + e.message + '。请确认 history.json 已生成并推送到 GitHub。';
+  }
+}
+
+// ── 页面渲染
+function renderPage() {
+  document.getElementById('loading').style.display = 'none';
+  document.getElementById('table-wrap').style.display = 'block';
+
+  const latest = historyData.latest || [];
+  const dates  = historyData.dates  || [];
+  const prods  = historyData.products || {};
+
+  // 摘要卡片
+  document.getElementById('last-updated').textContent = '更新于 ' + (historyData.last_updated || '—');
+  document.getElementById('s-total').textContent = latest.length;
+  document.getElementById('s-days').textContent  = dates.length;
+
+  const amzCount = latest.filter(r => r['卖家类型'] === '亚马逊自营').length;
+  const cnCount  = latest.filter(r => (r['卖家类型'] || '').includes('中国')).length;
+  const prices   = latest.map(r => parseFloat(r['价格(墨西哥比索)'] || 0)).filter(Boolean);
+  const avgPrice = prices.length ? prices.reduce((a, b) => a + b, 0) / prices.length : 0;
+
+  document.getElementById('s-amz').textContent   = latest.length ? Math.round(amzCount / latest.length * 100) + '%' : '—';
+  document.getElementById('s-cn').textContent    = latest.length ? Math.round(cnCount  / latest.length * 100) + '%' : '—';
+  document.getElementById('s-price').textContent = avgPrice ? Math.round(avgPrice) : '—';
+
+  renderTable(latest, prods);
+  bindSort();
+}
+
+// ── 表格渲染
+function renderTable(rows, prods) {
+  const tbody = document.getElementById('tbody');
+  tbody.innerHTML = '';
+
+  const sorted = sortRows([...rows], sortState.col, sortState.asc);
+
+  sorted.forEach(row => {
+    const asin    = row['ASIN编号']         || '';
+    const title   = row['商品名称']          || '';
+    const brand   = row['品牌']             || '';
+    const rating  = row['评分']             || '';
+    const reviews = row['评论数']           || '';
+    const price   = row['价格(墨西哥比索)']  || '';
+    const sales   = row['月销量估算']        || '';
+    const listed  = row['上架时间']          || '';
+    const months  = row['在售月数']          || '';
+    const variants= row['变体数量']          || '';
+    const seller  = row['卖家']             || '';
+    const stype   = row['卖家类型']          || '';
+    const scountry= row['卖家所在地']        || '';
+    const fulfill = row['配送方式']          || '';
+    const rank    = parseInt(row['排名'])   || 0;
+    const url     = row['商品链接']          || '#';
+
+    const prod    = prods[asin] || {};
+    const history = prod.history || [];
+    const salesHistory = history.map(h => h.monthly_sales);
+    const dateHistory  = history.map(h => h.date);
+
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
+      <td class="rank">${rankBadge(rank)}</td>
+      <td class="asin">${asin}</td>
+      <td class="title-cell"><a href="${url}" target="_blank" title="${title}">${title}</a></td>
+      <td>${brand}</td>
+      <td class="rating">${rating ? '★ ' + rating : '—'}</td>
+      <td class="reviews">${reviews ? Number(reviews).toLocaleString() : '—'}</td>
+      <td class="price">${price ? 'MXN ' + parseFloat(price).toLocaleString('en', {minimumFractionDigits:2, maximumFractionDigits:2}) : '—'}</td>
+      <td>${sales ? Number(sales).toLocaleString() : '—'}</td>
+      <td>${listed || '—'}</td>
+      <td style="text-align:center">${months || '—'}</td>
+      <td style="text-align:center">${variants || '—'}</td>
+      <td style="max-width:120px;overflow:hidden;text-overflow:ellipsis" title="${seller}">${seller || '—'}</td>
+      <td>${sellerTag(stype)}</td>
+      <td>${scountry || '—'}</td>
+      <td>${fulfillTag(fulfill)}</td>
+      <td class="sparkline-cell" data-asin="${asin}">${sparklineSVG(salesHistory)}</td>
+    `;
+
+    // 点击 sparkline → 弹出详情图
+    tr.querySelector('.sparkline-cell').addEventListener('click', () => {
+      openModal(title, asin, dateHistory, salesHistory, history);
+    });
+
+    tbody.appendChild(tr);
+  });
+}
+
+// ── 排名徽章
+function rankBadge(rank) {
+  const cls = rank === 1 ? 'gold' : rank === 2 ? 'silver' : rank === 3 ? 'bronze' : 'normal';
+  return `<span class="rank-badge ${cls}">${rank}</span>`;
+}
+
+// ── 标签
+function sellerTag(type) {
+  if (!type) return '—';
+  if (type === '亚马逊自营')        return `<span class="tag tag-amazon">${type}</span>`;
+  if (type.includes('中国'))         return `<span class="tag tag-cn">${type}</span>`;
+  if (type.startsWith('品牌方'))     return `<span class="tag tag-brand">${type}</span>`;
+  return `<span class="tag tag-local">${type}</span>`;
+}
+function fulfillTag(f) {
+  if (!f) return '—';
+  if (f === 'FBA' || f === '亚马逊自营配送') return `<span class="tag tag-fba">${f}</span>`;
+  if (f === 'FBM')                             return `<span class="tag tag-fbm">${f}</span>`;
+  return f;
+}
+
+// ── 迷你 Sparkline SVG
+function sparklineSVG(data) {
+  if (!data || data.length < 2) return '<span class="no-trend">— 暂无历史</span>';
+  const W = 90, H = 32, PAD = 3;
+  const max = Math.max(...data);
+  const min = Math.min(...data);
+  const range = max - min || 1;
+  const pts = data.map((v, i) => {
+    const x = PAD + (i / (data.length - 1)) * (W - PAD * 2);
+    const y = PAD + (1 - (v - min) / range) * (H - PAD * 2);
+    return `${x.toFixed(1)},${y.toFixed(1)}`;
+  }).join(' ');
+  const last   = data[data.length - 1];
+  const first  = data[0];
+  const color  = last >= first ? '#16a34a' : '#dc2626';
+  const lx = PAD + (W - PAD * 2);
+  const ly = PAD + (1 - (last - min) / range) * (H - PAD * 2);
+  return `
+    <svg width="${W}" height="${H}" style="overflow:visible;cursor:pointer" title="点击查看详情">
+      <polyline points="${pts}" fill="none" stroke="${color}" stroke-width="1.8" stroke-linejoin="round"/>
+      <circle cx="${lx.toFixed(1)}" cy="${ly.toFixed(1)}" r="2.5" fill="${color}"/>
+    </svg>`;
+}
+
+// ── 详情图弹窗
+function openModal(title, asin, dates, salesData, history) {
+  document.getElementById('modal-title').textContent = title || asin;
+  document.getElementById('modal-sub').textContent   = `ASIN: ${asin}  |  ${dates.length} 天数据`;
+  document.getElementById('modal-overlay').classList.add('show');
+
+  if (modalChart) { modalChart.destroy(); modalChart = null; }
+
+  const rankData  = history.map(h => h.rank);
+  const priceData = history.map(h => h.price);
+
+  const ctx = document.getElementById('modal-canvas').getContext('2d');
+  modalChart = new Chart(ctx, {
+    type: 'line',
+    data: {
+      labels: dates,
+      datasets: [
+        {
+          label: '月销量估算',
+          data: salesData,
+          borderColor: '#2563eb',
+          backgroundColor: 'rgba(37,99,235,.08)',
+          fill: true,
+          tension: .3,
+          pointRadius: 4,
+          pointHoverRadius: 6,
+          yAxisID: 'y',
+        },
+        {
+          label: '排名',
+          data: rankData,
+          borderColor: '#f59e0b',
+          borderDash: [4, 3],
+          backgroundColor: 'transparent',
+          fill: false,
+          tension: .3,
+          pointRadius: 3,
+          pointHoverRadius: 5,
+          yAxisID: 'y1',
+        },
+      ],
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      interaction: { mode: 'index', intersect: false },
+      plugins: {
+        legend: { position: 'top', labels: { font: { size: 12 } } },
+        tooltip: {
+          callbacks: {
+            label: ctx => {
+              if (ctx.dataset.yAxisID === 'y1') return ` 排名: #${ctx.raw}`;
+              return ` 月销量: ${Number(ctx.raw).toLocaleString()}`;
+            },
+            afterBody: (items) => {
+              const idx = items[0]?.dataIndex;
+              if (idx == null) return [];
+              const h = history[idx];
+              return [
+                `价格: MXN ${h.price.toFixed(2)}`,
+                `评分: ★ ${h.rating}   评论数: ${Number(h.reviews).toLocaleString()}`,
+              ];
+            },
+          },
+        },
+      },
+      scales: {
+        x: {
+          title: { display: true, text: '日期', font: { size: 12 } },
+          ticks: { maxRotation: 30, font: { size: 11 } },
+        },
+        y: {
+          title: { display: true, text: '月销量', font: { size: 12 } },
+          position: 'left',
+          ticks: { font: { size: 11 } },
+        },
+        y1: {
+          title: { display: true, text: '排名', font: { size: 12 } },
+          position: 'right',
+          reverse: true,
+          grid: { drawOnChartArea: false },
+          ticks: {
+            font: { size: 11 },
+            callback: v => '#' + v,
+          },
+        },
+      },
+    },
+  });
+}
+
+function closeModal() {
+  document.getElementById('modal-overlay').classList.remove('show');
+  if (modalChart) { modalChart.destroy(); modalChart = null; }
+}
+
+document.getElementById('modal-close').addEventListener('click', closeModal);
+document.getElementById('modal-overlay').addEventListener('click', e => {
+  if (e.target === document.getElementById('modal-overlay')) closeModal();
+});
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+// ── 排序
+const COL_MAP = {
+  rank:          r => parseInt(r['排名']) || 999,
+  asin:          r => r['ASIN编号'] || '',
+  title:         r => r['商品名称'] || '',
+  brand:         r => r['品牌'] || '',
+  rating:        r => parseFloat(r['评分']) || 0,
+  reviews:       r => parseInt(r['评论数']) || 0,
+  price:         r => parseFloat(r['价格(墨西哥比索)']) || 0,
+  monthly_sales: r => parseInt(r['月销量估算']) || 0,
+  listed_date:   r => r['上架时间'] || '',
+  months_listed: r => parseInt(r['在售月数']) || 0,
+  variants:      r => parseInt(r['变体数量']) || 0,
+  seller:        r => r['卖家'] || '',
+  seller_type:   r => r['卖家类型'] || '',
+  seller_country:r => r['卖家所在地'] || '',
+  fulfillment:   r => r['配送方式'] || '',
+  trend:         r => parseInt(r['月销量估算']) || 0,
+};
+
+function sortRows(rows, col, asc) {
+  const fn = COL_MAP[col] || (r => r['排名']);
+  return rows.sort((a, b) => {
+    const av = fn(a), bv = fn(b);
+    if (av < bv) return asc ? -1 : 1;
+    if (av > bv) return asc ? 1 : -1;
+    return 0;
+  });
+}
+
+function bindSort() {
+  document.querySelectorAll('thead th[data-col]').forEach(th => {
+    th.addEventListener('click', () => {
+      const col = th.dataset.col;
+      if (sortState.col === col) {
+        sortState.asc = !sortState.asc;
+      } else {
+        sortState.col = col;
+        sortState.asc = col === 'rank';
+      }
+      document.querySelectorAll('thead th').forEach(t => {
+        t.classList.remove('sorted-asc', 'sorted-desc');
+      });
+      th.classList.add(sortState.asc ? 'sorted-asc' : 'sorted-desc');
+      if (historyData) renderTable(historyData.latest || [], historyData.products || {});
+    });
+  });
+  // 默认排序标记
+  document.querySelector('thead th[data-col="rank"]').classList.add('sorted-asc');
+}
+
+// 启动
+loadData();
+</script>
+</body>
+</html>

@@ -1,0 +1,34 @@
+name: Daily Amazon MX Spider
+
+on:
+  schedule:
+    - cron: '0 15 * * *'   # UTC 15:00 = 墨西哥城 09:00 (CST, UTC-6)
+  workflow_dispatch:         # 允许手动触发
+
+jobs:
+  run-spider:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run agent
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python agent.py
+
+      - name: Commit & push results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add output/
+          git diff --staged --quiet || git commit -m "data: 自动更新畅销榜数据 $(date +%Y-%m-%d)"
+          git push
