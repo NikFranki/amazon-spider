@@ -1,0 +1,23 @@
+# 爬取输出数据（本地生成，不提交）
+output/
+
+# Python 缓存
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# macOS 系统文件
+.DS_Store
+
+# Claude Code 项目配置
+.claude/
+
+# 编辑器
+.vscode/
+.idea/
+
+# 虚拟环境
+venv/
+.venv/
+env/
