@@ -91,7 +91,7 @@ GitHub Actions (每天 UTC 15:00 = 墨西哥城 09:00)
 
 1. 仓库页面 → **Settings → Pages**
 2. Source 选 **Deploy from a branch**
-3. Branch 选 `main`，目录选 `/web`
+3. Branch 选 `main`，目录选 `/(根目录)`
 4. 保存后等约 1 分钟，页面地址为：
    ```
    https://<你的用户名>.github.io/<仓库名>/
@@ -155,7 +155,7 @@ schedule:
 | `amazon_mx_bestsellers_spider_of_dog.py` | 核心爬虫，可单独运行 |
 | `agent.py` | Agent 调度脚本，供 GitHub Actions 调用 |
 | `.github/workflows/daily_spider.yml` | GitHub Actions 定时任务配置 |
-| `web/index.html` | 前端可视化页面（表格 + sparkline 趋势图） |
+| `index.html` | 前端可视化页面（表格 + sparkline 趋势图） |
 | `output/history.json` | 所有历史数据聚合文件，前端数据源 |
 | `output/bestsellers_*.csv` | 每次抓取的原始 CSV，可直接用 Excel 打开 |
 | `output/bestsellers_*.json` | 每次抓取的原始 JSON |
