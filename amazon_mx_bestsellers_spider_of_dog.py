@@ -186,6 +186,51 @@ def translate_to_zh(text):
         return text
 
 
+def translate_address_zh(reversed_addr):
+    """调用 DeepSeek 把已倒序（国家→...→门牌号）、用 / 分隔的西语地址翻译成中文，
+    分隔符和段数、顺序保持不变。复用标题翻译的失败计数/熔断状态。"""
+    global _translate_fail_count, _translate_disabled
+    if not reversed_addr or _translate_disabled:
+        return reversed_addr
+    if not DEEPSEEK_API_KEY or not DEEPSEEK_API_URL:
+        return reversed_addr
+    body = json.dumps({
+        "model": "deepseek-v4-flash",
+        "messages": [
+            {"role": "system", "content": "你是专业的地址翻译，用户会给你一个用 / 分隔、已经按"
+                                           "从国家到门牌号顺序排列的西班牙语地址，请把每一段翻译"
+                                           "或音译成中文（国家二字码翻译成中文国家名），数字（邮编、"
+                                           "门牌号）原样保留，保持 / 分隔符、段数和顺序不变，只返回"
+                                           "结果，不要解释，不要加引号。"},
+            {"role": "user", "content": reversed_addr},
+        ],
+        "stream": False,
+    }).encode("utf-8")
+    req = urllib.request.Request(
+        DEEPSEEK_API_URL,
+        data=body,
+        headers={
+            "Content-Type": "application/json",
+            "Authorization": f"Bearer {DEEPSEEK_API_KEY}",
+        },
+        method="POST",
+    )
+    try:
+        with urllib.request.urlopen(req, timeout=20) as resp:
+            data = json.loads(resp.read().decode("utf-8"))
+            _translate_fail_count = 0
+            return data["choices"][0]["message"]["content"].strip()
+    except Exception as e:
+        _translate_fail_count += 1
+        if _translate_fail_count >= 3:
+            _translate_disabled = True
+            print("  [翻译] 连续失败 3 次，自动禁用翻译，地址保留原文。"
+                  "如需翻译请检查 .env 配置或网络。", file=sys.stderr)
+        else:
+            print(f"  [翻译] 地址翻译失败 ({e})，保留原文", file=sys.stderr)
+        return reversed_addr
+
+
 def fetch(url, max_retries=MAX_RETRIES, cookies=None, referer=None):
     """带重试和浏览器请求头抓取页面，返回 HTML 文本。cookies 为 dict，有值时附加到请求头。"""
     last_err = None
@@ -500,35 +545,34 @@ def parse_detail_page(src):
 # ---------------------------------------------------------------- 卖家所在地
 
 def parse_seller_detail(src):
-    """从卖家主页'卖家详细信息'区块解析完整营业地址和国家二字码，返回 (address, country)。
+    """从卖家主页'卖家详细信息'区块解析地址明细行和国家二字码，返回 (lines, country)。
     锚定 HTML 注释 <!-- Detailed Seller Information -->，地址明细行靠结构 class
-    'indent-left' 识别，跟页面显示语言（中/西/英）无关。地址行按 DOM 原始顺序（门牌号→
+    'indent-left' 识别，跟页面显示语言（中/西/英）无关。lines 按 DOM 原始顺序（门牌号→
     街区→市→州→邮编→国家，行政级别从细到粗），最后一行即国家二字码。
     """
     m = re.search(r"<!--\s*Detailed Seller Information\s*-->(.*?)"
                   r"<!--\s*Detailed Seller Information\s*-->", src, re.S)
     if not m:
-        return "", ""
+        return [], ""
     rows = re.findall(r'<div class="a-row[^"]*indent-left[^"]*"[^>]*>(.*?)</div>',
                        m.group(1), re.S)
     lines = [strip_tags(r) for r in rows]
     lines = [ln for ln in lines if ln]
-    address = ", ".join(lines)
     country = lines[-1] if lines and re.fullmatch(r"[A-Za-z]{2}", lines[-1]) else ""
-    return address, country
+    return lines, country
 
 
 def fetch_seller_detail(seller_id, cache, cookies=None):
-    """抓卖家主页解析完整营业地址和国家二字码（缓存去重），返回 (address, country)。"""
+    """抓卖家主页解析地址明细行和国家二字码（缓存去重），返回 (lines, country)。"""
     if not seller_id:
-        return "", ""
+        return [], ""
     if seller_id in cache:
         return cache[seller_id]
     url = f"https://www.amazon.com.mx/sp?ie=UTF8&seller={seller_id}"
-    address, country = "", ""
+    lines, country = [], ""
     try:
         src = fetch(url, max_retries=2, cookies=cookies)
-        address, country = parse_seller_detail(src)
+        lines, country = parse_seller_detail(src)
         if not country:
             # 兜底：老版页面结构，直接找 Dirección 后面的国家码
             m = re.search(r"Direcci[oó]n(?:\s+comercial)?\s*:(.{0,3000})", src, re.S)
@@ -538,8 +582,8 @@ def fetch_seller_detail(seller_id, cache, cookies=None):
                     country = codes[-1]
     except Exception as e:
         print(f"  卖家页抓取失败 ({seller_id}): {e}", file=sys.stderr)
-    cache[seller_id] = (address, country)
-    return address, country
+    cache[seller_id] = (lines, country)
+    return lines, country
 
 
 def classify_seller(seller, brand, is_amazon, country):
@@ -606,6 +650,7 @@ def scrape(base_url, pages, top, do_translate=True, do_seller=True,
         src = fetch(url, cookies=cookies)
         if not category:
             category = parse_category(src)
+            print(f"[类目] {category}")
         ranks.update(parse_recs_list(src))
         fallback.update(parse_rendered_items(src))
         if pg < pages:
@@ -658,17 +703,23 @@ def scrape(base_url, pages, top, do_translate=True, do_seller=True,
         unique = {it["seller_id"] for it in items if it["seller_id"] and not it["is_amazon"]}
         print(f"[卖家] 共 {len(unique)} 个独立第三方卖家，查询营业地址 ...")
         for j, sid in enumerate(sorted(unique), 1):
-            addr, c = fetch_seller_detail(sid, seller_cache, cookies=cookies)
-            print(f"[卖家 {j}/{len(unique)}] {sid} → {c or '未知'} {addr[:50] if addr else ''}")
+            lines, c = fetch_seller_detail(sid, seller_cache, cookies=cookies)
+            addr_preview = ", ".join(lines)
+            print(f"[卖家 {j}/{len(unique)}] {sid} → {c or '未知'} {addr_preview[:50] if addr_preview else ''}")
             time.sleep(random.uniform(*DETAIL_DELAY))
 
     # 阶段 4：派生字段 + 翻译
     if do_translate:
         print(f"[翻译] 共 {len(items)} 条标题，开始翻译 ...")
     for idx, it in enumerate(items, 1):
-        address, country = seller_cache.get(it["seller_id"], ("", ""))
+        lines, country = seller_cache.get(it["seller_id"], ([], ""))
         it["seller_country"] = COUNTRY_ZH.get(country, country)
-        it["seller_address"] = address
+        reversed_addr = "/".join(reversed(lines))
+        if do_translate and reversed_addr:
+            it["seller_address"] = translate_address_zh(reversed_addr)
+            print(f"[翻译地址 {idx}/{len(items)}] {it['seller_address'][:50]}")
+        else:
+            it["seller_address"] = reversed_addr
         it["seller_type"] = classify_seller(it["seller"], it["brand"],
                                             it["is_amazon"], country)
         it["fulfillment"] = classify_fulfillment(it["is_amazon"], it["ships_from"],
