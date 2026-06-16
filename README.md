@@ -1,9 +1,26 @@
 # amazon-spider
 
-亚马逊墨西哥站畅销榜（Los más vendidos）选品爬虫，仅依赖 Python 3 标准库。
+亚马逊墨西哥站畅销榜（Los más vendidos）选品爬虫。
 
 两阶段抓取：先从榜单页（2 页）拿到前 100 名的 ASIN + 排名（含懒加载的 31-50 名），
 再逐个抓商品详情页补全所有选品维度。
+
+## 依赖
+
+抓取本身仅用 Python 3 标准库；标题翻译走 DeepSeek API，需额外安装依赖并配置 `.env`：
+
+```bash
+pip install python-dotenv
+```
+
+在项目根目录创建 `.env`：
+
+```
+DEEPSEEK_API_KEY=你的key
+DEEPSEEK_API_URL=DeepSeek 聊天接口地址
+```
+
+未配置时会自动禁用翻译，标题保留西班牙语原文（不影响其余抓取流程）。
 
 ## 用法
 
@@ -19,6 +36,20 @@ python3 amazon_mx_bestsellers_spider_of_dog.py <URL> --top 50 --no-seller-info -
 
 # 指定输出目录 / 调整销量推算用的评论率
 python3 amazon_mx_bestsellers_spider_of_dog.py <URL> -o ./data --review-rate 0.02
+
+# 使用 Netscape cookie 文件登录态抓取（用浏览器插件 Get cookies.txt LOCALLY 导出到
+# amazon-spider/amazon.com.mx_cookies.txt），登录态下部分商品可拿到官方「上月购买量」
+python3 amazon_mx_bestsellers_spider_of_dog.py --cookie-file amazon.com.mx_cookies.txt
+
+# 也可以直接传浏览器 DevTools → Network 面板复制的 Cookie 请求头字符串
+python3 amazon_mx_bestsellers_spider_of_dog.py --cookie "k1=v1; k2=v2"
+
+# 不加翻译
+python3 amazon_mx_bestsellers_spider_of_dog.py --cookie-file amazon.com.mx_cookies.txt --no-translate
+
+# 指定页码和前几名
+python3 amazon_mx_bestsellers_spider_of_dog.py --pages 1 --top 1 --cookie-file
+  amazon.com.mx_cookies.txt
 ```
 
 ## 输出
@@ -29,7 +60,7 @@ python3 amazon_mx_bestsellers_spider_of_dog.py <URL> -o ./data --review-rate 0.0
 | --- | --- |
 | 排名 / ASIN编号 / 商品名称 / 品牌 | 商品名称默认翻译为中文 |
 | 评分 / 评论数 / 价格(墨西哥比索) | 来自详情页，榜单页数据兜底 |
-| 月销量估算 / 销量依据 | 优先亚马逊官方「上月购买量」徽章；否则按 评论数 ÷ 在售月数 ÷ 评论率(默认2.5%) 推算 |
+| 月销量估算 / 销量依据 | 三级优先：① 亚马逊官方「上月购买量」徽章 ② BSR（畅销排名）对数插值推算 ③ 评论数 ÷ 在售月数 ÷ 评论率(默认1.2%) 兜底 |
 | 上架时间 / 在售月数 | 详情页「Producto en Amazon.com.mx desde」 |
 | 变体数量 | twister 变体 JSON（颜色/尺码组合数），无变体为 1 |
 | 卖家 / 卖家类型 / 卖家所在地 | 类型：亚马逊自营 / 品牌方(国别) / 第三方(国别)；所在地来自卖家主页营业地址 |
@@ -164,10 +195,10 @@ schedule:
 
 ## 已知限制
 
-- 请求量约 100 个详情页 + 去重后的第三方卖家页，带 1.2-2.8s 随机延迟；
+- 请求量约 100 个详情页 + 去重后的第三方卖家页，带 2.5-5.0s 随机延迟；
   请控制运行频率，避免触发风控（命中验证码会自动退避重试）。
-- 月销量为估算值：评论率因类目而异（1%-3% 常见），可用 `--review-rate` 调整；
-  上架时间缺失时按默认 24 个月在售推算，会在「销量依据」列标注。
+- 月销量为估算值（BSR 推算/评论率推算均非官方数据）：评论率因类目而异（1%-3% 常见），
+  可用 `--review-rate` 调整；上架时间缺失时按默认 24 个月在售推算，会在「销量依据」列标注。
 - 卖家类型中「品牌方」按 卖家名≈品牌名 判断；卖家所在地依赖亚马逊卖家主页的
   「Dirección」营业地址，个别卖家页无地址时为空。
 - 解析基于当前页面 HTML 结构，亚马逊改版后需更新对应正则

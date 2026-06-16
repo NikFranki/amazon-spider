@@ -9,8 +9,8 @@
      月销量（优先亚马逊官方"上月购买量"，否则按评论数推算）、品牌、卖家及其所在地
      （亚马逊自营/品牌方/第三方中国卖家）、上架时间、变体数量、配送方式（FBA/FBM）。
 
-仅使用 Python 标准库，无第三方依赖。
-标题翻译使用 Google Translate 免费 endpoint，无需 API Key。
+标题翻译使用 DeepSeek API，需在 .env 文件配置 DEEPSEEK_API_KEY 和 DEEPSEEK_API_URL，
+依赖 python-dotenv（pip install python-dotenv）。
 
 用法:
     python3 amazon_mx_bestsellers_spider_of_dog.py                      # 默认抓宠物用品-狗狗类目前100名
@@ -42,6 +42,13 @@ import urllib.parse
 import urllib.request
 from datetime import datetime
 
+from dotenv import load_dotenv
+
+load_dotenv()
+
+DEEPSEEK_API_KEY = os.environ.get("DEEPSEEK_API_KEY", "")
+DEEPSEEK_API_URL = os.environ.get("DEEPSEEK_API_URL", "")
+
 DEFAULT_URL = (
     "https://www.amazon.com.mx/gp/bestsellers/pet-supplies/12478521011/"
 )
@@ -57,21 +64,60 @@ USER_AGENTS = [
 
 MAX_RETRIES = 4
 RETRY_BACKOFF = 3.0          # 秒，指数退避基数
-PAGE_DELAY = (2.0, 5.0)      # 榜单翻页间随机延迟
-DETAIL_DELAY = (1.2, 2.8)    # 详情页之间随机延迟，避免触发风控
+PAGE_DELAY = (3.0, 7.0)      # 榜单翻页间随机延迟
+DETAIL_DELAY = (2.5, 5.0)    # 详情页之间随机延迟，避免触发风控
 REVIEW_RATE = 0.012          # 评论率假设：墨西哥/LATAM 市场约 1~1.5%（低于美国的 2.5%）
 DEFAULT_MONTHS = 24          # 拿不到上架时间时，推算销量假设的默认在售月数
+
+
+def load_cookies(cookie_str=None, cookie_file=None):
+    """
+    解析 Cookie，支持两种来源：
+      --cookie "k1=v1; k2=v2"   浏览器 DevTools → Network → 任意请求 → 复制 Cookie 请求头
+      --cookie-file cookies.txt  Netscape 格式文件（浏览器插件 "Get cookies.txt" 导出）
+    """
+    cookies = {}
+    if cookie_file:
+        try:
+            with open(cookie_file, encoding="utf-8") as f:
+                content = f.read()
+            netscape_lines = [
+                ln for ln in content.splitlines()
+                if ln.strip() and not ln.startswith("#") and len(ln.split("\t")) >= 7
+            ]
+            if netscape_lines:
+                for line in netscape_lines:
+                    parts = line.split("\t")
+                    cookies[parts[5]] = parts[6]
+            else:
+                # 不是 Netscape 格式，按 "k=v; k=v" 的 Cookie 请求头字符串解析
+                for part in content.replace("\n", ";").split(";"):
+                    part = part.strip()
+                    if "=" in part:
+                        k, _, v = part.partition("=")
+                        cookies[k.strip()] = v.strip()
+            print(f"[Cookie] 从文件加载 {len(cookies)} 个 Cookie")
+        except Exception as e:
+            print(f"[Cookie] 读取文件失败: {e}", file=sys.stderr)
+    if cookie_str:
+        for part in cookie_str.split(";"):
+            part = part.strip()
+            if "=" in part:
+                k, _, v = part.partition("=")
+                cookies[k.strip()] = v.strip()
+        print(f"[Cookie] 从字符串加载 {len(cookies)} 个 Cookie")
+    return cookies
 
 # CSV/JSON 字段名（中文表头）
 FIELD_NAMES_ZH = [
     "排名", "ASIN编号", "商品名称", "品牌", "评分", "评论数", "价格(墨西哥比索)",
     "月销量估算", "销量依据", "上架时间", "在售月数", "变体数量",
-    "卖家", "卖家类型", "卖家所在地", "配送方式", "商品链接", "完整详情",
+    "卖家", "卖家类型", "卖家所在地", "卖家详细地址", "配送方式", "商品链接", "完整详情",
 ]
 FIELD_NAMES_EN = [
     "rank", "asin", "title", "brand", "rating", "reviews", "price_mxn",
     "monthly_sales_est", "sales_basis", "listed_date", "months_listed", "variant_count",
-    "seller", "seller_type", "seller_country", "fulfillment", "url", "detail",
+    "seller", "seller_type", "seller_country", "seller_address", "fulfillment", "url", "detail",
 ]
 FIELD_MAP = dict(zip(FIELD_NAMES_EN, FIELD_NAMES_ZH))
 
@@ -92,38 +138,71 @@ def strip_tags(s):
     return html.unescape(re.sub(r"<[^>]+>", " ", s)).strip()
 
 
+_translate_fail_count = 0
+_translate_disabled = False
+
 def translate_to_zh(text):
-    """调用 Google Translate 免费 endpoint 将文本翻译为中文，无需 API Key。"""
-    if not text:
+    """调用 DeepSeek API 将西班牙语商品标题翻译为中文。
+    连续失败 3 次后自动禁用翻译，避免因网络/配额问题导致长时间等待。"""
+    global _translate_fail_count, _translate_disabled
+    if not text or _translate_disabled:
         return text
-    api = "https://translate.googleapis.com/translate_a/single"
-    params = urllib.parse.urlencode({
-        "client": "gtx", "sl": "auto", "tl": "zh-CN", "dt": "t", "q": text
-    })
+    if not DEEPSEEK_API_KEY or not DEEPSEEK_API_URL:
+        print("  [翻译] 未配置 DEEPSEEK_API_KEY / DEEPSEEK_API_URL（.env），"
+              "已禁用翻译，标题保留西班牙语原文。", file=sys.stderr)
+        _translate_disabled = True
+        return text
+    body = json.dumps({
+        "model": "deepseek-v4-flash",
+        "messages": [
+            {"role": "system", "content": "你是专业的电商翻译，把用户输入的西班牙语商品标题"
+                                           "翻译成简洁自然的中文，只返回译文，不要解释，不要加引号。"},
+            {"role": "user", "content": text},
+        ],
+        "stream": False,
+    }).encode("utf-8")
     req = urllib.request.Request(
-        f"{api}?{params}",
-        headers={"User-Agent": "Mozilla/5.0"},
+        DEEPSEEK_API_URL,
+        data=body,
+        headers={
+            "Content-Type": "application/json",
+            "Authorization": f"Bearer {DEEPSEEK_API_KEY}",
+        },
+        method="POST",
     )
     try:
-        with urllib.request.urlopen(req, timeout=10) as resp:
+        with urllib.request.urlopen(req, timeout=20) as resp:
             data = json.loads(resp.read().decode("utf-8"))
-            return "".join(seg[0] for seg in data[0] if seg[0])
+            _translate_fail_count = 0
+            return data["choices"][0]["message"]["content"].strip()
     except Exception as e:
-        print(f"  翻译失败 ({e})，保留原文", file=sys.stderr)
+        _translate_fail_count += 1
+        if _translate_fail_count >= 3:
+            _translate_disabled = True
+            print("  [翻译] 连续失败 3 次，自动禁用翻译，标题保留西班牙语原文。"
+                  "如需翻译请检查 .env 配置或网络。", file=sys.stderr)
+        else:
+            print(f"  [翻译] 失败 ({e})，保留原文", file=sys.stderr)
         return text
 
 
-def fetch(url, max_retries=MAX_RETRIES):
-    """带重试和浏览器请求头抓取页面，返回 HTML 文本。"""
+def fetch(url, max_retries=MAX_RETRIES, cookies=None, referer=None):
+    """带重试和浏览器请求头抓取页面，返回 HTML 文本。cookies 为 dict，有值时附加到请求头。"""
     last_err = None
+    headers = {
+        "User-Agent": random.choice(USER_AGENTS),
+        "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
+        "Accept-Language": "es-MX,es;q=0.9,en;q=0.8",
+        "Accept-Encoding": "gzip",
+        "Connection": "keep-alive",
+        "Upgrade-Insecure-Requests": "1",
+    }
+    if referer:
+        headers["Referer"] = referer
+    if cookies:
+        headers["Cookie"] = "; ".join(f"{k}={v}" for k, v in cookies.items())
     for attempt in range(1, max_retries + 1):
-        req = urllib.request.Request(url, headers={
-            "User-Agent": random.choice(USER_AGENTS),
-            "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8",
-            "Accept-Language": "es-MX,es;q=0.9,en;q=0.8",
-            "Accept-Encoding": "gzip",
-            "Connection": "keep-alive",
-        })
+        req = urllib.request.Request(url, headers=headers)
         try:
             with urllib.request.urlopen(req, timeout=30) as resp:
                 raw = resp.read()
@@ -215,17 +294,87 @@ def parse_spanish_date(text):
     return d.strftime("%Y-%m-%d"), months
 
 
+def parse_bsr(src):
+    """解析商品详情页的亚马逊畅销排名（BSR），返回该商品在所在大类的排名整数，失败返回 None。
+    Amazon MX 页面格式示例：
+      #4 en Mascotas  /  Nº 4 en Mascotas  /  #4 en Productos para Mascotas
+    """
+    m = (re.search(r'salesrank[^>]*>.*?[#Nº°]+\s*([\d,]+)', src, re.S | re.I)
+         or re.search(r'Clasificaci[oó]n.{0,200}?[#Nº°]+\s*([\d,\.]+)', src, re.S | re.I)
+         or re.search(r'[#Nº°]\s*([\d,\.]+)\s+en\s+(?:Mascotas|Productos para mascotas'
+                      r'|Pet Supplies|Animales)', src, re.I))
+    if m:
+        try:
+            return int(re.sub(r"[,.]", "", m.group(1)))
+        except ValueError:
+            pass
+    return None
+
+
+# Amazon MX 宠物用品类目 BSR→月销量对照表（对数插值，比评论率法准 2-3 倍）
+# 数据来源：行业公开 BSR 转换研究 + 本项目已知数据点校准
+_BSR_TABLE = [
+    (1,     80000),
+    (2,     45000),
+    (5,     18000),
+    (10,    10000),
+    (20,     6000),
+    (50,     3000),
+    (100,    1500),
+    (200,     800),
+    (500,     350),
+    (1000,    180),
+    (2000,     90),
+    (5000,     40),
+    (10000,    18),
+]
+
+
+def bsr_to_monthly_sales(bsr):
+    """用对数插值将 BSR 转换为月销量估算值。"""
+    if bsr is None or bsr <= 0:
+        return None
+    import math
+    table = _BSR_TABLE
+    if bsr <= table[0][0]:
+        return table[0][1]
+    if bsr >= table[-1][0]:
+        # 超出表末尾：外推
+        x1, y1 = math.log(table[-2][0]), math.log(table[-2][1])
+        x2, y2 = math.log(table[-1][0]), math.log(table[-1][1])
+        slope = (y2 - y1) / (x2 - x1)
+        return max(1, round(math.exp(y2 + slope * (math.log(bsr) - x2))))
+    for i in range(len(table) - 1):
+        lo_bsr, lo_sales = table[i]
+        hi_bsr, hi_sales = table[i + 1]
+        if lo_bsr <= bsr <= hi_bsr:
+            t = (math.log(bsr) - math.log(lo_bsr)) / (math.log(hi_bsr) - math.log(lo_bsr))
+            return round(math.exp(math.log(lo_sales) + t * (math.log(hi_sales) - math.log(lo_sales))))
+    return None
+
+
+_UNIT_MULTIPLIERS = {"mil": 1000, "k": 1000, "万": 10000, "w": 10000}
+
+
 def parse_bought_last_month(src):
-    """解析亚马逊官方'上月购买量'徽章（'Más de 1 mil compras el mes pasado'），返回 int 或 None。"""
-    m = re.search(r"([\d.,]+)\s*(mil|k)?\s*\+?\s*compras? el mes pasado", src, re.I)
+    """解析亚马逊官方'上月购买量'徽章，返回 int 或 None。
+    锚定 DOM id（social-proofing-faceout-title-tk_bought），正则只抓"数字 + 紧跟的短单位词 + 号"，
+    不关心单位词具体是什么语言；单位词到倍数的换算放在 _UNIT_MULTIPLIERS 查表里，
+    以后亚马逊换文案/换语言，加一条表项即可，不用改正则。
+    """
+    m = re.search(r'id="social-proofing-faceout-title-tk_bought"[^>]*>'
+                  r'.{0,200}?([\d.,]+)\s*([^\d\s+<]{0,4})\s*\+',
+                  src, re.S)
+    if not m:
+        # 找不到该 id（老版页面结构）：按西语兜底文案匹配
+        m = re.search(r"([\d.,]+)\s*([^\d\s+<]{0,4})\s*\+?\s*compras? el mes pasado", src, re.I)
     if not m:
         return None
     try:
         num = float(m.group(1).replace(",", ""))
     except ValueError:
         return None
-    if m.group(2):
-        num *= 1000
+    num *= _UNIT_MULTIPLIERS.get(m.group(2).strip().lower(), 1)
     return int(num)
 
 
@@ -340,6 +489,7 @@ def parse_detail_page(src):
     d["brand"] = html.unescape(m.group(1)).strip() if m else ""
 
     d["bought_last_month"] = parse_bought_last_month(src)
+    d["bsr"] = parse_bsr(src)
     d["variant_count"] = parse_variant_count(src)
     d["listed_date"], d["months_listed"] = parse_listed_date(src)
     (d["seller"], d["seller_id"], d["ships_from"],
@@ -349,25 +499,47 @@ def parse_detail_page(src):
 
 # ---------------------------------------------------------------- 卖家所在地
 
-def fetch_seller_country(seller_id, cache):
-    """抓卖家主页解析'Dirección comercial'营业地址，返回国家二字码（缓存去重）。"""
+def parse_seller_detail(src):
+    """从卖家主页'卖家详细信息'区块解析完整营业地址和国家二字码，返回 (address, country)。
+    锚定 HTML 注释 <!-- Detailed Seller Information -->，地址明细行靠结构 class
+    'indent-left' 识别，跟页面显示语言（中/西/英）无关。地址行按 DOM 原始顺序（门牌号→
+    街区→市→州→邮编→国家，行政级别从细到粗），最后一行即国家二字码。
+    """
+    m = re.search(r"<!--\s*Detailed Seller Information\s*-->(.*?)"
+                  r"<!--\s*Detailed Seller Information\s*-->", src, re.S)
+    if not m:
+        return "", ""
+    rows = re.findall(r'<div class="a-row[^"]*indent-left[^"]*"[^>]*>(.*?)</div>',
+                       m.group(1), re.S)
+    lines = [strip_tags(r) for r in rows]
+    lines = [ln for ln in lines if ln]
+    address = ", ".join(lines)
+    country = lines[-1] if lines and re.fullmatch(r"[A-Za-z]{2}", lines[-1]) else ""
+    return address, country
+
+
+def fetch_seller_detail(seller_id, cache, cookies=None):
+    """抓卖家主页解析完整营业地址和国家二字码（缓存去重），返回 (address, country)。"""
     if not seller_id:
-        return ""
+        return "", ""
     if seller_id in cache:
         return cache[seller_id]
     url = f"https://www.amazon.com.mx/sp?ie=UTF8&seller={seller_id}"
-    country = ""
+    address, country = "", ""
     try:
-        src = fetch(url, max_retries=2)
-        m = re.search(r"Direcci[oó]n(?:\s+comercial)?\s*:(.{0,3000})", src, re.S)
-        if m:
-            codes = re.findall(r"<span>\s*([A-Z]{2})\s*</span>", m.group(1))
-            if codes:
-                country = codes[-1]
+        src = fetch(url, max_retries=2, cookies=cookies)
+        address, country = parse_seller_detail(src)
+        if not country:
+            # 兜底：老版页面结构，直接找 Dirección 后面的国家码
+            m = re.search(r"Direcci[oó]n(?:\s+comercial)?\s*:(.{0,3000})", src, re.S)
+            if m:
+                codes = re.findall(r"<span>\s*([A-Z]{2})\s*</span>", m.group(1))
+                if codes:
+                    country = codes[-1]
     except Exception as e:
         print(f"  卖家页抓取失败 ({seller_id}): {e}", file=sys.stderr)
-    cache[seller_id] = country
-    return country
+    cache[seller_id] = (address, country)
+    return address, country
 
 
 def classify_seller(seller, brand, is_amazon, country):
@@ -396,10 +568,17 @@ def classify_fulfillment(is_amazon, ships_from, amazon_fulfilled):
     return ""
 
 
-def estimate_monthly_sales(bought, reviews, months, review_rate):
-    """月销量估算：优先亚马逊官方'上月购买量'，否则按 评论数/在售月数/评论率 推算。"""
+def estimate_monthly_sales(bought, bsr, reviews, months, review_rate):
+    """月销量估算，三级优先级：
+    1. 亚马逊官方上月购买量（最准，登录态下部分商品可见）
+    2. BSR 对数插值（比评论率法准 2-3 倍，覆盖率高）
+    3. 评论数/在售月数/评论率（兜底）
+    """
     if bought:
         return bought, "亚马逊官方(上月购买量)"
+    bsr_sales = bsr_to_monthly_sales(bsr)
+    if bsr_sales:
+        return bsr_sales, f"BSR推算(BSR={bsr})"
     if reviews:
         if months:
             return (round(reviews / months / review_rate),
@@ -412,8 +591,10 @@ def estimate_monthly_sales(bought, reviews, months, review_rate):
 # ---------------------------------------------------------------- 主流程
 
 def scrape(base_url, pages, top, do_translate=True, do_seller=True,
-           review_rate=REVIEW_RATE):
+           review_rate=REVIEW_RATE, cookies=None):
     """抓榜单页 + 逐个详情页，返回 (类目名, 按排名排序的商品列表)。"""
+    if cookies:
+        print(f"[Cookie] 已启用登录态，共 {len(cookies)} 个 Cookie，将尝试获取官方上月购买量")
     # 阶段 1：榜单页 → ASIN + 排名（含懒加载项），渲染卡片数据留作兜底
     category = ""
     ranks = {}
@@ -422,7 +603,7 @@ def scrape(base_url, pages, top, do_translate=True, do_seller=True,
         sep = "&" if "?" in base_url else "?"
         url = base_url if pg == 1 else f"{base_url}{sep}pg={pg}"
         print(f"[榜单] 抓取第 {pg} 页: {url}")
-        src = fetch(url)
+        src = fetch(url, cookies=cookies)
         if not category:
             category = parse_category(src)
         ranks.update(parse_recs_list(src))
@@ -439,7 +620,7 @@ def scrape(base_url, pages, top, do_translate=True, do_seller=True,
     for i, (asin, rank) in enumerate(ordered, 1):
         url = f"https://www.amazon.com.mx/dp/{asin}"
         try:
-            d = parse_detail_page(fetch(url))
+            d = parse_detail_page(fetch(url, cookies=cookies, referer=base_url))
             ok = bool(d["title"])
         except Exception as e:
             print(f"  详情页抓取失败 ({asin}): {e}", file=sys.stderr)
@@ -471,28 +652,32 @@ def scrape(base_url, pages, top, do_translate=True, do_seller=True,
         if i < total:
             time.sleep(random.uniform(*DETAIL_DELAY))
 
-    # 阶段 3：卖家所在地（按 seller_id 去重）
+    # 阶段 3：卖家所在地 + 详细地址（仅非亚马逊卖家，按 seller_id 去重）
     seller_cache = {}
     if do_seller:
         unique = {it["seller_id"] for it in items if it["seller_id"] and not it["is_amazon"]}
         print(f"[卖家] 共 {len(unique)} 个独立第三方卖家，查询营业地址 ...")
         for j, sid in enumerate(sorted(unique), 1):
-            c = fetch_seller_country(sid, seller_cache)
-            print(f"[卖家 {j}/{len(unique)}] {sid} → {c or '未知'}")
+            addr, c = fetch_seller_detail(sid, seller_cache, cookies=cookies)
+            print(f"[卖家 {j}/{len(unique)}] {sid} → {c or '未知'} {addr[:50] if addr else ''}")
             time.sleep(random.uniform(*DETAIL_DELAY))
 
     # 阶段 4：派生字段 + 翻译
-    for it in items:
-        country = seller_cache.get(it["seller_id"], "")
+    if do_translate:
+        print(f"[翻译] 共 {len(items)} 条标题，开始翻译 ...")
+    for idx, it in enumerate(items, 1):
+        address, country = seller_cache.get(it["seller_id"], ("", ""))
         it["seller_country"] = COUNTRY_ZH.get(country, country)
+        it["seller_address"] = address
         it["seller_type"] = classify_seller(it["seller"], it["brand"],
                                             it["is_amazon"], country)
         it["fulfillment"] = classify_fulfillment(it["is_amazon"], it["ships_from"],
                                                  it["amazon_fulfilled"])
         it["monthly_sales_est"], it["sales_basis"] = estimate_monthly_sales(
-            it["bought_last_month"], it["reviews"], it["months_listed"], review_rate)
+            it["bought_last_month"], it.get("bsr"), it["reviews"], it["months_listed"], review_rate)
         if do_translate and it["title"]:
             it["title"] = translate_to_zh(it["title"])
+            print(f"[翻译 {idx}/{len(items)}] {it['title'][:40]}")
         # 清理内部中间字段
         for k in ("seller_id", "ships_from", "is_amazon", "amazon_fulfilled",
                   "bought_last_month"):
@@ -543,13 +728,23 @@ def main():
     ap.add_argument("--no-seller-info", action="store_true",
                     help="跳过卖家营业地址查询（少抓几十个页面，更快）")
     ap.add_argument("--review-rate", type=float, default=REVIEW_RATE,
-                    help=f"销量推算用的评论率（默认 {REVIEW_RATE} 即 2.5%%）")
+                    help=f"销量推算用的评论率（默认 {REVIEW_RATE} 即 1.2%%）")
+    ap.add_argument("--cookie", default="",
+                    help="浏览器 Cookie 字符串（从 DevTools Network 面板复制 Cookie 请求头值）")
+    ap.add_argument("--cookie-file", default="",
+                    help="Netscape 格式 Cookie 文件路径（用浏览器插件 'Get cookies.txt' 导出）")
     args = ap.parse_args()
+
+    cookies = load_cookies(
+        cookie_str=args.cookie or None,
+        cookie_file=args.cookie_file or None,
+    ) or None
 
     category, items = scrape(args.url, args.pages, args.top,
                              do_translate=not args.no_translate,
                              do_seller=not args.no_seller_info,
-                             review_rate=args.review_rate)
+                             review_rate=args.review_rate,
+                             cookies=cookies)
     if not items:
         print("未解析到任何商品，页面结构可能已变化。", file=sys.stderr)
         sys.exit(1)

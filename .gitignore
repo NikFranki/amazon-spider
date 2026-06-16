@@ -18,3 +18,9 @@ __pycache__/
 venv/
 .venv/
 env/
+
+# 环境变量/密钥
+.env
+*.env
+cookies*.txt
+amazon.com.mx_cookies.txt

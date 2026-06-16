@@ -1,0 +1,19 @@
+# Netscape HTTP Cookie File
+# https://curl.haxx.se/rfc/cookie_spec.html
+# This is a generated file! Do not edit.
+
+.www.amazon.com.mx	TRUE	/	TRUE	1781623617	aws-waf-token	830cb64c-748e-49d8-b3ea-44d7d11dbb17:CQoAbvFrmzkTAAAA:88TFvJnEir7EalPehYFLRxyXIsnLc7fZXzIPnB22M4/ooI2+XeLX6Gr0WRcHN5lgfxC5LdmEUA3AUnxBBQ4nIb9+4TLmu1ppGP2z6OgjtAxrzgsf5S3RuZozFG24LlNUI2yhYI7jrcyczKharXgmnFXlYyCott6TgfPc5vstdKMw/Q+e8N8v6NL/ETvAs2ulCr66nA==
+.amazon.com.mx	TRUE	/	TRUE	1816091658	session-id	141-8296967-5221314
+.amazon.com.mx	TRUE	/	FALSE	1812814457	i18n-prefs	MXN
+.amazon.com.mx	TRUE	/	FALSE	1812814457	lc-acbmx	es_MX
+.amazon.com.mx	TRUE	/	TRUE	1812814457	ubid-acbmx	133-3680722-8649551
+.amazon.com.mx	TRUE	/	TRUE	1815838456	sso-state-acbmx	Xdsso|ZQGPPztVxdoc9jjybhkR4Y0UuOeqgfrSPnRd5YCtX6fvXO8RorfPcwJuUrNkxJRjKwVNTiDCUFINjjxPhbomtiD6I8wlwtEQpDWwuj-wxbGwBIFv
+.amazon.com.mx	TRUE	/	TRUE	1812814456	at-acbmx	Atza|gQCO24khAwEBAN1NNWSRqbBXFxOhrSGbRc8Xf4LfNRAx5DgbC817JP_8fRK9sOjGTjddwWjsr8CBFBkMNCKK21Eom_QdyCSgqip1Pi-WWNcUXtoDuMHERiZMW5jjAPgoB59n3I02Z4P0GGSdWIFGJfhEdbXpVKiwUxQDHjqcQIp5zw8CDtcs2IWVyr6nuZsW_Mv5P71AZtqOXVfOKj6sJk4f8Tx6qErpQPiUPKy4BgkRNFbiK9VRFshlNuwqqNAQY8D6bvuPx6oz5mfk-JpAQ93PPRIJ7MgYtR9zDhP5W4KMk-OTJBpOmmcvnzHpQxlhwm-HpUXQXe9Jgs8g9bIuUMZg4KeTTQ569CE1jbBe7Q
+.amazon.com.mx	TRUE	/	TRUE	1812814456	sess-at-acbmx	s5OOo2jaBFh0h/zjTneKGeukcv94dp/0b/dfi4X08bo=
+.amazon.com.mx	TRUE	/	TRUE	1812814456	sst-acbmx	Sst1|PQK48MOb5-GE-QrIt8sZo-MhDd7GrWBO8g2EH39xBlRUYzGPTkyvedebmTppMXM8vatzt8rRQAovlIq-azHhbIQwIkdkY9jT3ij393MT2IdtmgtWN8YaXF-x-4X2iy9ogr_QCYvk4l04m7OOe0-kbgUUXfstUh3Z2bl2zCmxPQUPUGxQGV2VX0SgX9VWwBaDiQGYxUtJo5wHMFpkBll2AgHSHLrloaaeZh7Ktwo7xBInui7ZY_lgjmoss0YHMZKTg7sGbKY_at3d90apOk5o7G4DsXizNRbtwcLD2hN9-nFacjQy1RpncW3kGTiE5QoYXuP81bjh_2XMaMdwN_q0zuXg_-Iog91DK4vSXzBnz7rAzuXFU8RTItt5VLz5xWz6pEUd
+.amazon.com.mx	TRUE	/	TRUE	1816091658	session-id-time	2082787201l
+.www.amazon.com.mx	TRUE	/	FALSE	1782136457	rx	AQBglTSZn+HQd53ta0sYbO/Cwag=@AQkEMGo=
+.amazon.com.mx	TRUE	/	TRUE	1813127980	session-token	"dL8HTRFsLDv41zxUl5TF7btZiINxxFAMaCEnCIHfLh+BSdS3TRxxbX4F0CqI7oh7+1TNGjmLlLPa9VTdCffwlKH4vTF8E2kwDhhFv6160Vpj3kr3ob8hf/N7O82xfptngqNtO1Eh1mzsFnOo7mVv3trMHQS9xbA/Oq3SXEP+gmFuWLK/XkpGmcn9AUSEKY17mGvPaW79L08LTDd5ChGXu0UkZ4pv2Gib+OVK1Zaug227WyD6zLtAaA0qFl97JacZobGkqu/NhV0="
+.amazon.com.mx	TRUE	/	TRUE	1813127980	x-acbmx	"a3rd3h?MYI6zwwkkU3A4NfYRV1YxDB60CRA95um2tJoVk?QItXqzG4P8kQDEgMGS"
+www.amazon.com.mx	FALSE	/	FALSE	1781678998	rxc	AN0Acr4TzsTBOWBSyAo
+www.amazon.com.mx	FALSE	/	FALSE	1811832661	csm-hit	adb:adblk_yes&t:1781592661022&tb:89FX8R5SN83PSYJXCW5P+s-YWYMK7EMVNB5ZYPN7T18|1781592661022
