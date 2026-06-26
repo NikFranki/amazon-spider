@@ -5,13 +5,38 @@
 两阶段抓取：先从榜单页（2 页）拿到前 100 名的 ASIN + 排名（含懒加载的 31-50 名），
 再逐个抓商品详情页补全所有选品维度。
 
-## 依赖
+## 安装
 
-抓取本身仅用 Python 3 标准库；标题翻译走 DeepSeek API，需额外安装依赖并配置 `.env`：
+**1. 创建并激活虚拟环境**
+
+```bash
+cd amazon-spider
+python3 -m venv venv
+source venv/bin/activate   # Windows: venv\Scripts\activate
+```
+
+**2. 安装依赖**
 
 ```bash
 pip install python-dotenv
 ```
+
+**3. 配置 `.env`**
+
+在项目根目录创建 `.env`（参考下方说明填写）：
+
+```
+DEEPSEEK_API_KEY=你的key
+DEEPSEEK_API_URL=https://api.deepseek.com/v1/chat/completions
+
+TELEGRAM_BOT_TOKEN=你的token
+TELEGRAM_CHAT_ID=你的chat_id
+```
+
+- `DEEPSEEK_*`：用于将西班牙语商品标题翻译为中文，未填写时自动跳过翻译
+- `TELEGRAM_*`：用于每日推送摘要，未填写时跳过通知
+
+> 每次开新终端都要先执行 `source venv/bin/activate` 激活虚拟环境。
 
 在项目根目录创建 `.env`：
 
