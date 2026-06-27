@@ -611,7 +611,7 @@ def classify_fulfillment(is_amazon, ships_from, amazon_fulfilled):
     return ""
 
 
-def estimate_monthly_sales(bought, bsr, reviews, months, review_rate):
+def estimate_monthly_sales(bought, bsr, reviews=None, months=None, review_rate=None):
     """月销量估算，三级优先级：
     1. 亚马逊官方上月购买量（最准，登录态下部分商品可见）
     2. BSR 对数插值（比评论率法准 2-3 倍，覆盖率高）
@@ -622,12 +622,6 @@ def estimate_monthly_sales(bought, bsr, reviews, months, review_rate):
     bsr_sales = bsr_to_monthly_sales(bsr)
     if bsr_sales:
         return bsr_sales, f"BSR推算(BSR={bsr})"
-    if reviews:
-        if months:
-            return (round(reviews / months / review_rate),
-                    f"评论数推算(评论率{review_rate:.1%})")
-        return (round(reviews / DEFAULT_MONTHS / review_rate),
-                f"评论数推算(评论率{review_rate:.1%}, 按默认{DEFAULT_MONTHS}个月在售)")
     return None, ""
 
 

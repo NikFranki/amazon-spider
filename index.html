@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Amazon MX 宠物狗畅销榜</title>
+  <title>Amazon MX · 最畅销宠物商品 Hot 100</title>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
   <style>
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -185,7 +185,7 @@
 <body>
 
 <header>
-  <h1>🐾 Amazon MX · 宠物狗畅销榜</h1>
+  <h1>🐾 Amazon MX · 最畅销宠物商品 Hot 100</h1>
   <span id="last-updated">加载中…</span>
 </header>
 
@@ -322,7 +322,7 @@ function renderTable(rows, prods) {
       <td class="rank">${rankBadge(rank)}</td>
       <td class="asin">${asin}</td>
       <td class="title-cell"><a href="${url}" target="_blank" title="${title}">${title}</a></td>
-      <td>${brand}</td>
+      <td>${brand || '—'}</td>
       <td class="rating">${rating ? '★ ' + rating : '—'}</td>
       <td class="reviews">${reviews ? Number(reviews).toLocaleString() : '—'}</td>
       <td class="price">${price ? 'MXN ' + parseFloat(price).toLocaleString('en', {minimumFractionDigits:2, maximumFractionDigits:2}) : '—'}</td>
