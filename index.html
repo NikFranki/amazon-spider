@@ -195,6 +195,19 @@
       margin-left: 4px;
     }
     #custom-date-wrap { display: none; }
+    #export-csv {
+      margin-left: auto;
+      border: 1px solid #1a1a2e;
+      border-radius: 6px;
+      padding: 6px 12px;
+      background: #1a1a2e;
+      color: #fff;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+    #export-csv:hover { background: #272743; }
 
     /* ── Delta 标签 ── */
     .delta-up   { color: #16a34a; font-weight: 600; }
@@ -249,6 +262,7 @@
     <input type="date" id="custom-date" />
   </span>
   <span id="baseline-hint"></span>
+  <button id="export-csv" type="button">导出 CSV</button>
 </div>
 
 <div id="error"></div>
@@ -550,6 +564,99 @@ function renderTable(rows, prods) {
   });
 }
 
+function rowDelta(row) {
+  if (!baselineSnap) return {};
+
+  const asin = row['ASIN编号'] || '';
+  const rank = parseInt(row['排名']) || 0;
+  const sales = row['月销量'];
+  const price = row['价格(墨西哥比索)'];
+  const variants = row['变体数量'];
+  const prev = baselineSnap.byAsin[asin];
+  const wasIn = baselineSnap.inRank.has(asin);
+
+  if (!wasIn) {
+    return { rank: '新上榜', sales: '', price: '', variants: '' };
+  }
+
+  const deltaRank = prev?.rank != null ? prev.rank - rank : null;
+  const deltaSales = prev?.monthly_sales != null && sales
+    ? ((parseInt(sales) - prev.monthly_sales) / (prev.monthly_sales || 1) * 100)
+    : null;
+  const deltaPrice = prev?.price != null && price
+    ? ((parseFloat(price) - prev.price) / (prev.price || 1) * 100)
+    : null;
+  const deltaVariants = prev?.variants != null && variants !== ''
+    ? parseInt(variants) - prev.variants
+    : null;
+
+  return {
+    rank: deltaRank === null ? '' : deltaRank,
+    sales: deltaSales === null ? '' : `${deltaSales.toFixed(0)}%`,
+    price: deltaPrice === null ? '' : `${deltaPrice.toFixed(1)}%`,
+    variants: deltaVariants === null ? '' : deltaVariants,
+  };
+}
+
+function csvEscape(value) {
+  const s = value == null ? '' : String(value);
+  return /[",\n\r]/.test(s) ? `"${s.replace(/"/g, '""')}"` : s;
+}
+
+function exportCSV() {
+  if (!historyData) return;
+
+  const rows = sortRows([...(historyData.latest || [])], sortState.col, sortState.asc);
+  const includeDelta = baselineSnap !== null;
+  const headers = [
+    '排名', 'ASIN', '商品名称', '品牌', '评分', '评论数', '价格(MXN)', '月销量',
+    '上架时间', '在售月数', '变体数量', '卖家', '卖家类型', '卖家所在地',
+    '配送方式', '商品链接'
+  ];
+  if (includeDelta) {
+    headers.push('对比基准日期', '排名变化', '月销变化', '价格变化', '变体变化');
+  }
+
+  const lines = [headers.map(csvEscape).join(',')];
+  rows.forEach(row => {
+    const values = [
+      row['排名'] || '',
+      row['ASIN编号'] || '',
+      row['商品名称'] || '',
+      row['品牌'] || '',
+      row['评分'] || '',
+      row['评论数'] || '',
+      row['价格(墨西哥比索)'] || '',
+      row['月销量'] || '',
+      row['上架时间'] || '',
+      row['在售月数'] || '',
+      row['变体数量'] || '',
+      row['卖家'] || '',
+      row['卖家类型'] || '',
+      row['卖家所在地'] || '',
+      row['配送方式'] || '',
+      row['商品链接'] || '',
+    ];
+    if (includeDelta) {
+      const delta = rowDelta(row);
+      values.push(baselineSnap.date, delta.rank, delta.sales, delta.price, delta.variants);
+    }
+    lines.push(values.map(csvEscape).join(','));
+  });
+
+  const csv = '\uFEFF' + lines.join('\n');
+  const blob = new Blob([csv], { type: 'text/csv;charset=utf-8' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  const date = historyData.last_updated || new Date().toISOString().slice(0, 10);
+  a.href = url;
+  a.download = `amazon-mx-bestsellers-${date}.csv`;
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  URL.revokeObjectURL(url);
+}
+
 // ── 排名徽章
 function rankBadge(rank) {
   const cls = rank === 1 ? 'gold' : rank === 2 ? 'silver' : rank === 3 ? 'bronze' : 'normal';
@@ -752,6 +859,7 @@ function bindSort() {
 function bindCompareBar() {
   document.getElementById('baseline-mode').addEventListener('change', applyBaseline);
   document.getElementById('custom-date').addEventListener('change', applyBaseline);
+  document.getElementById('export-csv').addEventListener('click', exportCSV);
 }
 
 // 启动

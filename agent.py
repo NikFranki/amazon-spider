@@ -162,6 +162,7 @@ def update_history(today_data):
             "monthly_sales": int(item["月销量"] or 0),
             "rating":        float(item["评分"] or 0),
             "reviews":       int(item["评论数"] or 0),
+            "variants":      int(item["变体数量"] or 0),
         }
         history["products"][asin]["history"] = sorted(entry_map.values(), key=lambda e: e["date"])
         history["products"][asin]["title"] = item["商品名称"]
