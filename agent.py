@@ -20,9 +20,10 @@ Amazon MX 畅销榜 Agent
 
 import json
 import os
+import re
 import sys
 import urllib.request
-from datetime import date
+from datetime import date, timedelta
 
 from dotenv import load_dotenv
 load_dotenv()
@@ -43,6 +44,45 @@ TELEGRAM_CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID", "")
 def _sorted_data_files(exclude=None):
     files = sorted(OUTPUT_DIR.glob("bestsellers_*.json"), key=lambda p: p.name)
     return [p for p in files if p != exclude]
+
+
+def _pick_baseline(today_path: Path, min_days: int = 7) -> Path | None:
+    """
+    选取对比基准快照：
+      1. 优先取距今至少 min_days 天、且最接近今天的快照（"上周同期"）
+      2. 若历史数据都不足 min_days 天，则取最早的一个快照
+      3. 同一天有多个文件时，取当天最后一个（文件名最大）
+    文件名格式：bestsellers_*_YYYYMMDD_HHMMSS_*.json
+    """
+    candidates = _sorted_data_files(exclude=today_path)
+    if not candidates:
+        return None
+
+    # 从文件名提取日期
+    def file_date(p: Path):
+        m = re.search(r"_(\d{8})_\d{6}_", p.name)
+        return m.group(1) if m else ""  # "20260613"
+
+    today_str = re.search(r"_(\d{8})_\d{6}_", today_path.name)
+    today_dt = date.fromisoformat(today_str.group(1)[:4] + "-" + today_str.group(1)[4:6] + "-" + today_str.group(1)[6:]) if today_str else date.today()
+    cutoff = today_dt - timedelta(days=min_days)
+
+    # 每天只保留最后一个文件（文件名最大 = 时间戳最晚）
+    by_date: dict[str, Path] = {}
+    for p in candidates:
+        d = file_date(p)
+        if d:
+            by_date[d] = p  # 后面的覆盖前面的，即保留当天最新
+
+    # 筛出距今 >= min_days 天的日期，取最近的
+    old_dates = [d for d in by_date if date.fromisoformat(d[:4]+"-"+d[4:6]+"-"+d[6:]) <= cutoff]
+    if old_dates:
+        best = max(old_dates)
+        return by_date[best]
+
+    # 历史不足 min_days 天，退而求其次取最早的
+    earliest = min(by_date)
+    return by_date[earliest]
 
 
 def load_json(path):
@@ -217,8 +257,10 @@ def main():
     today_data = load_json(today_path)
     print(f"[agent] 保存完成: {today_path.name}")
 
-    prev_files = _sorted_data_files(exclude=today_path)
-    prev_data = load_json(prev_files[-1]) if prev_files else None
+    baseline_path = _pick_baseline(today_path, min_days=7)
+    prev_data = load_json(baseline_path) if baseline_path else None
+    if baseline_path:
+        print(f"[agent] 对比基准: {baseline_path.name}")
 
     changes = detect_changes(today_data, prev_data)
     print(

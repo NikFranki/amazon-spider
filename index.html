@@ -165,6 +165,44 @@
     #modal-close:hover { color: #1a1a2e; }
     #modal-chart-wrap { position: relative; height: 280px; }
 
+    /* ── 对比工具栏 ── */
+    #compare-bar {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 10px 24px;
+      background: #fff;
+      border-bottom: 1px solid #eee;
+      flex-wrap: wrap;
+    }
+    #compare-bar label { font-size: 12px; color: #555; white-space: nowrap; }
+    #compare-bar select, #compare-bar input[type=date] {
+      font-size: 12px;
+      border: 1px solid #d1d5db;
+      border-radius: 6px;
+      padding: 5px 10px;
+      background: #f9fafb;
+      color: #1a1a2e;
+      cursor: pointer;
+    }
+    #compare-bar select:focus, #compare-bar input[type=date]:focus {
+      outline: none;
+      border-color: #2563eb;
+    }
+    #baseline-hint {
+      font-size: 11px;
+      color: #888;
+      margin-left: 4px;
+    }
+    #custom-date-wrap { display: none; }
+
+    /* ── Delta 标签 ── */
+    .delta-up   { color: #16a34a; font-weight: 600; }
+    .delta-down { color: #dc2626; font-weight: 600; }
+    .delta-new  { background: #dcfce7; color: #166534; padding: 2px 6px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+    .delta-gone { background: #fee2e2; color: #991b1b; padding: 2px 6px; border-radius: 4px; font-size: 11px; font-weight: 600; }
+    .delta-none { color: #ccc; }
+
     /* ── 加载 / 错误 ── */
     #loading {
       text-align: center; padding: 60px;
@@ -197,6 +235,22 @@
   <div class="card"><div class="label">均价 (MXN)</div><div class="value" id="s-price">—</div></div>
 </div>
 
+<div id="compare-bar" style="display:none">
+  <label>对比基准：</label>
+  <select id="baseline-mode">
+    <option value="none">不对比</option>
+    <option value="7">上周（7天前）</option>
+    <option value="14">两周前（14天前）</option>
+    <option value="30">上月（30天前）</option>
+    <option value="oldest">最早快照</option>
+    <option value="custom">指定日期…</option>
+  </select>
+  <span id="custom-date-wrap">
+    <input type="date" id="custom-date" />
+  </span>
+  <span id="baseline-hint"></span>
+</div>
+
 <div id="error"></div>
 <div id="loading">数据加载中，请稍候…</div>
 
@@ -220,6 +274,10 @@
         <th data-col="seller_country">卖家所在地</th>
         <th data-col="fulfillment">配送方式</th>
         <th data-col="trend" style="min-width:100px">趋势(月销量)</th>
+        <th data-col="delta_rank" class="delta-col" style="display:none">排名变化</th>
+        <th data-col="delta_sales" class="delta-col" style="display:none">月销变化</th>
+        <th data-col="delta_price" class="delta-col" style="display:none">价格变化</th>
+        <th data-col="delta_variants" class="delta-col" style="display:none">变体变化</th>
       </tr>
     </thead>
     <tbody id="tbody"></tbody>
@@ -241,9 +299,10 @@
 <script>
 const HISTORY_URL = 'https://raw.githubusercontent.com/NikFranki/amazon-spider/main/output/history.json';
 
-let historyData = null;
-let modalChart  = null;
-let sortState   = { col: 'rank', asc: true };
+let historyData  = null;
+let modalChart   = null;
+let sortState    = { col: 'rank', asc: true };
+let baselineSnap = null;   // { date, byAsin: { asin: {rank,price,monthly_sales,variants} } }
 
 // ── 数据加载
 async function loadData() {
@@ -258,6 +317,74 @@ async function loadData() {
     el.style.display = 'block';
     el.textContent = '数据加载失败：' + e.message + '。请确认 history.json 已生成并推送到 GitHub。';
   }
+}
+
+// ── 基准快照计算
+function buildBaselineSnap(targetDate) {
+  // targetDate: 'YYYY-MM-DD' 或 null（不对比）
+  if (!targetDate || !historyData) { baselineSnap = null; return; }
+
+  const prods = historyData.products || {};
+  const byAsin = {};
+
+  for (const [asin, prod] of Object.entries(prods)) {
+    const history = prod.history || [];
+    // 取 <= targetDate 中最近的一条
+    const candidates = history.filter(h => h.date <= targetDate);
+    if (!candidates.length) continue;
+    const entry = candidates[candidates.length - 1];
+    byAsin[asin] = entry;
+  }
+
+  // 也记录那天在榜的 ASIN 集合（用于判断新上/下榜）
+  // history 里每个 entry 有 rank，rank 有值就说明当时在榜
+  const inRank = new Set(Object.keys(byAsin).filter(a => byAsin[a].rank != null));
+  baselineSnap = { date: targetDate, byAsin, inRank };
+}
+
+function pickDateByDays(days) {
+  const dates = (historyData?.dates || []).slice().sort();
+  if (!dates.length) return null;
+  const latest = dates[dates.length - 1];
+  const latestMs = new Date(latest).getTime();
+  const cutoff = latestMs - days * 86400000;
+  // 找 <= cutoff 中最近的日期
+  const old = dates.filter(d => new Date(d).getTime() <= cutoff);
+  if (old.length) return old[old.length - 1];
+  // 不够就取最早
+  return dates[0];
+}
+
+function applyBaseline() {
+  const mode = document.getElementById('baseline-mode').value;
+  const hint = document.getElementById('baseline-hint');
+  const customWrap = document.getElementById('custom-date-wrap');
+  customWrap.style.display = mode === 'custom' ? 'inline' : 'none';
+
+  let targetDate = null;
+  if (mode === 'none') {
+    baselineSnap = null;
+  } else if (mode === 'custom') {
+    targetDate = document.getElementById('custom-date').value || null;
+    if (targetDate) buildBaselineSnap(targetDate);
+    else baselineSnap = null;
+  } else if (mode === 'oldest') {
+    const dates = (historyData?.dates || []).slice().sort();
+    targetDate = dates.length > 1 ? dates[0] : null;
+    buildBaselineSnap(targetDate);
+  } else {
+    targetDate = pickDateByDays(parseInt(mode));
+    buildBaselineSnap(targetDate);
+  }
+
+  // 显示/隐藏 delta 列
+  const show = baselineSnap !== null;
+  document.querySelectorAll('.delta-col').forEach(el => {
+    el.style.display = show ? '' : 'none';
+  });
+  hint.textContent = baselineSnap ? `基准日期：${baselineSnap.date}` : '';
+
+  if (historyData) renderTable(historyData.latest || [], historyData.products || {});
 }
 
 // ── 页面渲染
@@ -283,8 +410,18 @@ function renderPage() {
   document.getElementById('s-cn').textContent    = latest.length ? Math.round(cnCount  / latest.length * 100) + '%' : '—';
   document.getElementById('s-price').textContent = avgPrice ? Math.round(avgPrice) : '—';
 
+  // 填充自定义日期选择器的可选范围
+  const customInput = document.getElementById('custom-date');
+  if (dates.length) {
+    customInput.min = dates[0];
+    customInput.max = dates[dates.length - 1];
+    customInput.value = dates.length > 1 ? dates[dates.length - 2] : dates[0];
+  }
+
+  document.getElementById('compare-bar').style.display = 'flex';
   renderTable(latest, prods);
   bindSort();
+  bindCompareBar();
 }
 
 // ── 表格渲染
@@ -336,6 +473,73 @@ function renderTable(rows, prods) {
       <td>${fulfillTag(fulfill)}</td>
       <td class="sparkline-cell" data-asin="${asin}">${sparklineSVG(salesHistory)}</td>
     `;
+
+    // ── delta 列
+    if (baselineSnap) {
+      const prev    = baselineSnap.byAsin[asin];
+      const wasIn   = baselineSnap.inRank.has(asin);
+      const isIn    = true; // 当前在榜
+
+      // 新上榜 / 持续在榜
+      const newEntry = isIn && !wasIn;
+
+      const deltaRank = prev?.rank != null
+        ? prev.rank - rank   // 正数 = 上升
+        : null;
+
+      const deltaSales = prev?.monthly_sales != null && sales
+        ? ((parseInt(sales) - prev.monthly_sales) / (prev.monthly_sales || 1) * 100)
+        : null;
+
+      const deltaPrice = prev?.price != null && price
+        ? ((parseFloat(price) - prev.price) / (prev.price || 1) * 100)
+        : null;
+
+      const deltaVariants = prev?.variants != null && variants !== ''
+        ? parseInt(variants) - prev.variants
+        : null;
+
+      const fmtRank = newEntry
+        ? `<span class="delta-new">🆕 新上榜</span>`
+        : deltaRank === null
+          ? '<span class="delta-none">—</span>'
+          : deltaRank > 0
+            ? `<span class="delta-up">↑${deltaRank}</span>`
+            : deltaRank < 0
+              ? `<span class="delta-down">↓${Math.abs(deltaRank)}</span>`
+              : '<span class="delta-none">–</span>';
+
+      const fmtSales = deltaSales === null
+        ? '<span class="delta-none">—</span>'
+        : deltaSales > 0
+          ? `<span class="delta-up">↑${deltaSales.toFixed(0)}%</span>`
+          : deltaSales < 0
+            ? `<span class="delta-down">↓${Math.abs(deltaSales).toFixed(0)}%</span>`
+            : '<span class="delta-none">–</span>';
+
+      const fmtPrice = deltaPrice === null
+        ? '<span class="delta-none">—</span>'
+        : deltaPrice > 0
+          ? `<span class="delta-down">↑${deltaPrice.toFixed(1)}%</span>`   // 涨价对买家是坏事，标红
+          : deltaPrice < 0
+            ? `<span class="delta-up">↓${Math.abs(deltaPrice).toFixed(1)}%</span>`
+            : '<span class="delta-none">–</span>';
+
+      const fmtVariants = deltaVariants === null
+        ? '<span class="delta-none">—</span>'
+        : deltaVariants > 0
+          ? `<span class="delta-up">+${deltaVariants}</span>`
+          : deltaVariants < 0
+            ? `<span class="delta-down">${deltaVariants}</span>`
+            : '<span class="delta-none">–</span>';
+
+      tr.innerHTML += `
+        <td style="text-align:center">${fmtRank}</td>
+        <td style="text-align:center">${fmtSales}</td>
+        <td style="text-align:center">${fmtPrice}</td>
+        <td style="text-align:center">${fmtVariants}</td>
+      `;
+    }
 
     // 点击 sparkline → 弹出详情图
     tr.querySelector('.sparkline-cell').addEventListener('click', () => {
@@ -542,6 +746,12 @@ function bindSort() {
   });
   // 默认排序标记
   document.querySelector('thead th[data-col="rank"]').classList.add('sorted-asc');
+}
+
+// ── 对比栏事件绑定
+function bindCompareBar() {
+  document.getElementById('baseline-mode').addEventListener('change', applyBaseline);
+  document.getElementById('custom-date').addEventListener('change', applyBaseline);
 }
 
 // 启动
