@@ -64,8 +64,8 @@ USER_AGENTS = [
 
 MAX_RETRIES = 4
 RETRY_BACKOFF = 3.0          # 秒，指数退避基数
-PAGE_DELAY = (3.0, 7.0)      # 榜单翻页间随机延迟
-DETAIL_DELAY = (2.5, 5.0)    # 详情页之间随机延迟，避免触发风控
+PAGE_DELAY = (3.0, 5.0)      # 榜单翻页间随机延迟
+DETAIL_DELAY = (1.0, 2.5)    # 详情页之间随机延迟，避免触发风控
 REVIEW_RATE = 0.012          # 评论率假设：墨西哥/LATAM 市场约 1~1.5%（低于美国的 2.5%）
 DEFAULT_MONTHS = 24          # 拿不到上架时间时，推算销量假设的默认在售月数
 
