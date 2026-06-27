@@ -110,7 +110,7 @@ def load_cookies(cookie_str=None, cookie_file=None):
 # CSV/JSON 字段名（中文表头）
 FIELD_NAMES_ZH = [
     "排名", "ASIN编号", "商品名称", "品牌", "评分", "评论数", "价格(墨西哥比索)",
-    "月销量估算", "销量依据", "上架时间", "在售月数", "变体数量",
+    "月销量", "销量依据", "上架时间", "在售月数", "变体数量",
     "卖家", "卖家类型", "卖家所在地", "卖家详细地址", "配送方式", "商品链接", "完整详情",
 ]
 FIELD_NAMES_EN = [
@@ -375,7 +375,7 @@ _BSR_TABLE = [
 
 
 def bsr_to_monthly_sales(bsr):
-    """用对数插值将 BSR 转换为月销量估算值。"""
+    """用对数插值将 BSR 转换为月销量。"""
     if bsr is None or bsr <= 0:
         return None
     import math
@@ -612,7 +612,7 @@ def classify_fulfillment(is_amazon, ships_from, amazon_fulfilled):
 
 
 def estimate_monthly_sales(bought, bsr, reviews=None, months=None, review_rate=None):
-    """月销量估算，三级优先级：
+    """月销量，二级优先级：
     1. 亚马逊官方上月购买量（最准，登录态下部分商品可见）
     2. BSR 对数插值（比评论率法准 2-3 倍，覆盖率高）
     3. 评论数/在售月数/评论率（兜底）

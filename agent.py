@@ -119,7 +119,7 @@ def update_history(today_data):
             "date":          today_str,
             "rank":          int(item["排名"]),
             "price":         float(item["价格(墨西哥比索)"] or 0),
-            "monthly_sales": int(item["月销量估算"] or 0),
+            "monthly_sales": int(item["月销量"] or 0),
             "rating":        float(item["评分"] or 0),
             "reviews":       int(item["评论数"] or 0),
         }

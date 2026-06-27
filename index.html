@@ -211,7 +211,7 @@
         <th data-col="rating">评分</th>
         <th data-col="reviews">评论数</th>
         <th data-col="price">价格(MXN)</th>
-        <th data-col="monthly_sales">月销量估算</th>
+        <th data-col="monthly_sales">月销量</th>
         <th data-col="listed_date">上架时间</th>
         <th data-col="months_listed">在售月数</th>
         <th data-col="variants">变体数量</th>
@@ -301,7 +301,7 @@ function renderTable(rows, prods) {
     const rating  = row['评分']             || '';
     const reviews = row['评论数']           || '';
     const price   = row['价格(墨西哥比索)']  || '';
-    const sales   = row['月销量估算']        || '';
+    const sales   = row['月销量']        || '';
     const listed  = row['上架时间']          || '';
     const months  = row['在售月数']          || '';
     const variants= row['变体数量']          || '';
@@ -409,7 +409,7 @@ function openModal(title, asin, dates, salesData, history) {
       labels: dates,
       datasets: [
         {
-          label: '月销量估算',
+          label: '月销量',
           data: salesData,
           borderColor: '#2563eb',
           backgroundColor: 'rgba(37,99,235,.08)',
@@ -502,7 +502,7 @@ const COL_MAP = {
   rating:        r => parseFloat(r['评分']) || 0,
   reviews:       r => parseInt(r['评论数']) || 0,
   price:         r => parseFloat(r['价格(墨西哥比索)']) || 0,
-  monthly_sales: r => parseInt(r['月销量估算']) || 0,
+  monthly_sales: r => parseInt(r['月销量']) || 0,
   listed_date:   r => r['上架时间'] || '',
   months_listed: r => parseInt(r['在售月数']) || 0,
   variants:      r => parseInt(r['变体数量']) || 0,
@@ -510,7 +510,7 @@ const COL_MAP = {
   seller_type:   r => r['卖家类型'] || '',
   seller_country:r => r['卖家所在地'] || '',
   fulfillment:   r => r['配送方式'] || '',
-  trend:         r => parseInt(r['月销量估算']) || 0,
+  trend:         r => parseInt(r['月销量']) || 0,
 };
 
 function sortRows(rows, col, asc) {
