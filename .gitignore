@@ -24,3 +24,6 @@ env/
 *.env
 cookies*.txt
 amazon.com.mx_cookies.txt
+
+# 本地运行日志
+logs/

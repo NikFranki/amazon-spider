@@ -101,18 +101,26 @@ python3 amazon_mx_bestsellers_spider_of_dog.py --pages 1 --top 1 --cookie-file
 ### 整体架构
 
 ```
-GitHub Actions (每天 UTC 15:00 = 墨西哥城 09:00)
+本地 Mac（macOS launchd 每天 10:00 触发）
         ↓
-  agent.py 运行爬虫 + 变化检测
+  run_spider.sh
         ↓
-  更新 output/history.json（前端数据源）
+  agent.py 运行爬虫 + 变化检测 + 更新 output/history.json
         ↓
   git commit + push 到 GitHub
         ↓
   Telegram Bot 推送每日摘要
         ↓
-  GitHub Pages 前端页面（web/index.html）自动读取最新数据
+  GitHub Pages 前端页面自动读取最新 history.json
 ```
+
+**为什么用本地机器而不是 GitHub Actions？**
+
+GitHub Actions 运行在 Azure 云服务器上，IP 段是公开的，亚马逊会直接封锁。
+本地住宅宽带 IP 不在封禁名单内，抓取成功率接近 100%。
+GitHub 仍承担数据存储（output/）和前端展示（GitHub Pages）职责，不做抓取。
+
+`.github/workflows/daily_spider.yml` 中的 `schedule` 已注释禁用，`workflow_dispatch` 保留手动触发入口备用。
 
 ---
 
@@ -128,18 +136,23 @@ GitHub Actions (每天 UTC 15:00 = 墨西哥城 09:00)
    ```
    返回 JSON 中 `result[0].message.chat.id` 的值就是 **Chat ID**（纯数字）
 
-> ⚠️ Token 和 Chat ID 都不要提交到代码里，只存在 GitHub Secrets 中。
+> ⚠️ Token 和 Chat ID 不要提交到代码里，只写在本地 `.env` 文件中（已在 `.gitignore` 排除）。
 
 ---
 
-### 第二步：配置 GitHub Secrets
+### 第二步：配置 `.env`
 
-进入仓库页面 → **Settings → Secrets and variables → Actions → New repository secret**，添加两条：
+将 Telegram 凭证和 DeepSeek API Key 写入项目根目录的 `.env`（`.gitignore` 已排除，不会提交）：
 
-| Secret 名称 | 值 |
-|---|---|
-| `TELEGRAM_BOT_TOKEN` | BotFather 给的 Token |
-| `TELEGRAM_CHAT_ID` | getUpdates 拿到的 chat.id |
+```
+DEEPSEEK_API_KEY=你的key
+DEEPSEEK_API_URL=https://api.deepseek.com/v1/chat/completions
+
+TELEGRAM_BOT_TOKEN=你的token
+TELEGRAM_CHAT_ID=你的chat_id
+```
+
+`run_spider.sh` 启动时会 `source .env` 将这些变量注入环境，`agent.py` 通过 `os.environ.get` 读取。
 
 ---
 
@@ -157,29 +170,53 @@ GitHub Actions (每天 UTC 15:00 = 墨西哥城 09:00)
 
 ---
 
-### 第四步：手动触发测试
+### 第四步：本地定时调度（macOS launchd）
 
-1. 进入仓库 → **Actions → Daily Amazon MX Spider**
-2. 点击 **Run workflow** 手动触发一次
-3. 等待约 15 分钟（爬虫全量抓取耗时），检查：
-   - Actions 日志是否显示绿色 ✓
-   - `output/` 目录是否新增了 CSV + JSON 文件
-   - `output/history.json` 是否已生成
-   - Telegram 是否收到推送消息
-   - 前端页面是否显示数据
+调度方案：`run_spider.sh` + launchd plist，每天本地时间 10:00 自动触发。
 
----
+**`run_spider.sh` 做了什么：**
 
-### 定时调度说明
+1. `source .env` 加载凭证到环境变量
+2. 用 venv 里的 python3 跑 `agent.py`（爬虫 + 变化检测 + history.json + Telegram）
+3. `git add output/ && git commit && git push` 推送到 GitHub
+4. 所有输出追加到 `logs/spider.log`
 
-`.github/workflows/daily_spider.yml` 中的 cron 配置：
+**部署步骤：**
 
-```yaml
-schedule:
-  - cron: '0 15 * * *'   # UTC 15:00 = 墨西哥城 09:00 (CST, UTC-6)
+```bash
+# 1. 给脚本加执行权限
+chmod +x run_spider.sh
+
+# 2. 把 plist 复制到 LaunchAgents 目录
+cp com.franki.amazon-spider.plist ~/Library/LaunchAgents/
+
+# 3. 加载（下次开机及每天 10:00 自动触发）
+launchctl load ~/Library/LaunchAgents/com.franki.amazon-spider.plist
+
+# 4. 立即手动触发一次验证
+launchctl start com.franki.amazon-spider
 ```
 
-如需修改时间，注意 GitHub Actions 使用 UTC 时区，墨西哥城比 UTC 慢 6 小时（冬令时）或 5 小时（夏令时）。
+**查看日志：**
+
+```bash
+tail -f logs/spider.log
+```
+
+日志每次运行约 20-30 KB，一年累计约 10 MB，一般不需要处理。如果想清空：
+
+```bash
+> logs/spider.log
+```
+
+**停用/重新加载：**
+
+```bash
+launchctl unload ~/Library/LaunchAgents/com.franki.amazon-spider.plist
+launchctl load   ~/Library/LaunchAgents/com.franki.amazon-spider.plist
+```
+
+> 注意：电脑关机或睡眠时 launchd 不会触发，当天错过的任务不会补跑。如需保障每天必跑，保持电脑在 10:00 前开机即可。
 
 ---
 
@@ -209,12 +246,15 @@ schedule:
 | 文件 | 用途 |
 |---|---|
 | `amazon_mx_bestsellers_spider_of_dog.py` | 核心爬虫，可单独运行 |
-| `agent.py` | Agent 调度脚本，供 GitHub Actions 调用 |
-| `.github/workflows/daily_spider.yml` | GitHub Actions 定时任务配置 |
+| `agent.py` | 调度脚本：爬虫 + 变化检测 + history.json + Telegram |
+| `run_spider.sh` | 本地定时任务入口：加载 .env → 跑 agent.py → git push |
+| `com.franki.amazon-spider.plist` | macOS launchd 定时配置，复制到 ~/Library/LaunchAgents/ |
+| `.github/workflows/daily_spider.yml` | GitHub Actions 配置（schedule 已禁用，保留手动触发） |
 | `index.html` | 前端可视化页面（表格 + sparkline 趋势图） |
 | `output/history.json` | 所有历史数据聚合文件，前端数据源 |
 | `output/bestsellers_*.csv` | 每次抓取的原始 CSV，可直接用 Excel 打开 |
 | `output/bestsellers_*.json` | 每次抓取的原始 JSON |
+| `logs/spider.log` | 本地运行日志（.gitignore 排除） |
 
 ---
 

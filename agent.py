@@ -23,6 +23,9 @@ import os
 import sys
 import urllib.request
 from datetime import date
+
+from dotenv import load_dotenv
+load_dotenv()
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
@@ -209,7 +212,7 @@ def main():
         send_telegram(msg)
         sys.exit(1)
 
-    csv_path, json_path = save(items, category, DEFAULT_URL, str(OUTPUT_DIR))
+    _, json_path = save(items, category, DEFAULT_URL, str(OUTPUT_DIR))
     today_path = Path(json_path)
     today_data = load_json(today_path)
     print(f"[agent] 保存完成: {today_path.name}")
