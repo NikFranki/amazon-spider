@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-09-22",
+  "last_updated": "2026-09-23",
   "dates": [
     "2026-06-27",
     "2026-06-28",
@@ -83,11 +83,12 @@
     "2026-09-19",
     "2026-09-20",
     "2026-09-21",
-    "2026-09-22"
+    "2026-09-22",
+    "2026-09-23"
   ],
   "products": {
     "B0153V4AOM": {
-      "title": "Nupec 小型犬成犬狗粮，含Omega 3和6，8公斤装",
+      "title": "Nupec 小型犬成犬狗粮，含Omega 3和6，8公斤装。",
       "brand": "Nupec",
       "history": [
         {
@@ -835,11 +836,20 @@
           "rating": 4.8,
           "reviews": 15737,
           "variants": 1
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 1,
+          "price": 1192.0,
+          "monthly_sales": 5000,
+          "rating": 4.8,
+          "reviews": 15740,
+          "variants": 1
         }
       ]
     },
     "B08JSG74RV": {
-      "title": "Ganador Premium超级食物20kg，中大型犬成犬粮。",
+      "title": "Ganador Premium Superfoods 20kg，中大型成年犬粮。",
       "brand": "Ganador",
       "history": [
         {
@@ -1587,11 +1597,20 @@
           "rating": 4.7,
           "reviews": 2893,
           "variants": 1
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 5,
+          "price": 989.0,
+          "monthly_sales": 3000,
+          "rating": 4.6,
+          "reviews": 2896,
+          "variants": 1
         }
       ]
     },
     "B0153V41AU": {
-      "title": "Nupec 成犬狗粮含Omega 3和6 - 1包 x 15公斤",
+      "title": "Nupec 成犬狗粮 含Omega-3和Omega-6 - 1袋 x 15kg",
       "brand": "Nupec",
       "history": [
         {
@@ -2339,11 +2358,20 @@
           "rating": 4.8,
           "reviews": 7947,
           "variants": 1
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 14,
+          "price": 1729.0,
+          "monthly_sales": 2000,
+          "rating": 4.8,
+          "reviews": 7947,
+          "variants": 1
         }
       ]
     },
     "B0CXYTC8WM": {
-      "title": "Ganador狗干粮20kg",
+      "title": "Ganador 狗粮 20kg",
       "brand": "Ganador",
       "history": [
         {
@@ -3091,11 +3119,20 @@
           "rating": 4.7,
           "reviews": 1758,
           "variants": 1
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 4,
+          "price": 722.96,
+          "monthly_sales": 3000,
+          "rating": 4.7,
+          "reviews": 1759,
+          "variants": 1
         }
       ]
     },
     "B07DCJ8B3S": {
-      "title": "Ganador Premium狗粮 15kg",
+      "title": "Ganador Premium 狗干粮 15kg",
       "brand": "Ganador",
       "history": [
         {
@@ -3842,6 +3879,15 @@
           "monthly_sales": 3000,
           "rating": 4.8,
           "reviews": 1752,
+          "variants": 1
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 7,
+          "price": 729.99,
+          "monthly_sales": 3000,
+          "rating": 4.8,
+          "reviews": 1753,
           "variants": 1
         }
       ]
@@ -4595,11 +4641,20 @@
           "rating": 4.7,
           "reviews": 2600,
           "variants": 1
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 9,
+          "price": 980.0,
+          "monthly_sales": 3000,
+          "rating": 4.7,
+          "reviews": 2600,
+          "variants": 1
         }
       ]
     },
     "B0CYXKNB1Y": {
-      "title": "MESVIER 狗狗胸背带牵引绳1.5米 大中小型犬适用 可调节反光透气 防爆冲遛狗旅行训练宠物用品",
+      "title": "MESVIER 中小型大型犬胸背带牵引绳1.5米，可调节反光透气宠物胸背，防拽狗狗胸背带，适用于散步旅行训练犬只配件",
       "brand": "MESVIER",
       "history": [
         {
@@ -5265,6 +5320,15 @@
           "monthly_sales": 300,
           "rating": 4.7,
           "reviews": 9783,
+          "variants": 51
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 2,
+          "price": 249.0,
+          "monthly_sales": 300,
+          "rating": 4.7,
+          "reviews": 9786,
           "variants": 51
         }
       ]
@@ -6018,6 +6082,15 @@
           "rating": 4.8,
           "reviews": 8541,
           "variants": 1
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 6,
+          "price": 349.0,
+          "monthly_sales": 3000,
+          "rating": 4.8,
+          "reviews": 8543,
+          "variants": 1
         }
       ]
     },
@@ -6648,8 +6721,8 @@
       ]
     },
     "B0F494MVYC": {
-      "title": "Ganador 优质三文鱼成犬干粮 20kg",
-      "brand": "Ganador",
+      "title": "甘多犬用干粮 三文鱼味 高级装 20kg",
+      "brand": "",
       "history": [
         {
           "date": "2026-06-27",
@@ -7072,6 +7145,15 @@
           "rating": 4.8,
           "reviews": 226,
           "variants": 1
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 23,
+          "price": 989.0,
+          "monthly_sales": 0,
+          "rating": 4.8,
+          "reviews": 226,
+          "variants": 0
         }
       ]
     },
@@ -7824,12 +7906,21 @@
           "rating": 4.7,
           "reviews": 4801,
           "variants": 1
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 15,
+          "price": 969.0,
+          "monthly_sales": 2000,
+          "rating": 4.7,
+          "reviews": 4801,
+          "variants": 1
         }
       ]
     },
     "B07XZHXZW4": {
-      "title": "HI MULTI PRO 成犬优质狗粮 25kg 含益生菌及高生物价蛋白质",
-      "brand": "HI MULTI PRO",
+      "title": "HI MULTI PRO 成犬优质粮 25kg，含益生菌和高生物价蛋白质",
+      "brand": "",
       "history": [
         {
           "date": "2026-06-27",
@@ -8567,12 +8658,21 @@
           "rating": 4.6,
           "reviews": 6560,
           "variants": 3
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 13,
+          "price": 1000.0,
+          "monthly_sales": 0,
+          "rating": 4.6,
+          "reviews": 6561,
+          "variants": 0
         }
       ]
     },
     "B01FVRF920": {
-      "title": "Barkys 80136100614 肉干棒 肉条 1公斤，1件，小号",
-      "brand": "BARKYS",
+      "title": "Barkys 80136100614 肉干条 肉类棒 1公斤，1件，小号",
+      "brand": "",
       "history": [
         {
           "date": "2026-06-27",
@@ -9319,11 +9419,20 @@
           "rating": 4.8,
           "reviews": 1579,
           "variants": 1
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 53,
+          "price": 299.0,
+          "monthly_sales": 0,
+          "rating": 4.8,
+          "reviews": 1580,
+          "variants": 0
         }
       ]
     },
     "B01N30FXOM": {
-      "title": "普瑞纳康多乐成犬迷你及小型犬牛肉鸡肉味7.5kg",
+      "title": "普瑞纳康多乐成年小型犬牛肉鸡肉味狗粮 7.5Kg",
       "brand": "Dog Chow",
       "history": [
         {
@@ -10071,11 +10180,20 @@
           "rating": 4.8,
           "reviews": 4926,
           "variants": 1
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 12,
+          "price": 329.0,
+          "monthly_sales": 5000,
+          "rating": 4.8,
+          "reviews": 4929,
+          "variants": 1
         }
       ]
     },
     "B0CF63JSS9": {
-      "title": "Dogelthy纯三文鱼油 狗狗专用含Omega 3、6和9",
+      "title": "Dogelthy纯三文鱼油 犬用Omega 3,6,9三文鱼油",
       "brand": "Dogelthy",
       "history": [
         {
@@ -10823,6 +10941,15 @@
           "rating": 4.7,
           "reviews": 3078,
           "variants": 3
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 17,
+          "price": 579.0,
+          "monthly_sales": 1000,
+          "rating": 4.7,
+          "reviews": 3080,
+          "variants": 3
         }
       ]
     },
@@ -11566,7 +11693,7 @@
       ]
     },
     "B01FUDI7F6": {
-      "title": "Nupec 狗粮，老年犬，15公斤装。",
+      "title": "Nupec 老年犬狗粮 15公斤装",
       "brand": "Nupec",
       "history": [
         {
@@ -12314,12 +12441,21 @@
           "rating": 4.8,
           "reviews": 5207,
           "variants": 3
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 26,
+          "price": 2024.11,
+          "monthly_sales": 900,
+          "rating": 4.8,
+          "reviews": 5207,
+          "variants": 3
         }
       ]
     },
     "B0CF4BLG83": {
-      "title": "Dogelthy犬用关节保健软骨素粉",
-      "brand": "Dogelthy",
+      "title": "Dogelthy Mobility 犬用软骨保护粉补充剂 | 含氨基葡萄糖、软骨素和II型UCII胶原蛋白，鱼味 270克",
+      "brand": "",
       "history": [
         {
           "date": "2026-06-27",
@@ -13066,11 +13202,20 @@
           "rating": 4.6,
           "reviews": 2111,
           "variants": 4
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 18,
+          "price": 1067.0,
+          "monthly_sales": 0,
+          "rating": 4.6,
+          "reviews": 2111,
+          "variants": 0
         }
       ]
     },
     "B0153V7ZTO": {
-      "title": "普瑞纳康多乐成犬中型和大型犬牛肉鸡肉味 7.5公斤",
+      "title": "普瑞纳康多乐成犬中型及大型犬牛肉鸡肉味7.5kg",
       "brand": "Dog Chow",
       "history": [
         {
@@ -13818,11 +13963,20 @@
           "rating": 4.8,
           "reviews": 4144,
           "variants": 1
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 11,
+          "price": 329.0,
+          "monthly_sales": 4000,
+          "rating": 4.8,
+          "reviews": 4146,
+          "variants": 1
         }
       ]
     },
     "B07PSK15Y2": {
-      "title": "Nupec 小型犬老年犬干粮 - 1 x 8 kg",
+      "title": "Nupec 老年小型犬干粮 8kg",
       "brand": "Nupec",
       "history": [
         {
@@ -14570,11 +14724,20 @@
           "rating": 4.8,
           "reviews": 4269,
           "variants": 1
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 40,
+          "price": 1513.78,
+          "monthly_sales": 1000,
+          "rating": 4.8,
+          "reviews": 4269,
+          "variants": 1
         }
       ]
     },
     "B01FUDI7OC": {
-      "title": "Nupec狗粮，体重控制，适用于超重或肥胖犬只的营养配方，15公斤装。",
+      "title": "Nupec 狗粮，体重控制，超重或肥胖犬营养配方，15公斤装",
       "brand": "Nupec",
       "history": [
         {
@@ -15322,6 +15485,15 @@
           "rating": 4.8,
           "reviews": 3941,
           "variants": 3
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 41,
+          "price": 2299.0,
+          "monthly_sales": 700,
+          "rating": 4.8,
+          "reviews": 3942,
+          "variants": 3
         }
       ]
     },
@@ -15394,7 +15566,7 @@
       ]
     },
     "B09R93SSD5": {
-      "title": "普瑞纳Beneful成犬全犬型亮泽健康三文鱼味 10公斤",
+      "title": "普瑞纳Beneful成犬全犬种亮泽健康三文鱼味10公斤",
       "brand": "Purina",
       "history": [
         {
@@ -16142,11 +16314,20 @@
           "rating": 4.8,
           "reviews": 4259,
           "variants": 1
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 8,
+          "price": 527.0,
+          "monthly_sales": 3000,
+          "rating": 4.8,
+          "reviews": 4259,
+          "variants": 1
         }
       ]
     },
     "B0153V43UI": {
-      "title": "Nupec 成犬狗粮，含 Omega 3 和 6，5公斤装",
+      "title": "Nupec 成犬狗粮，含Omega 3和6，5公斤装。",
       "brand": "Nupec",
       "history": [
         {
@@ -16732,11 +16913,20 @@
           "rating": 4.8,
           "reviews": 4027,
           "variants": 3
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 21,
+          "price": 668.25,
+          "monthly_sales": 700,
+          "rating": 4.8,
+          "reviews": 4027,
+          "variants": 3
         }
       ]
     },
     "B09R916GQ3": {
-      "title": "普瑞纳Beneful成犬原味牛肉味10Kg",
+      "title": "普瑞纳贝能成犬原味牛肉味10公斤",
       "brand": "WeTap",
       "history": [
         {
@@ -17484,6 +17674,15 @@
           "rating": 4.8,
           "reviews": 2647,
           "variants": 1
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 22,
+          "price": 527.0,
+          "monthly_sales": 2000,
+          "rating": 4.8,
+          "reviews": 2647,
+          "variants": 1
         }
       ]
     },
@@ -17889,7 +18088,7 @@
       ]
     },
     "B003CL6Q84": {
-      "title": "希尔思科学配方小型迷你成犬鸡肉味狗粮7kg",
+      "title": "希尔思科学配方小型犬成犬鸡肉味狗粮 7Kg",
       "brand": "Hill's Science Diet",
       "history": [
         {
@@ -18637,11 +18836,20 @@
           "rating": 4.8,
           "reviews": 10774,
           "variants": 2
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 19,
+          "price": 1344.0,
+          "monthly_sales": 1000,
+          "rating": 4.8,
+          "reviews": 10775,
+          "variants": 2
         }
       ]
     },
     "B071HPBSHV": {
-      "title": "Amazon Basics - 公犬尿布，30片装，小号，超强吸水一次性包裹，安全贴合，防漏舒适",
+      "title": "Amazon Basics - 公狗纸尿裤，30片装，小号，超强吸水一次性包裹，安全贴身，防漏舒适",
       "brand": "Amazon Basics",
       "history": [
         {
@@ -19389,12 +19597,21 @@
           "rating": 4.5,
           "reviews": 32164,
           "variants": 4
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 20,
+          "price": 355.13,
+          "monthly_sales": 700,
+          "rating": 4.5,
+          "reviews": 32156,
+          "variants": 4
         }
       ]
     },
     "B01FKNX3FU": {
-      "title": "Ganador 成犬 小型犬 20 kg 蓝色",
-      "brand": "Ganador",
+      "title": "Ganador 成犬小型犬粮，20公斤，蓝色",
+      "brand": "",
       "history": [
         {
           "date": "2026-06-27",
@@ -20132,6 +20349,15 @@
           "rating": 4.8,
           "reviews": 1545,
           "variants": 1
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 27,
+          "price": 819.0,
+          "monthly_sales": 0,
+          "rating": 4.8,
+          "reviews": 1545,
+          "variants": 0
         }
       ]
     },
@@ -20618,7 +20844,7 @@
       ]
     },
     "B0CK32S653": {
-      "title": "Waggys三文鱼粒，天然无谷物狗狗零食，100粒",
+      "title": "Waggys三文鱼小食，狗狗天然无谷奖励零食，100粒",
       "brand": "Waggys",
       "history": [
         {
@@ -21366,11 +21592,20 @@
           "rating": 4.6,
           "reviews": 689,
           "variants": 2
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 43,
+          "price": 132.78,
+          "monthly_sales": 1000,
+          "rating": 4.6,
+          "reviews": 689,
+          "variants": 2
         }
       ]
     },
     "B0BBSG79MX": {
-      "title": "宝路高蛋白成犬粮，牛肉鸡肉味，24包，每包85克，含蛋白质、抗氧化剂和维生素E",
+      "title": "宝路高蛋白成犬粮，牛肉鸡肉味，24袋，每袋85克，含蛋白质、抗氧化剂和维生素E",
       "brand": "Pedigree",
       "history": [
         {
@@ -22118,6 +22353,15 @@
           "rating": 4.8,
           "reviews": 1195,
           "variants": 1
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 28,
+          "price": 228.0,
+          "monthly_sales": 1000,
+          "rating": 4.8,
+          "reviews": 1195,
+          "variants": 1
         }
       ]
     },
@@ -22190,7 +22434,7 @@
       ]
     },
     "B07NSD6XW3": {
-      "title": "Nupec 小型老年犬干粮，2公斤，1包",
+      "title": "Nupec 小型老年犬干粮，2千克，1包",
       "brand": "Nupec",
       "history": [
         {
@@ -22938,12 +23182,21 @@
           "rating": 4.9,
           "reviews": 2281,
           "variants": 1
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 62,
+          "price": 469.0,
+          "monthly_sales": 900,
+          "rating": 4.9,
+          "reviews": 2282,
+          "variants": 1
         }
       ]
     },
     "B07PY5FGR1": {
-      "title": "Cloralex 宠物用，消除异味 3.75升",
-      "brand": "Cloralex",
+      "title": "Cloralex宠物专用，消除异味 3.75升",
+      "brand": "",
       "history": [
         {
           "date": "2026-06-27",
@@ -23690,6 +23943,15 @@
           "rating": 4.8,
           "reviews": 2517,
           "variants": 1
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 30,
+          "price": 85.5,
+          "monthly_sales": 0,
+          "rating": 4.8,
+          "reviews": 2517,
+          "variants": 0
         }
       ]
     },
@@ -23816,8 +24078,8 @@
       ]
     },
     "B08NWZD6MS": {
-      "title": "春日花开 - 宠物猫狗专业二合一清洁梳，轻松去毛结防打结，宠物美容安全刷（橙色）",
-      "brand": "Spring Blossoms",
+      "title": "",
+      "brand": "",
       "history": [
         {
           "date": "2026-06-27",
@@ -24564,6 +24826,15 @@
           "rating": 4.8,
           "reviews": 4393,
           "variants": 6
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 47,
+          "price": 0.0,
+          "monthly_sales": 0,
+          "rating": 0.0,
+          "reviews": 0,
+          "variants": 0
         }
       ]
     },
@@ -24762,8 +25033,8 @@
       ]
     },
     "B09Y1R1GWL": {
-      "title": "宝路 - 小型犬狗粮湿粮包，牛肉条味，含天然成分、蛋白质和纤维，24包，每包100g",
-      "brand": "Pedigree",
+      "title": "",
+      "brand": "",
       "history": [
         {
           "date": "2026-06-27",
@@ -25375,6 +25646,15 @@
           "rating": 4.8,
           "reviews": 934,
           "variants": 1
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 34,
+          "price": 0.0,
+          "monthly_sales": 0,
+          "rating": 0.0,
+          "reviews": 0,
+          "variants": 0
         }
       ]
     },
@@ -25524,8 +25804,8 @@
       ]
     },
     "B0088LIINY": {
-      "title": "Earth Rated - 狗狗拾便袋，8卷共120个，薰衣草香型",
-      "brand": "Earth Rated",
+      "title": "",
+      "brand": "",
       "history": [
         {
           "date": "2026-06-27",
@@ -26272,6 +26552,15 @@
           "rating": 4.9,
           "reviews": 200133,
           "variants": 4
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 32,
+          "price": 0.0,
+          "monthly_sales": 0,
+          "rating": 0.0,
+          "reviews": 0,
+          "variants": 0
         }
       ]
     },
@@ -26664,7 +26953,7 @@
       ]
     },
     "B0DF4TZZ82": {
-      "title": "Dogelthy 狗零食鸡爪脱水 100% 天然",
+      "title": "Dogelthy 狗零食 脱水鸡爪 100%天然",
       "brand": "Dogelthy",
       "history": [
         {
@@ -27385,12 +27674,21 @@
           "rating": 4.4,
           "reviews": 94,
           "variants": 6
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 52,
+          "price": 215.1,
+          "monthly_sales": 200,
+          "rating": 4.4,
+          "reviews": 94,
+          "variants": 6
         }
       ]
     },
     "B07TGKCWWP": {
-      "title": "Fancy Pets 宠物狗一次性纸尿裤 CH | 超强吸收 | 12片装 | 适用于失禁、训练和发情期 | 舒适可调节",
-      "brand": "Fancy Pets",
+      "title": "",
+      "brand": "",
       "history": [
         {
           "date": "2026-06-27",
@@ -28038,12 +28336,21 @@
           "rating": 4.5,
           "reviews": 1248,
           "variants": 10
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 33,
+          "price": 0.0,
+          "monthly_sales": 0,
+          "rating": 0.0,
+          "reviews": 0,
+          "variants": 0
         }
       ]
     },
     "B09232RF2N": {
-      "title": "Perfect Sense 老年犬粮 3kg | 含氨基葡萄糖和软骨素的天然狗粮颗粒 | 适合老年犬 | 小型犬",
-      "brand": "Perfect Sense",
+      "title": "Perfect Sense 老年犬粮 3 kg | 含氨基葡萄糖和软骨素的天然颗粒 | 老年犬适用 | 小型犬",
+      "brand": "",
       "history": [
         {
           "date": "2026-06-27",
@@ -28682,6 +28989,15 @@
           "rating": 4.7,
           "reviews": 718,
           "variants": 3
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 58,
+          "price": 434.61,
+          "monthly_sales": 0,
+          "rating": 4.7,
+          "reviews": 718,
+          "variants": 0
         }
       ]
     },
@@ -28903,7 +29219,7 @@
       ]
     },
     "B0153V47YU": {
-      "title": "Nupec 狗粮，小型犬幼犬，含维生素E和硒，2公斤装。",
+      "title": "Nupec 小型犬幼犬狗粮，含维生素E和硒，2公斤装。",
       "brand": "Nupec",
       "history": [
         {
@@ -29651,11 +29967,20 @@
           "rating": 4.8,
           "reviews": 3176,
           "variants": 1
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 67,
+          "price": 401.0,
+          "monthly_sales": 700,
+          "rating": 4.8,
+          "reviews": 3176,
+          "variants": 1
         }
       ]
     },
     "B0CDYWTMRM": {
-      "title": "普瑞纳康乐多成犬全犬种牛肉鸡肉味18Kg",
+      "title": "Purina Dog Chow 成犬全犬种牛肉鸡肉味 18Kg",
       "brand": "Dog Chow",
       "history": [
         {
@@ -30124,11 +30449,20 @@
           "rating": 4.7,
           "reviews": 577,
           "variants": 1
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 31,
+          "price": 723.0,
+          "monthly_sales": 1000,
+          "rating": 4.7,
+          "reviews": 578,
+          "variants": 1
         }
       ]
     },
     "B09Y1RNQXL": {
-      "title": "宝路 小型犬成犬湿粮包 鸡肉味 含天然食材 蛋白质和纤维 24包 每包100克",
+      "title": "Pedigree - 小型犬狗粮湿粮包，鸡肉口味，含天然成分、蛋白质和纤维，24包，每包100克",
       "brand": "Pedigree",
       "history": [
         {
@@ -30633,11 +30967,20 @@
           "rating": 4.8,
           "reviews": 634,
           "variants": 1
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 91,
+          "price": 228.0,
+          "monthly_sales": 700,
+          "rating": 4.8,
+          "reviews": 635,
+          "variants": 1
         }
       ]
     },
     "B016C6EOO8": {
-      "title": "Amazon Basics 狗狗和小狗吸水垫，5层防漏快干设计，用于训练，71 x 86 厘米（超大号），60片装，蓝色和白色",
+      "title": "Amazon Basics 狗狗和幼犬吸水尿垫，5层防漏快干设计，训练用，71 x 86 厘米（超大号），60片装，蓝白",
       "brand": "Amazon Basics",
       "history": [
         {
@@ -31088,11 +31431,20 @@
           "rating": 4.5,
           "reviews": 216185,
           "variants": 6
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 37,
+          "price": 648.95,
+          "monthly_sales": 300,
+          "rating": 4.5,
+          "reviews": 216179,
+          "variants": 6
         }
       ]
     },
     "B01FKNX4R2": {
-      "title": "Ganador 幼犬全犬种干粮 - 1 x 20 kg",
+      "title": "Ganador 幼犬全犬种干粮 - 20公斤",
       "brand": "Ganador",
       "history": [
         {
@@ -31471,11 +31823,20 @@
           "rating": 4.7,
           "reviews": 1160,
           "variants": 1
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 96,
+          "price": 789.0,
+          "monthly_sales": 400,
+          "rating": 4.7,
+          "reviews": 1161,
+          "variants": 1
         }
       ]
     },
     "B07X148WCW": {
-      "title": "Purina One成猫中大型鸡肉牛肉味7Kg",
+      "title": "普瑞纳ONE成年中型和大型犬鸡肉牛肉味7公斤",
       "brand": "WeTap",
       "history": [
         {
@@ -32142,11 +32503,20 @@
           "rating": 4.5,
           "reviews": 734,
           "variants": 1
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 90,
+          "price": 499.33,
+          "monthly_sales": 600,
+          "rating": 4.5,
+          "reviews": 734,
+          "variants": 1
         }
       ]
     },
     "B07MQP8RLK": {
-      "title": "Fancy Pets Medical Solutions 犬猫皮肤及爪垫保湿修复软膏",
+      "title": "Fancy Pets Medical Solutions 猫狗皮肤及脚垫保湿修复软膏",
       "brand": "Fancy Pets",
       "history": [
         {
@@ -32250,6 +32620,15 @@
         {
           "date": "2026-09-20",
           "rank": 99,
+          "price": 92.31,
+          "monthly_sales": 300,
+          "rating": 4.7,
+          "reviews": 7843,
+          "variants": 1
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 83,
           "price": 92.31,
           "monthly_sales": 300,
           "rating": 4.7,
@@ -34296,7 +34675,7 @@
       ]
     },
     "B0BQTFBXHP": {
-      "title": "希尔思科学配方高龄犬鸡肉味小颗粒狗粮 6.8Kg",
+      "title": "希尔思科学配方小颗粒老年犬鸡肉味狗粮 6.8kg",
       "brand": "Hill's Science Diet",
       "history": [
         {
@@ -35044,12 +35423,21 @@
           "rating": 4.7,
           "reviews": 485,
           "variants": 1
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 55,
+          "price": 1344.0,
+          "monthly_sales": 800,
+          "rating": 4.7,
+          "reviews": 486,
+          "variants": 1
         }
       ]
     },
     "B09Z6QHGTG": {
-      "title": "猫狗LED灯指甲剪：照亮指甲或血线，修剪更安全。超锋利刀片适合厚指甲，快速感应防止过度修剪。猫狗适用。",
-      "brand": "Elvess",
+      "title": "猫狗LED指甲剪：照亮指甲或血线，修剪更安全。超锋利刀片适合厚指甲，快速感应防止过度修剪。适合猫狗。",
+      "brand": "",
       "history": [
         {
           "date": "2026-06-27",
@@ -35796,6 +36184,15 @@
           "rating": 4.6,
           "reviews": 1723,
           "variants": 1
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 63,
+          "price": 195.65,
+          "monthly_sales": 0,
+          "rating": 4.7,
+          "reviews": 1724,
+          "variants": 0
         }
       ]
     },
@@ -36885,6 +37282,15 @@
           "monthly_sales": 800,
           "rating": 4.4,
           "reviews": 23612,
+          "variants": 3
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 81,
+          "price": 299.0,
+          "monthly_sales": 800,
+          "rating": 4.4,
+          "reviews": 23615,
           "variants": 3
         }
       ]
@@ -38143,7 +38549,7 @@
       ]
     },
     "B0D7XPXCSL": {
-      "title": "Tapo - TP-Link 2K 室内安全摄像头，带云台功能，适用于婴儿监视器、宠物，移动侦测，双向音频，存储，黑色，C211，2件",
+      "title": "Tapo - TP-Link 2K 室内监控摄像头 云台版 用于婴儿监护、宠物、移动侦测、双向音频、存储 黑色 C211 2件装",
       "brand": "Tapo",
       "history": [
         {
@@ -38405,11 +38811,20 @@
           "rating": 4.5,
           "reviews": 1960,
           "variants": 2
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 77,
+          "price": 806.61,
+          "monthly_sales": 300,
+          "rating": 4.5,
+          "reviews": 1963,
+          "variants": 2
         }
       ]
     },
     "B0DQW1YXG5": {
-      "title": "Feandrea 中型犬床，76 x 51 x 18 厘米，高边设计",
+      "title": "Feandrea 中型犬床，76 x 51 x 18 厘米，高边框",
       "brand": "FEANDREA",
       "history": [
         {
@@ -38725,11 +39140,20 @@
           "rating": 4.5,
           "reviews": 557,
           "variants": 9
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 36,
+          "price": 509.99,
+          "monthly_sales": 200,
+          "rating": 4.5,
+          "reviews": 559,
+          "variants": 9
         }
       ]
     },
     "B003CLAJ1E": {
-      "title": "希尔思科学配方小型迷你老年犬鸡肉味狗粮 2公斤",
+      "title": "希尔思科学配方高龄小型及迷你犬鸡肉味狗粮2公斤",
       "brand": "Hill's Science Diet",
       "history": [
         {
@@ -39477,11 +39901,20 @@
           "rating": 4.8,
           "reviews": 3268,
           "variants": 1
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 35,
+          "price": 518.45,
+          "monthly_sales": 700,
+          "rating": 4.8,
+          "reviews": 3268,
+          "variants": 1
         }
       ]
     },
     "B07L9JHXJR": {
-      "title": "Taste Of The Wild Pacific Stream 狗粮",
+      "title": "Taste Of The Wild 太平洋溪流狗粮",
       "brand": "Taste Of The Wild",
       "history": [
         {
@@ -40148,11 +40581,20 @@
           "rating": 4.6,
           "reviews": 6660,
           "variants": 1
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 59,
+          "price": 1648.0,
+          "monthly_sales": 1000,
+          "rating": 4.6,
+          "reviews": 6660,
+          "variants": 1
         }
       ]
     },
     "B0BQX4HLCS": {
-      "title": "Raganet 中小型宠物便携围栏，宠物屋高58厘米×长78厘米，防水牛津布，室内外适用，安全耐用（灰色）",
+      "title": "Raganet 中小型宠物便携围栏，宠物屋高58cm x 长78cm，牛津布防水，室内外适用，安全耐用（灰色）",
       "brand": "Raganet",
       "history": [
         {
@@ -40441,11 +40883,20 @@
           "rating": 4.6,
           "reviews": 1099,
           "variants": 1
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 88,
+          "price": 249.0,
+          "monthly_sales": 500,
+          "rating": 4.6,
+          "reviews": 1101,
+          "variants": 1
         }
       ]
     },
     "B074M2D1LJ": {
-      "title": "Perfect Sense 中大型成犬优质犬粮 MLB 15 kg - 100%天然，含Omega-3、益生元和抗氧化剂 - 高消化率",
+      "title": "Perfect Sense 成犬中大型犬 premium 狗粮 15 kg - 100%天然，含Omega 3、益生元和抗氧化剂 - 高消化性",
       "brand": "Perfect Sense",
       "history": [
         {
@@ -41175,6 +41626,15 @@
           "rating": 4.6,
           "reviews": 727,
           "variants": 3
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 76,
+          "price": 1599.0,
+          "monthly_sales": 400,
+          "rating": 4.6,
+          "reviews": 727,
+          "variants": 3
         }
       ]
     },
@@ -41418,7 +41878,7 @@
       ]
     },
     "B0155E0168": {
-      "title": "Fancy Pets 狗用不锈钢盘 8盎司/227克",
+      "title": "Fancy Pets 不锈钢狗碗 8盎司/227克",
       "brand": "Fancy Pets",
       "history": [
         {
@@ -42148,6 +42608,15 @@
           "rating": 4.7,
           "reviews": 6686,
           "variants": 7
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 78,
+          "price": 40.5,
+          "monthly_sales": 300,
+          "rating": 4.7,
+          "reviews": 6686,
+          "variants": 7
         }
       ]
     },
@@ -42175,8 +42644,8 @@
       ]
     },
     "B0CF64R8Y1": {
-      "title": "Dogelthy Gastro Aid 犬用益生元益生菌补充剂",
-      "brand": "Dogelthy",
+      "title": "Dogelthy 犬用肠胃护理补充剂，含益生元与益生菌 | 每勺含30亿+ CFU",
+      "brand": "",
       "history": [
         {
           "date": "2026-06-27",
@@ -42464,6 +42933,15 @@
           "rating": 4.6,
           "reviews": 1192,
           "variants": 4
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 61,
+          "price": 729.0,
+          "monthly_sales": 0,
+          "rating": 4.6,
+          "reviews": 1192,
+          "variants": 0
         }
       ]
     },
@@ -42829,7 +43307,7 @@
       ]
     },
     "B01BKECCNM": {
-      "title": "希尔思科学配方犬用湿粮鸡肉味 12包 354克",
+      "title": "Hill's Science Diet 狗用湿粮 鸡肉味 12包 354克",
       "brand": "Hill's Science Diet",
       "history": [
         {
@@ -42929,12 +43407,21 @@
           "rating": 4.6,
           "reviews": 1005,
           "variants": 5
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 97,
+          "price": 1349.0,
+          "monthly_sales": 200,
+          "rating": 4.6,
+          "reviews": 1006,
+          "variants": 5
         }
       ]
     },
     "B0DW5GCZPX": {
-      "title": "HI MULTI PRO 小型犬成犬优质粮",
-      "brand": "HI MULTI PRO",
+      "title": "",
+      "brand": "",
       "history": [
         {
           "date": "2026-06-27",
@@ -43015,6 +43502,15 @@
           "rating": 4.7,
           "reviews": 258,
           "variants": 1
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 45,
+          "price": 0.0,
+          "monthly_sales": 0,
+          "rating": 0.0,
+          "reviews": 0,
+          "variants": 0
         }
       ]
     },
@@ -43583,7 +44079,7 @@
       ]
     },
     "B09NF9NPZ6": {
-      "title": "Canine Chews 狗狗零食肉条 100%牛肉 100根（混合）",
+      "title": "Canine Chews 狗零食牛肉条 100%牛肉 100支（混合装）",
       "brand": "Canine Chews",
       "history": [
         {
@@ -43773,6 +44269,15 @@
           "rating": 4.5,
           "reviews": 263,
           "variants": 6
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 94,
+          "price": 199.0,
+          "monthly_sales": 200,
+          "rating": 4.5,
+          "reviews": 265,
+          "variants": 5
         }
       ]
     },
@@ -45238,7 +45743,7 @@
       ]
     },
     "B0B84V22ZJ": {
-      "title": "RENDIN 255 可降解狗粪袋，防漏芳香狗粪袋，17卷 + 1个分配器 + 1个夹子",
+      "title": "RENDIN 255只可降解狗狗拾便袋，防漏芳香拾便袋，17卷+1个分配器+1个夹子",
       "brand": "RENDIN",
       "history": [
         {
@@ -45896,6 +46401,15 @@
           "rating": 4.8,
           "reviews": 1783,
           "variants": 3
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 50,
+          "price": 175.12,
+          "monthly_sales": 500,
+          "rating": 4.8,
+          "reviews": 1784,
+          "variants": 3
         }
       ]
     },
@@ -46054,7 +46568,7 @@
       ]
     },
     "B0F96F3XWF": {
-      "title": "King Dog & Cat 宠物训练垫，清洁宠物，40片装，60 x 60厘米，6层最大吸水性和卫生，适用于狗狗",
+      "title": "King Dog & Cat Clean Pet 狗狗训练垫，40片，60×60厘米，6层，超强吸水，卫生洁净",
       "brand": "King Dog & Cat",
       "history": [
         {
@@ -46802,11 +47316,20 @@
           "rating": 4.8,
           "reviews": 13,
           "variants": 1
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 25,
+          "price": 295.0,
+          "monthly_sales": 1000,
+          "rating": 4.8,
+          "reviews": 13,
+          "variants": 1
         }
       ]
     },
     "B01A1DJ4GG": {
-      "title": "普瑞纳Beneful成犬迷你犬种肉味4公斤",
+      "title": "普瑞纳Beneful成犬小型犬牛肉味4Kg",
       "brand": "Purina",
       "history": [
         {
@@ -47410,11 +47933,20 @@
           "rating": 4.8,
           "reviews": 1491,
           "variants": 1
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 48,
+          "price": 235.0,
+          "monthly_sales": 800,
+          "rating": 4.8,
+          "reviews": 1492,
+          "variants": 1
         }
       ]
     },
     "B0B1W1ZZGQ": {
-      "title": "Churu Inaba，猫咪奶油零食，4种金枪鱼口味混合，低卡路里，50管装14克",
+      "title": "伊纳宝啾噜猫条，金枪鱼4种口味混合装，低卡路里，50支装14g",
       "brand": "INABA",
       "history": [
         {
@@ -48162,6 +48694,15 @@
           "rating": 4.9,
           "reviews": 1662,
           "variants": 18
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 3,
+          "price": 577.15,
+          "monthly_sales": 4000,
+          "rating": 4.9,
+          "reviews": 1666,
+          "variants": 18
         }
       ]
     },
@@ -48820,7 +49361,7 @@
       ]
     },
     "B07WZ2KN1V": {
-      "title": "Cloralex 宠物除臭剂 10升",
+      "title": "Cloralex 宠物除臭 10升",
       "brand": "Cloralex",
       "history": [
         {
@@ -49451,6 +49992,15 @@
           "monthly_sales": 600,
           "rating": 4.8,
           "reviews": 957,
+          "variants": 1
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 60,
+          "price": 256.0,
+          "monthly_sales": 600,
+          "rating": 4.8,
+          "reviews": 958,
           "variants": 1
         }
       ]
@@ -50782,8 +51332,8 @@
       ]
     },
     "B0BKK4GQTM": {
-      "title": "Raganet宠物运输包，适用于猫狗，便携包最大承重10公斤，尺寸：长42厘米 x 宽20厘米 x 高25厘米，旅行和车载背包，黑色",
-      "brand": "Raganet",
+      "title": "Raganet 宠物运输包，犬猫便携包，最大承重10公斤，尺寸：长42厘米 x 宽20厘米 x 高25厘米，旅行及车载背包，黑色",
+      "brand": "",
       "history": [
         {
           "date": "2026-06-29",
@@ -51198,6 +51748,15 @@
           "rating": 4.6,
           "reviews": 1314,
           "variants": 3
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 51,
+          "price": 189.0,
+          "monthly_sales": 0,
+          "rating": 4.6,
+          "reviews": 1316,
+          "variants": 0
         }
       ]
     },
@@ -51763,7 +52322,7 @@
       ]
     },
     "B09KQVCC67": {
-      "title": "Nature's Miracle 狗狗尿液和污渍酶清洁剂 946毫升",
+      "title": "Nature's Miracle 宠物狗尿液污渍酶清洁剂 946毫升",
       "brand": "Nature's Miracle",
       "history": [
         {
@@ -52485,12 +53044,21 @@
           "rating": 4.4,
           "reviews": 4711,
           "variants": 3
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 70,
+          "price": 223.3,
+          "monthly_sales": 800,
+          "rating": 4.4,
+          "reviews": 4718,
+          "variants": 3
         }
       ]
     },
     "B077PTWTJR": {
-      "title": "Fancy Pets医疗解决方案止痒舒缓喷雾 125毫升",
-      "brand": "Fancy Pets",
+      "title": "",
+      "brand": "",
       "history": [
         {
           "date": "2026-06-30",
@@ -52698,11 +53266,20 @@
           "rating": 4.5,
           "reviews": 1560,
           "variants": 1
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 42,
+          "price": 0.0,
+          "monthly_sales": 0,
+          "rating": 0.0,
+          "reviews": 0,
+          "variants": 0
         }
       ]
     },
     "B018TYLZU2": {
-      "title": "Fancy Pets 狗狗训练垫 Doggie Grass GDE｜带托盘和格栅的仿真草坪｜除臭易清洁",
+      "title": "Fancy Pets 狗狗训练垫 Doggie Grass GDE | 带托盘和格栅的人造草坪 | 除臭易清洁",
       "brand": "Fancy Pets",
       "history": [
         {
@@ -53415,6 +53992,15 @@
           "rating": 4.4,
           "reviews": 10110,
           "variants": 3
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 71,
+          "price": 509.0,
+          "monthly_sales": 600,
+          "rating": 4.4,
+          "reviews": 10110,
+          "variants": 3
         }
       ]
     },
@@ -53506,7 +54092,7 @@
       ]
     },
     "B0B76YCL74": {
-      "title": "猫狗梳子2件套，去毛器",
+      "title": "猫狗毛刷2件套，去毛器",
       "brand": "NEWKIBOU",
       "history": [
         {
@@ -53931,6 +54517,15 @@
           "rating": 4.6,
           "reviews": 2665,
           "variants": 2
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 93,
+          "price": 134.1,
+          "monthly_sales": 400,
+          "rating": 4.6,
+          "reviews": 2666,
+          "variants": 2
         }
       ]
     },
@@ -54208,7 +54803,7 @@
       ]
     },
     "B0855ND74T": {
-      "title": "PetLovers 衣物粘毛器600张套装 - 超粘粘毛滚筒，宠物除毛滚筒 - 6件装",
+      "title": "PetLovers 600张衣物除毛滚筒套装 - 超粘性除毛滚筒，宠物毛发去除滚筒 - 6个装",
       "brand": "PetLovers",
       "history": [
         {
@@ -54875,6 +55470,15 @@
           "monthly_sales": 300,
           "rating": 4.7,
           "reviews": 36962,
+          "variants": 6
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 87,
+          "price": 499.0,
+          "monthly_sales": 300,
+          "rating": 4.7,
+          "reviews": 36968,
           "variants": 6
         }
       ]
@@ -55858,7 +56462,7 @@
       ]
     },
     "B0DL98VSFP": {
-      "title": "540个便便袋，带分配器和夹子，薰衣草香味",
+      "title": "540个带分配器和夹子的便便袋，薰衣草香味",
       "brand": "ESRAIN",
       "history": [
         {
@@ -56418,6 +57022,15 @@
           "rating": 4.8,
           "reviews": 344,
           "variants": 1
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 85,
+          "price": 288.99,
+          "monthly_sales": 800,
+          "rating": 4.8,
+          "reviews": 345,
+          "variants": 1
         }
       ]
     },
@@ -56707,7 +57320,7 @@
       ]
     },
     "B07BDX6TWS": {
-      "title": "Perfect Sense 小型犬成犬狗粮 8 kg – 100%天然，助消化，富含Omega 3",
+      "title": "Perfect Sense 小型犬成犬狗粮 8kg – 100%天然，促进消化，富含Omega-3",
       "brand": "Perfect Sense",
       "history": [
         {
@@ -56988,6 +57601,15 @@
           "rating": 4.7,
           "reviews": 854,
           "variants": 3
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 73,
+          "price": 899.0,
+          "monthly_sales": 200,
+          "rating": 4.7,
+          "reviews": 854,
+          "variants": 3
         }
       ]
     },
@@ -57124,7 +57746,7 @@
       ]
     },
     "B08TH7LVQK": {
-      "title": "狗床，耐用，舒适，带柔软填充，尺寸和颜色可选（小号，黑色/灰色）",
+      "title": "狗床，耐用舒适，柔软填充，尺寸和颜色可选（小号，黑色/灰色）",
       "brand": "PETS APPAREL HILLS",
       "history": [
         {
@@ -57611,6 +58233,15 @@
           "monthly_sales": 100,
           "rating": 4.6,
           "reviews": 10463,
+          "variants": 50
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 39,
+          "price": 269.1,
+          "monthly_sales": 100,
+          "rating": 4.6,
+          "reviews": 10464,
           "variants": 50
         }
       ]
@@ -58912,7 +59543,7 @@
       ]
     },
     "B0G2CGCRN5": {
-      "title": "Dogelthy Allergy Blend Suplemento Natural contra Alergias para Perro. Sin Comezon y Molestias. Apoyo al Sistema Inmune, Piel y Salud Digestiva Sabor Cerdo 270 g",
+      "title": "Dogelthy 犬用天然抗过敏补充剂 抗过敏配方 无瘙痒与不适 支持免疫系统、皮肤和消化健康 猪肉味 270克",
       "brand": "Dogelthy",
       "history": [
         {
@@ -59129,6 +59760,15 @@
           "monthly_sales": 200,
           "rating": 4.3,
           "reviews": 136,
+          "variants": 2
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 98,
+          "price": 859.0,
+          "monthly_sales": 200,
+          "rating": 4.4,
+          "reviews": 145,
           "variants": 2
         }
       ]
@@ -59446,7 +60086,7 @@
       ]
     },
     "B075NLFVH8": {
-      "title": "宝路洁齿棒 成犬零食 7支 口腔护理 清洁牙齿 对抗牙垢",
+      "title": "Pedigree - DENTASTIX 成犬零食，7支装，口腔护理，清洁牙齿，对抗牙垢",
       "brand": "Pedigree",
       "history": [
         {
@@ -59555,6 +60195,15 @@
           "monthly_sales": 400,
           "rating": 4.8,
           "reviews": 573,
+          "variants": 2
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 99,
+          "price": 60.0,
+          "monthly_sales": 400,
+          "rating": 4.8,
+          "reviews": 574,
           "variants": 2
         }
       ]
@@ -60642,6 +61291,15 @@
           "rating": 4.7,
           "reviews": 2165,
           "variants": 4
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 46,
+          "price": 180.0,
+          "monthly_sales": 300,
+          "rating": 4.7,
+          "reviews": 2165,
+          "variants": 4
         }
       ]
     },
@@ -60901,7 +61559,7 @@
       ]
     },
     "B088BH2WLC": {
-      "title": "Feandrea 狗床，毛绒地毯，直径60厘米，灰色",
+      "title": "Feandrea 狗床，毛绒垫，直径60厘米，灰色",
       "brand": "FEANDREA",
       "history": [
         {
@@ -61110,12 +61768,21 @@
           "rating": 4.3,
           "reviews": 5939,
           "variants": 14
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 79,
+          "price": 349.99,
+          "monthly_sales": 100,
+          "rating": 4.3,
+          "reviews": 5943,
+          "variants": 14
         }
       ]
     },
     "B00NLMJ6F4": {
-      "title": "Virbac Nutri-Plus 营养补充凝胶 120g 犬猫通用",
-      "brand": "Virbac",
+      "title": "Virbac Nutri-Plus Gel 营养补充剂 120g 猫狗通用",
+      "brand": "",
       "history": [
         {
           "date": "2026-07-05",
@@ -61782,6 +62449,15 @@
           "rating": 4.9,
           "reviews": 354,
           "variants": 1
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 64,
+          "price": 297.6,
+          "monthly_sales": 0,
+          "rating": 4.9,
+          "reviews": 354,
+          "variants": 0
         }
       ]
     },
@@ -61843,7 +62519,7 @@
       ]
     },
     "B09Y1NFQ92": {
-      "title": "宝路 - 成年犬湿粮，鸡柳口味，24包装，含蛋白质、抗氧化剂和维生素E",
+      "title": "宝路 - 成犬湿粮，鸡肉条，24包，含蛋白质、抗氧化剂和维生素E",
       "brand": "Pedigree",
       "history": [
         {
@@ -62385,6 +63061,15 @@
           "rating": 4.8,
           "reviews": 879,
           "variants": 1
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 49,
+          "price": 288.0,
+          "monthly_sales": 600,
+          "rating": 4.8,
+          "reviews": 880,
+          "variants": 1
         }
       ]
     },
@@ -62404,7 +63089,7 @@
       ]
     },
     "B08B1XNGW1": {
-      "title": "Medical Solutions MS 伊丽莎白圈 4号（32厘米）",
+      "title": "Medical Solutions MS 伊丽莎白项圈 4号 (32厘米)",
       "brand": "Fancy Pets",
       "history": [
         {
@@ -62432,6 +63117,15 @@
           "monthly_sales": 100,
           "rating": 4.5,
           "reviews": 3047,
+          "variants": 11
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 66,
+          "price": 129.0,
+          "monthly_sales": 50,
+          "rating": 4.4,
+          "reviews": 3084,
           "variants": 11
         }
       ]
@@ -62557,8 +63251,8 @@
       ]
     },
     "B0CW618SPM": {
-      "title": "安全门，婴儿门，76-125厘米，狗/宠物门，儿童安全门，免打孔，适用于楼梯",
-      "brand": "MOXIMX",
+      "title": "MOXIMX 安全门，婴儿门，76-125 厘米，狗/宠物门，儿童安全门，免打孔，适用于楼梯",
+      "brand": "",
       "history": [
         {
           "date": "2026-07-06",
@@ -63153,6 +63847,15 @@
           "rating": 4.6,
           "reviews": 269,
           "variants": 2
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 54,
+          "price": 1081.49,
+          "monthly_sales": 0,
+          "rating": 4.6,
+          "reviews": 271,
+          "variants": 0
         }
       ]
     },
@@ -63310,8 +64013,8 @@
       ]
     },
     "B075NFDQR8": {
-      "title": "凯撒 - 成犬狗粮包，牛肉蔬菜味，每包75克，24包装",
-      "brand": "Cesar",
+      "title": "Cesar 成犬狗粮鲜封包 牛肉蔬菜味 75g/包 24包",
+      "brand": "",
       "history": [
         {
           "date": "2026-07-07",
@@ -63600,6 +64303,15 @@
           "rating": 4.7,
           "reviews": 280,
           "variants": 2
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 56,
+          "price": 249.89,
+          "monthly_sales": 0,
+          "rating": 4.7,
+          "reviews": 280,
+          "variants": 0
         }
       ]
     },
@@ -64036,7 +64748,7 @@
       ]
     },
     "B0D142MQ8T": {
-      "title": "Feandrea 狗床，矫形波浪形泡沫，91 x 68 x 16 厘米",
+      "title": "Feandrea 狗床，矫形瓦楞海绵，91 x 68 x 16 厘米",
       "brand": "FEANDREA",
       "history": [
         {
@@ -64271,6 +64983,15 @@
           "monthly_sales": 200,
           "rating": 4.6,
           "reviews": 902,
+          "variants": 7
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 38,
+          "price": 899.99,
+          "monthly_sales": 300,
+          "rating": 4.6,
+          "reviews": 901,
           "variants": 7
         }
       ]
@@ -66601,7 +67322,7 @@
       ]
     },
     "B0D43R8KKL": {
-      "title": "Fancy Pets MS 犬猫三文鱼油 250ml - 含DHA和EPA的Omega 3 - 健康皮肤、亮泽毛发、强健免疫系统",
+      "title": "Fancy Pets MS 犬猫三文鱼油 250ml - Omega 3 含 DHA 和 EPA - 皮肤健康、毛发光亮、强化免疫",
       "brand": "Medical Solutions",
       "history": [
         {
@@ -66995,6 +67716,15 @@
           "date": "2026-09-22",
           "rank": 16,
           "price": 170.0,
+          "monthly_sales": 1000,
+          "rating": 4.5,
+          "reviews": 2137,
+          "variants": 3
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 16,
+          "price": 189.0,
           "monthly_sales": 1000,
           "rating": 4.5,
           "reviews": 2137,
@@ -68110,7 +68840,7 @@
       ]
     },
     "B0929DKD6Z": {
-      "title": "Beneful普瑞纳成犬热带活力牛肉火鸡味10Kg",
+      "title": "普瑞纳Beneful成犬热带能量牛肉火鸡味10kg",
       "brand": "Purina Beneful Sunrise",
       "history": [
         {
@@ -68445,6 +69175,15 @@
           "rating": 4.8,
           "reviews": 1529,
           "variants": 1
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 75,
+          "price": 549.0,
+          "monthly_sales": 600,
+          "rating": 4.8,
+          "reviews": 1530,
+          "variants": 1
         }
       ]
     },
@@ -68560,7 +69299,7 @@
       ]
     },
     "B0C4LFMNQ5": {
-      "title": "猫咪狗狗指甲打磨器带LED灯，2档速度修剪器",
+      "title": "狗狗猫咪指甲打磨器带LED灯，指甲剪2档速度",
       "brand": "AbaqCasa",
       "history": [
         {
@@ -68669,6 +69408,15 @@
           "monthly_sales": 500,
           "rating": 4.5,
           "reviews": 412,
+          "variants": 1
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 86,
+          "price": 185.4,
+          "monthly_sales": 500,
+          "rating": 4.5,
+          "reviews": 416,
           "variants": 1
         }
       ]
@@ -68821,7 +69569,7 @@
       ]
     },
     "B08QJNMHLZ": {
-      "title": "Arm & Hammer 全面护理犬用牙齿护理套装 | 2.5盎司鸡肉味含酶狗牙膏、牙刷和指套刷 | 小苏打强化配方，清新口气，控制牙垢",
+      "title": "Arm & Hammer 全效护理犬用口腔护理套装 | 2.5盎司鸡肉味酶配方犬用牙膏、牙刷和指套牙刷 | 小苏打强化配方，清新口气并控制牙垢",
       "brand": "ARM & HAMMER",
       "history": [
         {
@@ -69354,11 +70102,20 @@
           "rating": 4.6,
           "reviews": 3410,
           "variants": 1
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 65,
+          "price": 122.92,
+          "monthly_sales": 800,
+          "rating": 4.6,
+          "reviews": 3410,
+          "variants": 1
         }
       ]
     },
     "B0GWHFXGK1": {
-      "title": "战术训狗项圈，粉色，M",
+      "title": "战术狗训练项圈，粉色，M",
       "brand": "DAQI",
       "history": [
         {
@@ -69432,6 +70189,15 @@
           "rating": 4.7,
           "reviews": 969,
           "variants": 15
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 57,
+          "price": 188.0,
+          "monthly_sales": 100,
+          "rating": 4.7,
+          "reviews": 983,
+          "variants": 14
         }
       ]
     },
@@ -70567,7 +71333,7 @@
       ]
     },
     "B075NBKBBR": {
-      "title": "Cesar - 成犬湿粮，牛肉汁味，24包，每包75克。",
+      "title": "Cesar - 成年犬湿粮，牛肉汁口味，24包，每包75克。",
       "brand": "Cesar",
       "history": [
         {
@@ -70686,6 +71452,15 @@
           "rating": 4.7,
           "reviews": 818,
           "variants": 4
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 68,
+          "price": 249.89,
+          "monthly_sales": 300,
+          "rating": 4.7,
+          "reviews": 819,
+          "variants": 4
         }
       ]
     },
@@ -70801,7 +71576,7 @@
       ]
     },
     "B00B5RFPYS": {
-      "title": "Arm & Hammer 高级护理犬用薄荷味去牙垢口腔喷雾 4盎司",
+      "title": "Arm & Hammer 艾禾美 Advanced Care 犬用去牙垢口腔喷雾，薄荷味，4盎司",
       "brand": "ARM & HAMMER",
       "history": [
         {
@@ -71000,6 +71775,15 @@
           "monthly_sales": 600,
           "rating": 4.5,
           "reviews": 5687,
+          "variants": 1
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 80,
+          "price": 131.21,
+          "monthly_sales": 600,
+          "rating": 4.5,
+          "reviews": 5688,
           "variants": 1
         }
       ]
@@ -72562,7 +73346,7 @@
       ]
     },
     "B0153V3YEY": {
-      "title": "Nupec 幼犬狗粮，含维生素E和硒，2公斤装",
+      "title": "Nupec 狗粮 幼犬粮 含维生素E和硒 2kg装",
       "brand": "Nupec",
       "history": [
         {
@@ -72689,6 +73473,15 @@
           "monthly_sales": 200,
           "rating": 4.8,
           "reviews": 9521,
+          "variants": 5
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 29,
+          "price": 329.0,
+          "monthly_sales": 200,
+          "rating": 4.8,
+          "reviews": 9522,
           "variants": 5
         }
       ]
@@ -72820,7 +73613,7 @@
       ]
     },
     "B07YSXP3XF": {
-      "title": "Virbac Veggiedent FR3SH S 犬用洁牙条 5-10公斤，15条",
+      "title": "维克 Veggiedent FR3SH S 犬用洁齿条 5-10kg，15条",
       "brand": "Virbac",
       "history": [
         {
@@ -72956,6 +73749,15 @@
           "monthly_sales": 300,
           "rating": 4.6,
           "reviews": 677,
+          "variants": 3
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 95,
+          "price": 259.0,
+          "monthly_sales": 200,
+          "rating": 4.6,
+          "reviews": 679,
           "variants": 3
         }
       ]
@@ -73162,7 +73964,7 @@
       ]
     },
     "B07BCQNR3N": {
-      "title": "Kirkland Maspet 三文鱼宠物干粮 15.8kg",
+      "title": "Kirkland Maspet宠物三文鱼干粮15.8kg",
       "brand": "Kirkland",
       "history": [
         {
@@ -73223,6 +74025,15 @@
           "date": "2026-09-22",
           "rank": 64,
           "price": 664.0,
+          "monthly_sales": 0,
+          "rating": 4.7,
+          "reviews": 568,
+          "variants": 1
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 84,
+          "price": 1184.08,
           "monthly_sales": 0,
           "rating": 4.7,
           "reviews": 568,
@@ -73375,7 +74186,7 @@
       ]
     },
     "B0DKLT7Y8K": {
-      "title": "Waggys Relax 犬用天然舒缓压力与焦虑片 60粒",
+      "title": "Waggys Relax天然舒缓犬用压力与焦虑，60粒",
       "brand": "Waggys",
       "history": [
         {
@@ -73664,6 +74475,15 @@
           "monthly_sales": 600,
           "rating": 4.4,
           "reviews": 222,
+          "variants": 1
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 92,
+          "price": 296.65,
+          "monthly_sales": 600,
+          "rating": 4.4,
+          "reviews": 223,
           "variants": 1
         }
       ]
@@ -74064,6 +74884,15 @@
           "rating": 4.6,
           "reviews": 3746,
           "variants": 5
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 24,
+          "price": 298.0,
+          "monthly_sales": 900,
+          "rating": 4.6,
+          "reviews": 3746,
+          "variants": 5
         }
       ]
     },
@@ -74368,7 +75197,7 @@
       ]
     },
     "B0C4L2W5RB": {
-      "title": "小中大型犬安全胸背带，配1.5米牵引绳（红色带牵引绳，L）",
+      "title": "小中大型犬安全胸背带 含1.5米牵引绳（红色含牵引绳，L码）",
       "brand": "UNA MASCOTA",
       "history": [
         {
@@ -74397,6 +75226,15 @@
           "rating": 4.5,
           "reviews": 160,
           "variants": 66
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 89,
+          "price": 219.0,
+          "monthly_sales": 0,
+          "rating": 4.5,
+          "reviews": 161,
+          "variants": 67
         }
       ]
     },
@@ -74751,6 +75589,15 @@
           "rank": 61,
           "price": 651.0,
           "monthly_sales": 200,
+          "rating": 4.7,
+          "reviews": 38,
+          "variants": 3
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 72,
+          "price": 693.0,
+          "monthly_sales": 0,
           "rating": 4.7,
           "reviews": 38,
           "variants": 3
@@ -75874,8 +76721,8 @@
       ]
     },
     "B0B31M9JGB": {
-      "title": "TAIMEI宠物粪便袋，25卷375只，便携一次性户外散步旅行车载清洁袋（黑色）",
-      "brand": "TAIMEI",
+      "title": "",
+      "brand": "",
       "history": [
         {
           "date": "2026-09-02",
@@ -75966,6 +76813,15 @@
           "rating": 3.6,
           "reviews": 1010,
           "variants": 2
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 44,
+          "price": 0.0,
+          "monthly_sales": 0,
+          "rating": 0.0,
+          "reviews": 0,
+          "variants": 0
         }
       ]
     },
@@ -76597,7 +77453,7 @@
       ]
     },
     "B0DH27NZGB": {
-      "title": "HomeChi 狗狗术后恢复服，母犬手术服",
+      "title": "HomeChi 狗狗恢复服，母狗手术服",
       "brand": "HomeChi",
       "history": [
         {
@@ -76626,6 +77482,15 @@
           "rating": 4.5,
           "reviews": 483,
           "variants": 67
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 74,
+          "price": 359.99,
+          "monthly_sales": 0,
+          "rating": 4.5,
+          "reviews": 483,
+          "variants": 65
         }
       ]
     },
@@ -76660,7 +77525,7 @@
       ]
     },
     "B0HGXN7CHL": {
-      "title": "Alvenzo 犬用 易于使用",
+      "title": "Alvenzo 狗狗用品 易用型",
       "brand": "Xanmus",
       "history": [
         {
@@ -76689,6 +77554,15 @@
           "rating": 4.3,
           "reviews": 0,
           "variants": 1
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 69,
+          "price": 379.99,
+          "monthly_sales": 0,
+          "rating": 4.2,
+          "reviews": 0,
+          "variants": 1
         }
       ]
     },
@@ -76708,7 +77582,7 @@
       ]
     },
     "B0F9XKDYRV": {
-      "title": "狗狗零食 Dog Chow Croc 100克 适合所有体型和年龄",
+      "title": "冠能鳄鱼味狗零食100克 全犬种全年龄",
       "brand": "Purina Dog Chow Snacks",
       "history": [
         {
@@ -76725,6 +77599,15 @@
           "rank": 55,
           "price": 13.5,
           "monthly_sales": 100,
+          "rating": 4.5,
+          "reviews": 34,
+          "variants": 1
+        },
+        {
+          "date": "2026-09-23",
+          "rank": 82,
+          "price": 13.5,
+          "monthly_sales": 200,
           "rating": 4.5,
           "reviews": 34,
           "variants": 1
@@ -76745,16 +77628,46 @@
           "variants": 66
         }
       ]
+    },
+    "B07284NRTH": {
+      "title": "Amazon Basics 狗粪袋，带分配器，绿色，810个（54卷），防漏加强，无香型，含牵引绳夹",
+      "brand": "",
+      "history": [
+        {
+          "date": "2026-09-23",
+          "rank": 10,
+          "price": 335.57,
+          "monthly_sales": 0,
+          "rating": 4.9,
+          "reviews": 8117,
+          "variants": 0
+        }
+      ]
+    },
+    "B005CUTWDE": {
+      "title": "Wahl - 宠物用100%天然燕麦洗发水 #820004T",
+      "brand": "Wahl",
+      "history": [
+        {
+          "date": "2026-09-23",
+          "rank": 100,
+          "price": 179.19,
+          "monthly_sales": 200,
+          "rating": 4.8,
+          "reviews": 35576,
+          "variants": 5
+        }
+      ]
     }
   },
   "latest": [
     {
       "排名": 1,
       "ASIN编号": "B0153V4AOM",
-      "商品名称": "Nupec 小型犬成犬狗粮，含Omega 3和6，8公斤装",
+      "商品名称": "Nupec 小型犬成犬狗粮，含Omega 3和6，8公斤装。",
       "品牌": "Nupec",
       "评分": 4.8,
-      "评论数": 15737,
+      "评论数": 15740,
       "价格(墨西哥比索)": 1192.0,
       "月销量": 5000,
       "销量依据": "亚马逊官方(上月购买量)",
@@ -76771,11 +77684,32 @@
     },
     {
       "排名": 2,
+      "ASIN编号": "B0CYXKNB1Y",
+      "商品名称": "MESVIER 中小型大型犬胸背带牵引绳1.5米，可调节反光透气宠物胸背，防拽狗狗胸背带，适用于散步旅行训练犬只配件",
+      "品牌": "MESVIER",
+      "评分": 4.7,
+      "评论数": 9786,
+      "价格(墨西哥比索)": 249.0,
+      "月销量": 300,
+      "销量依据": "亚马逊官方(上月购买量)",
+      "上架时间": "2024-04-13",
+      "在售月数": 29,
+      "变体数量": 51,
+      "卖家": "MESVIER",
+      "卖家类型": "品牌方(中国)",
+      "卖家所在地": "中国",
+      "卖家详细地址": "中国/518104/广东/宝安区/深圳/民主社区蚝三民主丰泽园5、6、7、8、9栋7栋1402/沙井街道",
+      "配送方式": "FBA",
+      "商品链接": "https://www.amazon.com.mx/dp/B0CYXKNB1Y",
+      "完整详情": true
+    },
+    {
+      "排名": 3,
       "ASIN编号": "B0B1W1ZZGQ",
-      "商品名称": "Churu Inaba，猫咪奶油零食，4种金枪鱼口味混合，低卡路里，50管装14克",
+      "商品名称": "伊纳宝啾噜猫条，金枪鱼4种口味混合装，低卡路里，50支装14g",
       "品牌": "INABA",
       "评分": 4.9,
-      "评论数": 1662,
+      "评论数": 1666,
       "价格(墨西哥比索)": 577.15,
       "月销量": 4000,
       "销量依据": "亚马逊官方(上月购买量)",
@@ -76791,33 +77725,33 @@
       "完整详情": true
     },
     {
-      "排名": 3,
-      "ASIN编号": "B0CYXKNB1Y",
-      "商品名称": "MESVIER 狗狗胸背带牵引绳1.5米 大中小型犬适用 可调节反光透气 防爆冲遛狗旅行训练宠物用品",
-      "品牌": "MESVIER",
+      "排名": 4,
+      "ASIN编号": "B0CXYTC8WM",
+      "商品名称": "Ganador 狗粮 20kg",
+      "品牌": "Ganador",
       "评分": 4.7,
-      "评论数": 9783,
-      "价格(墨西哥比索)": 249.0,
-      "月销量": 300,
+      "评论数": 1759,
+      "价格(墨西哥比索)": 722.96,
+      "月销量": 3000,
       "销量依据": "亚马逊官方(上月购买量)",
-      "上架时间": "2024-04-13",
-      "在售月数": 29,
-      "变体数量": 51,
-      "卖家": "MESVIER",
-      "卖家类型": "品牌方",
+      "上架时间": "2024-03-13",
+      "在售月数": 30,
+      "变体数量": 1,
+      "卖家": "Amazon México",
+      "卖家类型": "亚马逊自营",
       "卖家所在地": "",
       "卖家详细地址": "",
-      "配送方式": "FBA",
-      "商品链接": "https://www.amazon.com.mx/dp/B0CYXKNB1Y",
+      "配送方式": "亚马逊自营配送",
+      "商品链接": "https://www.amazon.com.mx/dp/B0CXYTC8WM",
       "完整详情": true
     },
     {
-      "排名": 4,
+      "排名": 5,
       "ASIN编号": "B08JSG74RV",
-      "商品名称": "Ganador Premium超级食物20kg，中大型犬成犬粮。",
+      "商品名称": "Ganador Premium Superfoods 20kg，中大型成年犬粮。",
       "品牌": "Ganador",
-      "评分": 4.7,
-      "评论数": 2893,
+      "评分": 4.6,
+      "评论数": 2896,
       "价格(墨西哥比索)": 989.0,
       "月销量": 3000,
       "销量依据": "亚马逊官方(上月购买量)",
@@ -76833,75 +77767,12 @@
       "完整详情": true
     },
     {
-      "排名": 5,
-      "ASIN编号": "B07DCJ8B3S",
-      "商品名称": "Ganador Premium狗粮 15kg",
-      "品牌": "Ganador",
-      "评分": 4.8,
-      "评论数": 1752,
-      "价格(墨西哥比索)": 729.99,
-      "月销量": 3000,
-      "销量依据": "亚马逊官方(上月购买量)",
-      "上架时间": "2024-05-09",
-      "在售月数": 28,
-      "变体数量": 1,
-      "卖家": "Amazon México",
-      "卖家类型": "亚马逊自营",
-      "卖家所在地": "",
-      "卖家详细地址": "",
-      "配送方式": "亚马逊自营配送",
-      "商品链接": "https://www.amazon.com.mx/dp/B07DCJ8B3S",
-      "完整详情": true
-    },
-    {
       "排名": 6,
-      "ASIN编号": "B0CXYTC8WM",
-      "商品名称": "Ganador狗干粮20kg",
-      "品牌": "Ganador",
-      "评分": 4.7,
-      "评论数": 1758,
-      "价格(墨西哥比索)": 680.0,
-      "月销量": 3000,
-      "销量依据": "亚马逊官方(上月购买量)",
-      "上架时间": "2024-03-13",
-      "在售月数": 30,
-      "变体数量": 1,
-      "卖家": "Amazon México",
-      "卖家类型": "亚马逊自营",
-      "卖家所在地": "",
-      "卖家详细地址": "",
-      "配送方式": "亚马逊自营配送",
-      "商品链接": "https://www.amazon.com.mx/dp/B0CXYTC8WM",
-      "完整详情": true
-    },
-    {
-      "排名": 7,
-      "ASIN编号": "B00NABTGY2",
-      "商品名称": "Amazon Basics - 狗粪袋，带分配器，黑色，900只装（60卷），防漏升级，无香型，含牵引绳夹",
-      "品牌": "Amazon Basics",
-      "评分": 4.9,
-      "评论数": 236636,
-      "价格(墨西哥比索)": 429.54,
-      "月销量": 1000,
-      "销量依据": "亚马逊官方(上月购买量)",
-      "上架时间": "2025-01-11",
-      "在售月数": 20,
-      "变体数量": 6,
-      "卖家": "Amazon Estados Unidos",
-      "卖家类型": "亚马逊自营",
-      "卖家所在地": "",
-      "卖家详细地址": "",
-      "配送方式": "亚马逊自营配送",
-      "商品链接": "https://www.amazon.com.mx/dp/B00NABTGY2",
-      "完整详情": true
-    },
-    {
-      "排名": 8,
       "ASIN编号": "B0153V49XO",
       "商品名称": "Nupec 小型犬成犬狗粮，含Omega 3和6，2公斤装。",
       "品牌": "Nupec",
       "评分": 4.8,
-      "评论数": 8541,
+      "评论数": 8543,
       "价格(墨西哥比索)": 349.0,
       "月销量": 3000,
       "销量依据": "亚马逊官方(上月购买量)",
@@ -76917,9 +77788,30 @@
       "完整详情": true
     },
     {
-      "排名": 9,
+      "排名": 7,
+      "ASIN编号": "B07DCJ8B3S",
+      "商品名称": "Ganador Premium 狗干粮 15kg",
+      "品牌": "Ganador",
+      "评分": 4.8,
+      "评论数": 1753,
+      "价格(墨西哥比索)": 729.99,
+      "月销量": 3000,
+      "销量依据": "亚马逊官方(上月购买量)",
+      "上架时间": "2024-05-09",
+      "在售月数": 29,
+      "变体数量": 1,
+      "卖家": "Amazon México",
+      "卖家类型": "亚马逊自营",
+      "卖家所在地": "",
+      "卖家详细地址": "",
+      "配送方式": "亚马逊自营配送",
+      "商品链接": "https://www.amazon.com.mx/dp/B07DCJ8B3S",
+      "完整详情": true
+    },
+    {
+      "排名": 8,
       "ASIN编号": "B09R93SSD5",
-      "商品名称": "普瑞纳Beneful成犬全犬型亮泽健康三文鱼味 10公斤",
+      "商品名称": "普瑞纳Beneful成犬全犬种亮泽健康三文鱼味10公斤",
       "品牌": "Purina",
       "评分": 4.8,
       "评论数": 4259,
@@ -76938,49 +77830,7 @@
       "完整详情": true
     },
     {
-      "排名": 10,
-      "ASIN编号": "B0153V7ZTO",
-      "商品名称": "普瑞纳康多乐成犬中型和大型犬牛肉鸡肉味 7.5公斤",
-      "品牌": "Dog Chow",
-      "评分": 4.8,
-      "评论数": 4144,
-      "价格(墨西哥比索)": 329.0,
-      "月销量": 4000,
-      "销量依据": "亚马逊官方(上月购买量)",
-      "上架时间": "2016-11-24",
-      "在售月数": 118,
-      "变体数量": 1,
-      "卖家": "Amazon México",
-      "卖家类型": "亚马逊自营",
-      "卖家所在地": "",
-      "卖家详细地址": "",
-      "配送方式": "亚马逊自营配送",
-      "商品链接": "https://www.amazon.com.mx/dp/B0153V7ZTO",
-      "完整详情": true
-    },
-    {
-      "排名": 11,
-      "ASIN编号": "B07XZHXZW4",
-      "商品名称": "HI MULTI PRO 成犬优质狗粮 25kg 含益生菌及高生物价蛋白质",
-      "品牌": "HI MULTI PRO",
-      "评分": 4.6,
-      "评论数": 6560,
-      "价格(墨西哥比索)": 1000.0,
-      "月销量": 1000,
-      "销量依据": "亚马逊官方(上月购买量)",
-      "上架时间": "2015-10-07",
-      "在售月数": 132,
-      "变体数量": 3,
-      "卖家": "ALBAPESA",
-      "卖家类型": "第三方",
-      "卖家所在地": "",
-      "卖家详细地址": "",
-      "配送方式": "FBA",
-      "商品链接": "https://www.amazon.com.mx/dp/B07XZHXZW4",
-      "完整详情": true
-    },
-    {
-      "排名": 12,
+      "排名": 9,
       "ASIN编号": "B01MQFPHMN",
       "商品名称": "Ganador Premium 成犬 20 kg，小型犬，黑色。包装可能有所不同",
       "品牌": "Ganador",
@@ -77001,12 +77851,54 @@
       "完整详情": true
     },
     {
-      "排名": 13,
-      "ASIN编号": "B01N30FXOM",
-      "商品名称": "普瑞纳康多乐成犬迷你及小型犬牛肉鸡肉味7.5kg",
+      "排名": 10,
+      "ASIN编号": "B07284NRTH",
+      "商品名称": "Amazon Basics 狗粪袋，带分配器，绿色，810个（54卷），防漏加强，无香型，含牵引绳夹",
+      "品牌": "",
+      "评分": 4.9,
+      "评论数": 8117,
+      "价格(墨西哥比索)": 335.57,
+      "月销量": null,
+      "销量依据": "",
+      "上架时间": "",
+      "在售月数": null,
+      "变体数量": null,
+      "卖家": "",
+      "卖家类型": "",
+      "卖家所在地": "",
+      "卖家详细地址": "",
+      "配送方式": "",
+      "商品链接": "https://www.amazon.com.mx/dp/B07284NRTH",
+      "完整详情": false
+    },
+    {
+      "排名": 11,
+      "ASIN编号": "B0153V7ZTO",
+      "商品名称": "普瑞纳康多乐成犬中型及大型犬牛肉鸡肉味7.5kg",
       "品牌": "Dog Chow",
       "评分": 4.8,
-      "评论数": 4926,
+      "评论数": 4146,
+      "价格(墨西哥比索)": 329.0,
+      "月销量": 4000,
+      "销量依据": "亚马逊官方(上月购买量)",
+      "上架时间": "2016-11-24",
+      "在售月数": 118,
+      "变体数量": 1,
+      "卖家": "Amazon México",
+      "卖家类型": "亚马逊自营",
+      "卖家所在地": "",
+      "卖家详细地址": "",
+      "配送方式": "亚马逊自营配送",
+      "商品链接": "https://www.amazon.com.mx/dp/B0153V7ZTO",
+      "完整详情": true
+    },
+    {
+      "排名": 12,
+      "ASIN编号": "B01N30FXOM",
+      "商品名称": "普瑞纳康多乐成年小型犬牛肉鸡肉味狗粮 7.5Kg",
+      "品牌": "Dog Chow",
+      "评分": 4.8,
+      "评论数": 4929,
       "价格(墨西哥比索)": 329.0,
       "月销量": 5000,
       "销量依据": "亚马逊官方(上月购买量)",
@@ -77022,9 +77914,30 @@
       "完整详情": true
     },
     {
+      "排名": 13,
+      "ASIN编号": "B07XZHXZW4",
+      "商品名称": "HI MULTI PRO 成犬优质粮 25kg，含益生菌和高生物价蛋白质",
+      "品牌": "",
+      "评分": 4.6,
+      "评论数": 6561,
+      "价格(墨西哥比索)": 1000.0,
+      "月销量": null,
+      "销量依据": "",
+      "上架时间": "",
+      "在售月数": null,
+      "变体数量": null,
+      "卖家": "",
+      "卖家类型": "",
+      "卖家所在地": "",
+      "卖家详细地址": "",
+      "配送方式": "",
+      "商品链接": "https://www.amazon.com.mx/dp/B07XZHXZW4",
+      "完整详情": false
+    },
+    {
       "排名": 14,
       "ASIN编号": "B0153V41AU",
-      "商品名称": "Nupec 成犬狗粮含Omega 3和6 - 1包 x 15公斤",
+      "商品名称": "Nupec 成犬狗粮 含Omega-3和Omega-6 - 1袋 x 15kg",
       "品牌": "Nupec",
       "评分": 4.8,
       "评论数": 7947,
@@ -77066,11 +77979,11 @@
     {
       "排名": 16,
       "ASIN编号": "B0D43R8KKL",
-      "商品名称": "Fancy Pets MS 犬猫三文鱼油 250ml - 含DHA和EPA的Omega 3 - 健康皮肤、亮泽毛发、强健免疫系统",
+      "商品名称": "Fancy Pets MS 犬猫三文鱼油 250ml - Omega 3 含 DHA 和 EPA - 皮肤健康、毛发光亮、强化免疫",
       "品牌": "Medical Solutions",
       "评分": 4.5,
       "评论数": 2137,
-      "价格(墨西哥比索)": 170.0,
+      "价格(墨西哥比索)": 189.0,
       "月销量": 1000,
       "销量依据": "亚马逊官方(上月购买量)",
       "上架时间": "2024-05-13",
@@ -77086,32 +77999,11 @@
     },
     {
       "排名": 17,
-      "ASIN编号": "B0CF4BLG83",
-      "商品名称": "Dogelthy犬用关节保健软骨素粉",
-      "品牌": "Dogelthy",
-      "评分": 4.6,
-      "评论数": 2111,
-      "价格(墨西哥比索)": 1067.0,
-      "月销量": 800,
-      "销量依据": "亚马逊官方(上月购买量)",
-      "上架时间": "2023-08-09",
-      "在售月数": 38,
-      "变体数量": 4,
-      "卖家": "Dogelthy",
-      "卖家类型": "品牌方",
-      "卖家所在地": "",
-      "卖家详细地址": "",
-      "配送方式": "FBA",
-      "商品链接": "https://www.amazon.com.mx/dp/B0CF4BLG83",
-      "完整详情": true
-    },
-    {
-      "排名": 18,
       "ASIN编号": "B0CF63JSS9",
-      "商品名称": "Dogelthy纯三文鱼油 狗狗专用含Omega 3、6和9",
+      "商品名称": "Dogelthy纯三文鱼油 犬用Omega 3,6,9三文鱼油",
       "品牌": "Dogelthy",
       "评分": 4.7,
-      "评论数": 3078,
+      "评论数": 3080,
       "价格(墨西哥比索)": 579.0,
       "月销量": 1000,
       "销量依据": "亚马逊官方(上月购买量)",
@@ -77127,12 +78019,33 @@
       "完整详情": true
     },
     {
+      "排名": 18,
+      "ASIN编号": "B0CF4BLG83",
+      "商品名称": "Dogelthy Mobility 犬用软骨保护粉补充剂 | 含氨基葡萄糖、软骨素和II型UCII胶原蛋白，鱼味 270克",
+      "品牌": "",
+      "评分": 4.6,
+      "评论数": 2111,
+      "价格(墨西哥比索)": 1067.0,
+      "月销量": null,
+      "销量依据": "",
+      "上架时间": "",
+      "在售月数": null,
+      "变体数量": null,
+      "卖家": "",
+      "卖家类型": "",
+      "卖家所在地": "",
+      "卖家详细地址": "",
+      "配送方式": "",
+      "商品链接": "https://www.amazon.com.mx/dp/B0CF4BLG83",
+      "完整详情": false
+    },
+    {
       "排名": 19,
       "ASIN编号": "B003CL6Q84",
-      "商品名称": "希尔思科学配方小型迷你成犬鸡肉味狗粮7kg",
+      "商品名称": "希尔思科学配方小型犬成犬鸡肉味狗粮 7Kg",
       "品牌": "Hill's Science Diet",
       "评分": 4.8,
-      "评论数": 10774,
+      "评论数": 10775,
       "价格(墨西哥比索)": 1344.0,
       "月销量": 1000,
       "销量依据": "亚马逊官方(上月购买量)",
@@ -77149,12 +78062,33 @@
     },
     {
       "排名": 20,
+      "ASIN编号": "B071HPBSHV",
+      "商品名称": "Amazon Basics - 公狗纸尿裤，30片装，小号，超强吸水一次性包裹，安全贴身，防漏舒适",
+      "品牌": "Amazon Basics",
+      "评分": 4.5,
+      "评论数": 32156,
+      "价格(墨西哥比索)": 355.13,
+      "月销量": 700,
+      "销量依据": "亚马逊官方(上月购买量)",
+      "上架时间": "2017-10-23",
+      "在售月数": 107,
+      "变体数量": 4,
+      "卖家": "Amazon Estados Unidos",
+      "卖家类型": "亚马逊自营",
+      "卖家所在地": "",
+      "卖家详细地址": "",
+      "配送方式": "亚马逊自营配送",
+      "商品链接": "https://www.amazon.com.mx/dp/B071HPBSHV",
+      "完整详情": true
+    },
+    {
+      "排名": 21,
       "ASIN编号": "B0153V43UI",
-      "商品名称": "Nupec 成犬狗粮，含 Omega 3 和 6，5公斤装",
+      "商品名称": "Nupec 成犬狗粮，含Omega 3和6，5公斤装。",
       "品牌": "Nupec",
       "评分": 4.8,
       "评论数": 4027,
-      "价格(墨西哥比索)": 672.21,
+      "价格(墨西哥比索)": 668.25,
       "月销量": 700,
       "销量依据": "亚马逊官方(上月购买量)",
       "上架时间": "2015-09-01",
@@ -77169,9 +78103,9 @@
       "完整详情": true
     },
     {
-      "排名": 21,
+      "排名": 22,
       "ASIN编号": "B09R916GQ3",
-      "商品名称": "普瑞纳Beneful成犬原味牛肉味10Kg",
+      "商品名称": "普瑞纳贝能成犬原味牛肉味10公斤",
       "品牌": "WeTap",
       "评分": 4.8,
       "评论数": 2647,
@@ -77190,28 +78124,28 @@
       "完整详情": true
     },
     {
-      "排名": 22,
-      "ASIN编号": "B071HPBSHV",
-      "商品名称": "Amazon Basics - 公犬尿布，30片装，小号，超强吸水一次性包裹，安全贴合，防漏舒适",
-      "品牌": "Amazon Basics",
-      "评分": 4.5,
-      "评论数": 32164,
-      "价格(墨西哥比索)": 364.9,
-      "月销量": 700,
-      "销量依据": "亚马逊官方(上月购买量)",
-      "上架时间": "2017-10-23",
-      "在售月数": 107,
-      "变体数量": 4,
-      "卖家": "Amazon México",
-      "卖家类型": "亚马逊自营",
+      "排名": 23,
+      "ASIN编号": "B0F494MVYC",
+      "商品名称": "甘多犬用干粮 三文鱼味 高级装 20kg",
+      "品牌": "",
+      "评分": 4.8,
+      "评论数": 226,
+      "价格(墨西哥比索)": 989.0,
+      "月销量": null,
+      "销量依据": "",
+      "上架时间": "",
+      "在售月数": null,
+      "变体数量": null,
+      "卖家": "",
+      "卖家类型": "",
       "卖家所在地": "",
       "卖家详细地址": "",
-      "配送方式": "亚马逊自营配送",
-      "商品链接": "https://www.amazon.com.mx/dp/B071HPBSHV",
-      "完整详情": true
+      "配送方式": "",
+      "商品链接": "https://www.amazon.com.mx/dp/B0F494MVYC",
+      "完整详情": false
     },
     {
-      "排名": 23,
+      "排名": 24,
       "ASIN编号": "B0185OQ6VO",
       "商品名称": "宠物干爽训练垫 - 50片",
       "品牌": "Dry Pet",
@@ -77232,9 +78166,9 @@
       "完整详情": true
     },
     {
-      "排名": 24,
+      "排名": 25,
       "ASIN编号": "B0F96F3XWF",
-      "商品名称": "King Dog & Cat 宠物训练垫，清洁宠物，40片装，60 x 60厘米，6层最大吸水性和卫生，适用于狗狗",
+      "商品名称": "King Dog & Cat Clean Pet 狗狗训练垫，40片，60×60厘米，6层，超强吸水，卫生洁净",
       "品牌": "King Dog & Cat",
       "评分": 4.8,
       "评论数": 13,
@@ -77245,101 +78179,59 @@
       "在售月数": null,
       "变体数量": 1,
       "卖家": "Zeitex",
-      "卖家类型": "第三方",
-      "卖家所在地": "",
-      "卖家详细地址": "",
+      "卖家类型": "第三方(墨西哥)",
+      "卖家所在地": "墨西哥",
+      "卖家详细地址": "MX/52764/MEXICO/HUIXQUILUCAN DE DEGOLLADO/AVENIDA JESUS DEL MONTE 39 PISO 2B JESUS DEL MONTE",
       "配送方式": "FBA",
       "商品链接": "https://www.amazon.com.mx/dp/B0F96F3XWF",
       "完整详情": true
     },
     {
-      "排名": 25,
-      "ASIN编号": "B0F494MVYC",
-      "商品名称": "Ganador 优质三文鱼成犬干粮 20kg",
-      "品牌": "Ganador",
-      "评分": 4.8,
-      "评论数": 226,
-      "价格(墨西哥比索)": 989.0,
-      "月销量": 500,
-      "销量依据": "亚马逊官方(上月购买量)",
-      "上架时间": "2025-04-09",
-      "在售月数": 17,
-      "变体数量": 1,
-      "卖家": "Amazon México",
-      "卖家类型": "亚马逊自营",
-      "卖家所在地": "",
-      "卖家详细地址": "",
-      "配送方式": "亚马逊自营配送",
-      "商品链接": "https://www.amazon.com.mx/dp/B0F494MVYC",
-      "完整详情": true
-    },
-    {
       "排名": 26,
-      "ASIN编号": "B07TGKCWWP",
-      "商品名称": "Fancy Pets 宠物狗一次性纸尿裤 CH | 超强吸收 | 12片装 | 适用于失禁、训练和发情期 | 舒适可调节",
-      "品牌": "Fancy Pets",
-      "评分": 4.5,
-      "评论数": 1248,
-      "价格(墨西哥比索)": 137.61,
-      "月销量": 500,
+      "ASIN编号": "B01FUDI7F6",
+      "商品名称": "Nupec 老年犬狗粮 15公斤装",
+      "品牌": "Nupec",
+      "评分": 4.8,
+      "评论数": 5207,
+      "价格(墨西哥比索)": 2024.11,
+      "月销量": 900,
       "销量依据": "亚马逊官方(上月购买量)",
-      "上架时间": "2019-06-25",
-      "在售月数": 87,
-      "变体数量": 10,
+      "上架时间": "2016-05-18",
+      "在售月数": 124,
+      "变体数量": 3,
       "卖家": "Amazon México",
       "卖家类型": "亚马逊自营",
       "卖家所在地": "",
       "卖家详细地址": "",
       "配送方式": "亚马逊自营配送",
-      "商品链接": "https://www.amazon.com.mx/dp/B07TGKCWWP",
+      "商品链接": "https://www.amazon.com.mx/dp/B01FUDI7F6",
       "完整详情": true
     },
     {
       "排名": 27,
       "ASIN编号": "B01FKNX3FU",
-      "商品名称": "Ganador 成犬 小型犬 20 kg 蓝色",
-      "品牌": "Ganador",
+      "商品名称": "Ganador 成犬小型犬粮，20公斤，蓝色",
+      "品牌": "",
       "评分": 4.8,
       "评论数": 1545,
       "价格(墨西哥比索)": 819.0,
-      "月销量": 900,
-      "销量依据": "亚马逊官方(上月购买量)",
-      "上架时间": "2016-11-24",
-      "在售月数": 118,
-      "变体数量": 1,
-      "卖家": "Amazon México",
-      "卖家类型": "亚马逊自营",
+      "月销量": null,
+      "销量依据": "",
+      "上架时间": "",
+      "在售月数": null,
+      "变体数量": null,
+      "卖家": "",
+      "卖家类型": "",
       "卖家所在地": "",
       "卖家详细地址": "",
-      "配送方式": "亚马逊自营配送",
+      "配送方式": "",
       "商品链接": "https://www.amazon.com.mx/dp/B01FKNX3FU",
-      "完整详情": true
+      "完整详情": false
     },
     {
       "排名": 28,
-      "ASIN编号": "B0088LIINY",
-      "商品名称": "Earth Rated - 狗狗拾便袋，8卷共120个，薰衣草香型",
-      "品牌": "Earth Rated",
-      "评分": 4.9,
-      "评论数": 200133,
-      "价格(墨西哥比索)": 165.0,
-      "月销量": 900,
-      "销量依据": "亚马逊官方(上月购买量)",
-      "上架时间": "",
-      "在售月数": null,
-      "变体数量": 4,
-      "卖家": "Amazon México",
-      "卖家类型": "亚马逊自营",
-      "卖家所在地": "",
-      "卖家详细地址": "",
-      "配送方式": "亚马逊自营配送",
-      "商品链接": "https://www.amazon.com.mx/dp/B0088LIINY",
-      "完整详情": true
-    },
-    {
-      "排名": 29,
       "ASIN编号": "B0BBSG79MX",
-      "商品名称": "宝路高蛋白成犬粮，牛肉鸡肉味，24包，每包85克，含蛋白质、抗氧化剂和维生素E",
+      "商品名称": "宝路高蛋白成犬粮，牛肉鸡肉味，24袋，每袋85克，含蛋白质、抗氧化剂和维生素E",
       "品牌": "Pedigree",
       "评分": 4.8,
       "评论数": 1195,
@@ -77358,54 +78250,54 @@
       "完整详情": true
     },
     {
-      "排名": 30,
-      "ASIN编号": "B08TH7LVQK",
-      "商品名称": "狗床，耐用，舒适，带柔软填充，尺寸和颜色可选（小号，黑色/灰色）",
-      "品牌": "PETS APPAREL HILLS",
-      "评分": 4.6,
-      "评论数": 10463,
-      "价格(墨西哥比索)": 269.1,
-      "月销量": 100,
-      "销量依据": "亚马逊官方(上月购买量)",
-      "上架时间": "2021-01-20",
-      "在售月数": 68,
-      "变体数量": 50,
-      "卖家": "I Jacket",
-      "卖家类型": "第三方",
-      "卖家所在地": "",
-      "卖家详细地址": "",
-      "配送方式": "FBA",
-      "商品链接": "https://www.amazon.com.mx/dp/B08TH7LVQK",
-      "完整详情": true
-    },
-    {
-      "排名": 31,
-      "ASIN编号": "B07PY5FGR1",
-      "商品名称": "Cloralex 宠物用，消除异味 3.75升",
-      "品牌": "Cloralex",
+      "排名": 29,
+      "ASIN编号": "B0153V3YEY",
+      "商品名称": "Nupec 狗粮 幼犬粮 含维生素E和硒 2kg装",
+      "品牌": "Nupec",
       "评分": 4.8,
-      "评论数": 2517,
-      "价格(墨西哥比索)": 89.0,
-      "月销量": 1000,
+      "评论数": 9522,
+      "价格(墨西哥比索)": 329.0,
+      "月销量": 200,
       "销量依据": "亚马逊官方(上月购买量)",
-      "上架时间": "",
-      "在售月数": null,
-      "变体数量": 1,
+      "上架时间": "2015-09-01",
+      "在售月数": 133,
+      "变体数量": 5,
       "卖家": "Amazon México",
       "卖家类型": "亚马逊自营",
       "卖家所在地": "",
       "卖家详细地址": "",
       "配送方式": "亚马逊自营配送",
-      "商品链接": "https://www.amazon.com.mx/dp/B07PY5FGR1",
+      "商品链接": "https://www.amazon.com.mx/dp/B0153V3YEY",
       "完整详情": true
     },
     {
-      "排名": 32,
+      "排名": 30,
+      "ASIN编号": "B07PY5FGR1",
+      "商品名称": "Cloralex宠物专用，消除异味 3.75升",
+      "品牌": "",
+      "评分": 4.8,
+      "评论数": 2517,
+      "价格(墨西哥比索)": 85.5,
+      "月销量": null,
+      "销量依据": "",
+      "上架时间": "",
+      "在售月数": null,
+      "变体数量": null,
+      "卖家": "",
+      "卖家类型": "",
+      "卖家所在地": "",
+      "卖家详细地址": "",
+      "配送方式": "",
+      "商品链接": "https://www.amazon.com.mx/dp/B07PY5FGR1",
+      "完整详情": false
+    },
+    {
+      "排名": 31,
       "ASIN编号": "B0CDYWTMRM",
-      "商品名称": "普瑞纳康乐多成犬全犬种牛肉鸡肉味18Kg",
+      "商品名称": "Purina Dog Chow 成犬全犬种牛肉鸡肉味 18Kg",
       "品牌": "Dog Chow",
       "评分": 4.7,
-      "评论数": 577,
+      "评论数": 578,
       "价格(墨西哥比索)": 723.0,
       "月销量": 1000,
       "销量依据": "亚马逊官方(上月购买量)",
@@ -77421,28 +78313,301 @@
       "完整详情": true
     },
     {
+      "排名": 32,
+      "ASIN编号": "B0088LIINY",
+      "商品名称": "",
+      "品牌": "",
+      "评分": null,
+      "评论数": null,
+      "价格(墨西哥比索)": null,
+      "月销量": null,
+      "销量依据": "",
+      "上架时间": "",
+      "在售月数": null,
+      "变体数量": null,
+      "卖家": "",
+      "卖家类型": "",
+      "卖家所在地": "",
+      "卖家详细地址": "",
+      "配送方式": "",
+      "商品链接": "https://www.amazon.com.mx/dp/B0088LIINY",
+      "完整详情": false
+    },
+    {
       "排名": 33,
-      "ASIN编号": "B01FUDI7F6",
-      "商品名称": "Nupec 狗粮，老年犬，15公斤装。",
-      "品牌": "Nupec",
+      "ASIN编号": "B07TGKCWWP",
+      "商品名称": "",
+      "品牌": "",
+      "评分": null,
+      "评论数": null,
+      "价格(墨西哥比索)": null,
+      "月销量": null,
+      "销量依据": "",
+      "上架时间": "",
+      "在售月数": null,
+      "变体数量": null,
+      "卖家": "",
+      "卖家类型": "",
+      "卖家所在地": "",
+      "卖家详细地址": "",
+      "配送方式": "",
+      "商品链接": "https://www.amazon.com.mx/dp/B07TGKCWWP",
+      "完整详情": false
+    },
+    {
+      "排名": 34,
+      "ASIN编号": "B09Y1R1GWL",
+      "商品名称": "",
+      "品牌": "",
+      "评分": null,
+      "评论数": null,
+      "价格(墨西哥比索)": null,
+      "月销量": null,
+      "销量依据": "",
+      "上架时间": "",
+      "在售月数": null,
+      "变体数量": null,
+      "卖家": "",
+      "卖家类型": "",
+      "卖家所在地": "",
+      "卖家详细地址": "",
+      "配送方式": "",
+      "商品链接": "https://www.amazon.com.mx/dp/B09Y1R1GWL",
+      "完整详情": false
+    },
+    {
+      "排名": 35,
+      "ASIN编号": "B003CLAJ1E",
+      "商品名称": "希尔思科学配方高龄小型及迷你犬鸡肉味狗粮2公斤",
+      "品牌": "Hill's Science Diet",
       "评分": 4.8,
-      "评论数": 5207,
-      "价格(墨西哥比索)": 2024.13,
-      "月销量": 900,
+      "评论数": 3268,
+      "价格(墨西哥比索)": 518.45,
+      "月销量": 700,
       "销量依据": "亚马逊官方(上月购买量)",
-      "上架时间": "2016-05-18",
-      "在售月数": 124,
-      "变体数量": 3,
+      "上架时间": "2017-12-05",
+      "在售月数": 106,
+      "变体数量": 1,
       "卖家": "Amazon México",
       "卖家类型": "亚马逊自营",
       "卖家所在地": "",
       "卖家详细地址": "",
       "配送方式": "亚马逊自营配送",
-      "商品链接": "https://www.amazon.com.mx/dp/B01FUDI7F6",
+      "商品链接": "https://www.amazon.com.mx/dp/B003CLAJ1E",
       "完整详情": true
     },
     {
-      "排名": 34,
+      "排名": 36,
+      "ASIN编号": "B0DQW1YXG5",
+      "商品名称": "Feandrea 中型犬床，76 x 51 x 18 厘米，高边框",
+      "品牌": "FEANDREA",
+      "评分": 4.5,
+      "评论数": 559,
+      "价格(墨西哥比索)": 509.99,
+      "月销量": 200,
+      "销量依据": "亚马逊官方(上月购买量)",
+      "上架时间": "2025-04-21",
+      "在售月数": 17,
+      "变体数量": 9,
+      "卖家": "COWIT MX",
+      "卖家类型": "第三方",
+      "卖家所在地": "",
+      "卖家详细地址": "",
+      "配送方式": "FBA",
+      "商品链接": "https://www.amazon.com.mx/dp/B0DQW1YXG5",
+      "完整详情": true
+    },
+    {
+      "排名": 37,
+      "ASIN编号": "B016C6EOO8",
+      "商品名称": "Amazon Basics 狗狗和幼犬吸水尿垫，5层防漏快干设计，训练用，71 x 86 厘米（超大号），60片装，蓝白",
+      "品牌": "Amazon Basics",
+      "评分": 4.5,
+      "评论数": 216179,
+      "价格(墨西哥比索)": 648.95,
+      "月销量": 300,
+      "销量依据": "亚马逊官方(上月购买量)",
+      "上架时间": "2025-01-11",
+      "在售月数": 20,
+      "变体数量": 6,
+      "卖家": "Amazon México",
+      "卖家类型": "亚马逊自营",
+      "卖家所在地": "",
+      "卖家详细地址": "",
+      "配送方式": "亚马逊自营配送",
+      "商品链接": "https://www.amazon.com.mx/dp/B016C6EOO8",
+      "完整详情": true
+    },
+    {
+      "排名": 38,
+      "ASIN编号": "B0D142MQ8T",
+      "商品名称": "Feandrea 狗床，矫形瓦楞海绵，91 x 68 x 16 厘米",
+      "品牌": "FEANDREA",
+      "评分": 4.6,
+      "评论数": 901,
+      "价格(墨西哥比索)": 899.99,
+      "月销量": 300,
+      "销量依据": "亚马逊官方(上月购买量)",
+      "上架时间": "2024-04-08",
+      "在售月数": 30,
+      "变体数量": 7,
+      "卖家": "COWIT MX",
+      "卖家类型": "第三方",
+      "卖家所在地": "",
+      "卖家详细地址": "",
+      "配送方式": "FBA",
+      "商品链接": "https://www.amazon.com.mx/dp/B0D142MQ8T",
+      "完整详情": true
+    },
+    {
+      "排名": 39,
+      "ASIN编号": "B08TH7LVQK",
+      "商品名称": "狗床，耐用舒适，柔软填充，尺寸和颜色可选（小号，黑色/灰色）",
+      "品牌": "PETS APPAREL HILLS",
+      "评分": 4.6,
+      "评论数": 10464,
+      "价格(墨西哥比索)": 269.1,
+      "月销量": 100,
+      "销量依据": "亚马逊官方(上月购买量)",
+      "上架时间": "2021-01-20",
+      "在售月数": 68,
+      "变体数量": 50,
+      "卖家": "I Jacket",
+      "卖家类型": "第三方",
+      "卖家所在地": "",
+      "卖家详细地址": "",
+      "配送方式": "FBA",
+      "商品链接": "https://www.amazon.com.mx/dp/B08TH7LVQK",
+      "完整详情": true
+    },
+    {
+      "排名": 40,
+      "ASIN编号": "B07PSK15Y2",
+      "商品名称": "Nupec 老年小型犬干粮 8kg",
+      "品牌": "Nupec",
+      "评分": 4.8,
+      "评论数": 4269,
+      "价格(墨西哥比索)": 1513.78,
+      "月销量": 1000,
+      "销量依据": "亚马逊官方(上月购买量)",
+      "上架时间": "2019-03-18",
+      "在售月数": 90,
+      "变体数量": 1,
+      "卖家": "Amazon México",
+      "卖家类型": "亚马逊自营",
+      "卖家所在地": "",
+      "卖家详细地址": "",
+      "配送方式": "亚马逊自营配送",
+      "商品链接": "https://www.amazon.com.mx/dp/B07PSK15Y2",
+      "完整详情": true
+    },
+    {
+      "排名": 41,
+      "ASIN编号": "B01FUDI7OC",
+      "商品名称": "Nupec 狗粮，体重控制，超重或肥胖犬营养配方，15公斤装",
+      "品牌": "Nupec",
+      "评分": 4.8,
+      "评论数": 3942,
+      "价格(墨西哥比索)": 2299.0,
+      "月销量": 700,
+      "销量依据": "亚马逊官方(上月购买量)",
+      "上架时间": "2016-05-18",
+      "在售月数": 124,
+      "变体数量": 3,
+      "卖家": "Selectashop",
+      "卖家类型": "第三方(墨西哥)",
+      "卖家所在地": "墨西哥",
+      "卖家详细地址": "墨西哥/01729/墨西哥城/墨西哥城/阿尔坎塔里利亚/德谢尔托德洛斯莱昂内斯 5547 内 B605",
+      "配送方式": "FBM",
+      "商品链接": "https://www.amazon.com.mx/dp/B01FUDI7OC",
+      "完整详情": true
+    },
+    {
+      "排名": 42,
+      "ASIN编号": "B077PTWTJR",
+      "商品名称": "",
+      "品牌": "",
+      "评分": null,
+      "评论数": null,
+      "价格(墨西哥比索)": null,
+      "月销量": null,
+      "销量依据": "",
+      "上架时间": "",
+      "在售月数": null,
+      "变体数量": null,
+      "卖家": "",
+      "卖家类型": "",
+      "卖家所在地": "",
+      "卖家详细地址": "",
+      "配送方式": "",
+      "商品链接": "https://www.amazon.com.mx/dp/B077PTWTJR",
+      "完整详情": false
+    },
+    {
+      "排名": 43,
+      "ASIN编号": "B0CK32S653",
+      "商品名称": "Waggys三文鱼小食，狗狗天然无谷奖励零食，100粒",
+      "品牌": "Waggys",
+      "评分": 4.6,
+      "评论数": 689,
+      "价格(墨西哥比索)": 132.78,
+      "月销量": 1000,
+      "销量依据": "亚马逊官方(上月购买量)",
+      "上架时间": "2023-09-28",
+      "在售月数": 36,
+      "变体数量": 2,
+      "卖家": "Waggy´s!",
+      "卖家类型": "品牌方",
+      "卖家所在地": "",
+      "卖家详细地址": "",
+      "配送方式": "FBA",
+      "商品链接": "https://www.amazon.com.mx/dp/B0CK32S653",
+      "完整详情": true
+    },
+    {
+      "排名": 44,
+      "ASIN编号": "B0B31M9JGB",
+      "商品名称": "",
+      "品牌": "",
+      "评分": null,
+      "评论数": null,
+      "价格(墨西哥比索)": null,
+      "月销量": null,
+      "销量依据": "",
+      "上架时间": "",
+      "在售月数": null,
+      "变体数量": null,
+      "卖家": "",
+      "卖家类型": "",
+      "卖家所在地": "",
+      "卖家详细地址": "",
+      "配送方式": "",
+      "商品链接": "https://www.amazon.com.mx/dp/B0B31M9JGB",
+      "完整详情": false
+    },
+    {
+      "排名": 45,
+      "ASIN编号": "B0DW5GCZPX",
+      "商品名称": "",
+      "品牌": "",
+      "评分": null,
+      "评论数": null,
+      "价格(墨西哥比索)": null,
+      "月销量": null,
+      "销量依据": "",
+      "上架时间": "",
+      "在售月数": null,
+      "变体数量": null,
+      "卖家": "",
+      "卖家类型": "",
+      "卖家所在地": "",
+      "卖家详细地址": "",
+      "配送方式": "",
+      "商品链接": "https://www.amazon.com.mx/dp/B0DW5GCZPX",
+      "完整详情": false
+    },
+    {
+      "排名": 46,
       "ASIN编号": "B008OV91VQ",
       "商品名称": "希尔思科学配方狗零食鸡肉味200克",
       "品牌": "Hill's",
@@ -77463,454 +78628,34 @@
       "完整详情": true
     },
     {
-      "排名": 35,
-      "ASIN编号": "B0CK32S653",
-      "商品名称": "Waggys三文鱼粒，天然无谷物狗狗零食，100粒",
-      "品牌": "Waggys",
-      "评分": 4.6,
-      "评论数": 689,
-      "价格(墨西哥比索)": 160.0,
+      "排名": 47,
+      "ASIN编号": "B08NWZD6MS",
+      "商品名称": "",
+      "品牌": "",
+      "评分": null,
+      "评论数": null,
+      "价格(墨西哥比索)": null,
       "月销量": null,
       "销量依据": "",
-      "上架时间": "2023-09-28",
-      "在售月数": 36,
-      "变体数量": 2,
+      "上架时间": "",
+      "在售月数": null,
+      "变体数量": null,
       "卖家": "",
       "卖家类型": "",
       "卖家所在地": "",
       "卖家详细地址": "",
       "配送方式": "",
-      "商品链接": "https://www.amazon.com.mx/dp/B0CK32S653",
-      "完整详情": true
-    },
-    {
-      "排名": 36,
-      "ASIN编号": "B09Y1R1GWL",
-      "商品名称": "宝路 - 小型犬狗粮湿粮包，牛肉条味，含天然成分、蛋白质和纤维，24包，每包100g",
-      "品牌": "Pedigree",
-      "评分": 4.8,
-      "评论数": 934,
-      "价格(墨西哥比索)": 228.0,
-      "月销量": 1000,
-      "销量依据": "亚马逊官方(上月购买量)",
-      "上架时间": "2022-04-15",
-      "在售月数": 53,
-      "变体数量": 1,
-      "卖家": "Amazon México",
-      "卖家类型": "亚马逊自营",
-      "卖家所在地": "",
-      "卖家详细地址": "",
-      "配送方式": "亚马逊自营配送",
-      "商品链接": "https://www.amazon.com.mx/dp/B09Y1R1GWL",
-      "完整详情": true
-    },
-    {
-      "排名": 37,
-      "ASIN编号": "B0153V3ZEI",
-      "商品名称": "Nupec 狗粮幼犬粮，含维生素E和硒，5kg装。",
-      "品牌": "Nupec",
-      "评分": 4.8,
-      "评论数": 9522,
-      "价格(墨西哥比索)": 723.0,
-      "月销量": 200,
-      "销量依据": "亚马逊官方(上月购买量)",
-      "上架时间": "2015-09-01",
-      "在售月数": 133,
-      "变体数量": 5,
-      "卖家": "Amazon México",
-      "卖家类型": "亚马逊自营",
-      "卖家所在地": "",
-      "卖家详细地址": "",
-      "配送方式": "亚马逊自营配送",
-      "商品链接": "https://www.amazon.com.mx/dp/B0153V3ZEI",
-      "完整详情": true
-    },
-    {
-      "排名": 38,
-      "ASIN编号": "B016C6EOO8",
-      "商品名称": "Amazon Basics 狗狗和小狗吸水垫，5层防漏快干设计，用于训练，71 x 86 厘米（超大号），60片装，蓝色和白色",
-      "品牌": "Amazon Basics",
-      "评分": 4.5,
-      "评论数": 216185,
-      "价格(墨西哥比索)": 648.95,
-      "月销量": 300,
-      "销量依据": "亚马逊官方(上月购买量)",
-      "上架时间": "2025-01-11",
-      "在售月数": 20,
-      "变体数量": 6,
-      "卖家": "Amazon México",
-      "卖家类型": "亚马逊自营",
-      "卖家所在地": "",
-      "卖家详细地址": "",
-      "配送方式": "亚马逊自营配送",
-      "商品链接": "https://www.amazon.com.mx/dp/B016C6EOO8",
-      "完整详情": true
-    },
-    {
-      "排名": 39,
-      "ASIN编号": "B077PTWTJR",
-      "商品名称": "Fancy Pets医疗解决方案止痒舒缓喷雾 125毫升",
-      "品牌": "Fancy Pets",
-      "评分": 4.5,
-      "评论数": 1560,
-      "价格(墨西哥比索)": 65.42,
-      "月销量": 600,
-      "销量依据": "亚马逊官方(上月购买量)",
-      "上架时间": "2017-11-23",
-      "在售月数": 106,
-      "变体数量": 1,
-      "卖家": "Amazon México",
-      "卖家类型": "亚马逊自营",
-      "卖家所在地": "",
-      "卖家详细地址": "",
-      "配送方式": "亚马逊自营配送",
-      "商品链接": "https://www.amazon.com.mx/dp/B077PTWTJR",
-      "完整详情": true
-    },
-    {
-      "排名": 40,
-      "ASIN编号": "B0D142MQ8T",
-      "商品名称": "Feandrea 狗床，矫形波浪形泡沫，91 x 68 x 16 厘米",
-      "品牌": "FEANDREA",
-      "评分": 4.6,
-      "评论数": 902,
-      "价格(墨西哥比索)": 764.99,
-      "月销量": 200,
-      "销量依据": "亚马逊官方(上月购买量)",
-      "上架时间": "2024-04-08",
-      "在售月数": 30,
-      "变体数量": 7,
-      "卖家": "COWIT MX",
-      "卖家类型": "第三方",
-      "卖家所在地": "",
-      "卖家详细地址": "",
-      "配送方式": "FBA",
-      "商品链接": "https://www.amazon.com.mx/dp/B0D142MQ8T",
-      "完整详情": true
-    },
-    {
-      "排名": 41,
-      "ASIN编号": "B0B31M9JGB",
-      "商品名称": "TAIMEI宠物粪便袋，25卷375只，便携一次性户外散步旅行车载清洁袋（黑色）",
-      "品牌": "TAIMEI",
-      "评分": 3.6,
-      "评论数": 1010,
-      "价格(墨西哥比索)": 161.1,
-      "月销量": 400,
-      "销量依据": "亚马逊官方(上月购买量)",
-      "上架时间": "",
-      "在售月数": null,
-      "变体数量": 2,
-      "卖家": "DANPIPI",
-      "卖家类型": "第三方",
-      "卖家所在地": "",
-      "卖家详细地址": "",
-      "配送方式": "FBA",
-      "商品链接": "https://www.amazon.com.mx/dp/B0B31M9JGB",
-      "完整详情": true
-    },
-    {
-      "排名": 42,
-      "ASIN编号": "B0GWHHR2P1",
-      "商品名称": "战术狗项圈，训练用，粉色，L码",
-      "品牌": "DAQI",
-      "评分": 4.7,
-      "评论数": 981,
-      "价格(墨西哥比索)": 188.0,
-      "月销量": 200,
-      "销量依据": "亚马逊官方(上月购买量)",
-      "上架时间": "2022-04-03",
-      "在售月数": 54,
-      "变体数量": 14,
-      "卖家": "CHIYING",
-      "卖家类型": "第三方",
-      "卖家所在地": "",
-      "卖家详细地址": "",
-      "配送方式": "FBA",
-      "商品链接": "https://www.amazon.com.mx/dp/B0GWHHR2P1",
-      "完整详情": true
-    },
-    {
-      "排名": 43,
-      "ASIN编号": "B07PSK15Y2",
-      "商品名称": "Nupec 小型犬老年犬干粮 - 1 x 8 kg",
-      "品牌": "Nupec",
-      "评分": 4.8,
-      "评论数": 4269,
-      "价格(墨西哥比索)": 1513.78,
-      "月销量": 1000,
-      "销量依据": "亚马逊官方(上月购买量)",
-      "上架时间": "2019-03-18",
-      "在售月数": 90,
-      "变体数量": 1,
-      "卖家": "Amazon México",
-      "卖家类型": "亚马逊自营",
-      "卖家所在地": "",
-      "卖家详细地址": "",
-      "配送方式": "亚马逊自营配送",
-      "商品链接": "https://www.amazon.com.mx/dp/B07PSK15Y2",
-      "完整详情": true
-    },
-    {
-      "排名": 44,
-      "ASIN编号": "B01FUDI7OC",
-      "商品名称": "Nupec狗粮，体重控制，适用于超重或肥胖犬只的营养配方，15公斤装。",
-      "品牌": "Nupec",
-      "评分": 4.8,
-      "评论数": 3941,
-      "价格(墨西哥比索)": 2299.0,
-      "月销量": 700,
-      "销量依据": "亚马逊官方(上月购买量)",
-      "上架时间": "2016-05-18",
-      "在售月数": 124,
-      "变体数量": 3,
-      "卖家": "Selectashop",
-      "卖家类型": "第三方",
-      "卖家所在地": "",
-      "卖家详细地址": "",
-      "配送方式": "FBM",
-      "商品链接": "https://www.amazon.com.mx/dp/B01FUDI7OC",
-      "完整详情": true
-    },
-    {
-      "排名": 45,
-      "ASIN编号": "B08NWZD6MS",
-      "商品名称": "春日花开 - 宠物猫狗专业二合一清洁梳，轻松去毛结防打结，宠物美容安全刷（橙色）",
-      "品牌": "Spring Blossoms",
-      "评分": 4.8,
-      "评论数": 4393,
-      "价格(墨西哥比索)": 217.99,
-      "月销量": 400,
-      "销量依据": "亚马逊官方(上月购买量)",
-      "上架时间": "2021-01-06",
-      "在售月数": 69,
-      "变体数量": 6,
-      "卖家": "GoodHappens",
-      "卖家类型": "第三方",
-      "卖家所在地": "",
-      "卖家详细地址": "",
-      "配送方式": "FBA",
       "商品链接": "https://www.amazon.com.mx/dp/B08NWZD6MS",
-      "完整详情": true
-    },
-    {
-      "排名": 46,
-      "ASIN编号": "B0CF64R8Y1",
-      "商品名称": "Dogelthy Gastro Aid 犬用益生元益生菌补充剂",
-      "品牌": "Dogelthy",
-      "评分": 4.6,
-      "评论数": 1192,
-      "价格(墨西哥比索)": 729.0,
-      "月销量": 200,
-      "销量依据": "亚马逊官方(上月购买量)",
-      "上架时间": "2023-08-09",
-      "在售月数": 38,
-      "变体数量": 4,
-      "卖家": "Dogelthy",
-      "卖家类型": "品牌方",
-      "卖家所在地": "",
-      "卖家详细地址": "",
-      "配送方式": "FBA",
-      "商品链接": "https://www.amazon.com.mx/dp/B0CF64R8Y1",
-      "完整详情": true
-    },
-    {
-      "排名": 47,
-      "ASIN编号": "B0DW5GCZPX",
-      "商品名称": "HI MULTI PRO 小型犬成犬优质粮",
-      "品牌": "HI MULTI PRO",
-      "评分": 4.7,
-      "评论数": 258,
-      "价格(墨西哥比索)": 632.4,
-      "月销量": 400,
-      "销量依据": "亚马逊官方(上月购买量)",
-      "上架时间": "2025-02-05",
-      "在售月数": 20,
-      "变体数量": 1,
-      "卖家": "ALBAPESA",
-      "卖家类型": "第三方",
-      "卖家所在地": "",
-      "卖家详细地址": "",
-      "配送方式": "FBA",
-      "商品链接": "https://www.amazon.com.mx/dp/B0DW5GCZPX",
-      "完整详情": true
+      "完整详情": false
     },
     {
       "排名": 48,
-      "ASIN编号": "B0DQW1YXG5",
-      "商品名称": "Feandrea 中型犬床，76 x 51 x 18 厘米，高边设计",
-      "品牌": "FEANDREA",
-      "评分": 4.5,
-      "评论数": 557,
-      "价格(墨西哥比索)": 509.99,
-      "月销量": 200,
-      "销量依据": "亚马逊官方(上月购买量)",
-      "上架时间": "2025-04-21",
-      "在售月数": 17,
-      "变体数量": 9,
-      "卖家": "COWIT MX",
-      "卖家类型": "第三方",
-      "卖家所在地": "",
-      "卖家详细地址": "",
-      "配送方式": "FBA",
-      "商品链接": "https://www.amazon.com.mx/dp/B0DQW1YXG5",
-      "完整详情": true
-    },
-    {
-      "排名": 49,
-      "ASIN编号": "B0B84V22ZJ",
-      "商品名称": "RENDIN 255 可降解狗粪袋，防漏芳香狗粪袋，17卷 + 1个分配器 + 1个夹子",
-      "品牌": "RENDIN",
-      "评分": 4.8,
-      "评论数": 1783,
-      "价格(墨西哥比索)": 175.12,
-      "月销量": 500,
-      "销量依据": "亚马逊官方(上月购买量)",
-      "上架时间": "",
-      "在售月数": null,
-      "变体数量": 3,
-      "卖家": "L-JL",
-      "卖家类型": "第三方",
-      "卖家所在地": "",
-      "卖家详细地址": "",
-      "配送方式": "FBA",
-      "商品链接": "https://www.amazon.com.mx/dp/B0B84V22ZJ",
-      "完整详情": true
-    },
-    {
-      "排名": 50,
-      "ASIN编号": "B08B1XD455",
-      "商品名称": "Medical Solutions 猫狗可调节伊丽莎白圈 Fancy Pets – 术后防护，防止舔咬抓挠伤口 – 2号（25厘米）",
-      "品牌": "Fancy Pets",
-      "评分": 4.4,
-      "评论数": 3083,
-      "价格(墨西哥比索)": 86.0,
-      "月销量": 100,
-      "销量依据": "亚马逊官方(上月购买量)",
-      "上架时间": "2020-06-11",
-      "在售月数": 75,
-      "变体数量": 11,
-      "卖家": "Amazon México",
-      "卖家类型": "亚马逊自营",
-      "卖家所在地": "",
-      "卖家详细地址": "",
-      "配送方式": "亚马逊自营配送",
-      "商品链接": "https://www.amazon.com.mx/dp/B08B1XD455",
-      "完整详情": true
-    },
-    {
-      "排名": 51,
-      "ASIN编号": "B07NSD6XW3",
-      "商品名称": "Nupec 小型老年犬干粮，2公斤，1包",
-      "品牌": "Nupec",
-      "评分": 4.9,
-      "评论数": 2281,
-      "价格(墨西哥比索)": 469.0,
-      "月销量": 900,
-      "销量依据": "亚马逊官方(上月购买量)",
-      "上架时间": "2019-03-18",
-      "在售月数": 90,
-      "变体数量": 1,
-      "卖家": "Amazon México",
-      "卖家类型": "亚马逊自营",
-      "卖家所在地": "",
-      "卖家详细地址": "",
-      "配送方式": "亚马逊自营配送",
-      "商品链接": "https://www.amazon.com.mx/dp/B07NSD6XW3",
-      "完整详情": true
-    },
-    {
-      "排名": 52,
-      "ASIN编号": "B09Y1NFQ92",
-      "商品名称": "宝路 - 成年犬湿粮，鸡柳口味，24包装，含蛋白质、抗氧化剂和维生素E",
-      "品牌": "Pedigree",
-      "评分": 4.8,
-      "评论数": 879,
-      "价格(墨西哥比索)": 225.25,
-      "月销量": 600,
-      "销量依据": "亚马逊官方(上月购买量)",
-      "上架时间": "2022-04-15",
-      "在售月数": 53,
-      "变体数量": 1,
-      "卖家": "Amazon México",
-      "卖家类型": "亚马逊自营",
-      "卖家所在地": "",
-      "卖家详细地址": "",
-      "配送方式": "亚马逊自营配送",
-      "商品链接": "https://www.amazon.com.mx/dp/B09Y1NFQ92",
-      "完整详情": true
-    },
-    {
-      "排名": 53,
-      "ASIN编号": "B01FVRF920",
-      "商品名称": "Barkys 80136100614 肉干棒 肉条 1公斤，1件，小号",
-      "品牌": "BARKYS",
-      "评分": 4.8,
-      "评论数": 1579,
-      "价格(墨西哥比索)": 299.0,
-      "月销量": 1000,
-      "销量依据": "亚马逊官方(上月购买量)",
-      "上架时间": "2016-05-19",
-      "在售月数": 124,
-      "变体数量": 1,
-      "卖家": "Amazon México",
-      "卖家类型": "亚马逊自营",
-      "卖家所在地": "",
-      "卖家详细地址": "",
-      "配送方式": "亚马逊自营配送",
-      "商品链接": "https://www.amazon.com.mx/dp/B01FVRF920",
-      "完整详情": true
-    },
-    {
-      "排名": 54,
-      "ASIN编号": "B075NFDQR8",
-      "商品名称": "凯撒 - 成犬狗粮包，牛肉蔬菜味，每包75克，24包装",
-      "品牌": "Cesar",
-      "评分": 4.7,
-      "评论数": 280,
-      "价格(墨西哥比索)": 249.89,
-      "月销量": 300,
-      "销量依据": "亚马逊官方(上月购买量)",
-      "上架时间": "2017-09-11",
-      "在售月数": 108,
-      "变体数量": 2,
-      "卖家": "Amazon México",
-      "卖家类型": "亚马逊自营",
-      "卖家所在地": "",
-      "卖家详细地址": "",
-      "配送方式": "亚马逊自营配送",
-      "商品链接": "https://www.amazon.com.mx/dp/B075NFDQR8",
-      "完整详情": true
-    },
-    {
-      "排名": 55,
-      "ASIN编号": "B0F9XKDYRV",
-      "商品名称": "狗狗零食 Dog Chow Croc 100克 适合所有体型和年龄",
-      "品牌": "Purina Dog Chow Snacks",
-      "评分": 4.5,
-      "评论数": 34,
-      "价格(墨西哥比索)": 13.5,
-      "月销量": 100,
-      "销量依据": "亚马逊官方(上月购买量)",
-      "上架时间": "2025-05-26",
-      "在售月数": 16,
-      "变体数量": 1,
-      "卖家": "Amazon México",
-      "卖家类型": "亚马逊自营",
-      "卖家所在地": "",
-      "卖家详细地址": "",
-      "配送方式": "亚马逊自营配送",
-      "商品链接": "https://www.amazon.com.mx/dp/B0F9XKDYRV",
-      "完整详情": true
-    },
-    {
-      "排名": 56,
       "ASIN编号": "B01A1DJ4GG",
-      "商品名称": "普瑞纳Beneful成犬迷你犬种肉味4公斤",
+      "商品名称": "普瑞纳Beneful成犬小型犬牛肉味4Kg",
       "品牌": "Purina",
       "评分": 4.8,
-      "评论数": 1491,
-      "价格(墨西哥比索)": 236.0,
+      "评论数": 1492,
+      "价格(墨西哥比索)": 235.0,
       "月销量": 800,
       "销量依据": "亚马逊官方(上月购买量)",
       "上架时间": "2015-12-31",
@@ -77925,54 +78670,138 @@
       "完整详情": true
     },
     {
-      "排名": 57,
-      "ASIN编号": "B003CLAJ1E",
-      "商品名称": "希尔思科学配方小型迷你老年犬鸡肉味狗粮 2公斤",
-      "品牌": "Hill's Science Diet",
+      "排名": 49,
+      "ASIN编号": "B09Y1NFQ92",
+      "商品名称": "宝路 - 成犬湿粮，鸡肉条，24包，含蛋白质、抗氧化剂和维生素E",
+      "品牌": "Pedigree",
       "评分": 4.8,
-      "评论数": 3268,
-      "价格(墨西哥比索)": 518.45,
-      "月销量": 800,
+      "评论数": 880,
+      "价格(墨西哥比索)": 288.0,
+      "月销量": 600,
       "销量依据": "亚马逊官方(上月购买量)",
-      "上架时间": "2017-12-05",
-      "在售月数": 106,
+      "上架时间": "2022-04-15",
+      "在售月数": 53,
       "变体数量": 1,
       "卖家": "Amazon México",
       "卖家类型": "亚马逊自营",
       "卖家所在地": "",
       "卖家详细地址": "",
       "配送方式": "亚马逊自营配送",
-      "商品链接": "https://www.amazon.com.mx/dp/B003CLAJ1E",
+      "商品链接": "https://www.amazon.com.mx/dp/B09Y1NFQ92",
       "完整详情": true
     },
     {
-      "排名": 58,
-      "ASIN编号": "B075NBKBBR",
-      "商品名称": "Cesar - 成犬湿粮，牛肉汁味，24包，每包75克。",
-      "品牌": "Cesar",
-      "评分": 4.7,
-      "评论数": 818,
-      "价格(墨西哥比索)": 249.89,
-      "月销量": 300,
+      "排名": 50,
+      "ASIN编号": "B0B84V22ZJ",
+      "商品名称": "RENDIN 255只可降解狗狗拾便袋，防漏芳香拾便袋，17卷+1个分配器+1个夹子",
+      "品牌": "RENDIN",
+      "评分": 4.8,
+      "评论数": 1784,
+      "价格(墨西哥比索)": 175.12,
+      "月销量": 500,
       "销量依据": "亚马逊官方(上月购买量)",
-      "上架时间": "2017-09-11",
-      "在售月数": 108,
-      "变体数量": 4,
-      "卖家": "Amazon México",
-      "卖家类型": "亚马逊自营",
+      "上架时间": "",
+      "在售月数": null,
+      "变体数量": 3,
+      "卖家": "L-JL",
+      "卖家类型": "第三方(中国)",
+      "卖家所在地": "中国",
+      "卖家详细地址": "中国/518129/广东/龙岗/深圳/21栋203室/第三工业区，坂田社区，坂田街道",
+      "配送方式": "FBA",
+      "商品链接": "https://www.amazon.com.mx/dp/B0B84V22ZJ",
+      "完整详情": true
+    },
+    {
+      "排名": 51,
+      "ASIN编号": "B0BKK4GQTM",
+      "商品名称": "Raganet 宠物运输包，犬猫便携包，最大承重10公斤，尺寸：长42厘米 x 宽20厘米 x 高25厘米，旅行及车载背包，黑色",
+      "品牌": "",
+      "评分": 4.6,
+      "评论数": 1316,
+      "价格(墨西哥比索)": 189.0,
+      "月销量": null,
+      "销量依据": "",
+      "上架时间": "",
+      "在售月数": null,
+      "变体数量": null,
+      "卖家": "",
+      "卖家类型": "",
       "卖家所在地": "",
       "卖家详细地址": "",
-      "配送方式": "亚马逊自营配送",
-      "商品链接": "https://www.amazon.com.mx/dp/B075NBKBBR",
+      "配送方式": "",
+      "商品链接": "https://www.amazon.com.mx/dp/B0BKK4GQTM",
+      "完整详情": false
+    },
+    {
+      "排名": 52,
+      "ASIN编号": "B0DF4TZZ82",
+      "商品名称": "Dogelthy 狗零食 脱水鸡爪 100%天然",
+      "品牌": "Dogelthy",
+      "评分": 4.4,
+      "评论数": 94,
+      "价格(墨西哥比索)": 215.1,
+      "月销量": 200,
+      "销量依据": "亚马逊官方(上月购买量)",
+      "上架时间": "2024-08-23",
+      "在售月数": 25,
+      "变体数量": 6,
+      "卖家": "Dogelthy",
+      "卖家类型": "品牌方",
+      "卖家所在地": "",
+      "卖家详细地址": "",
+      "配送方式": "FBA",
+      "商品链接": "https://www.amazon.com.mx/dp/B0DF4TZZ82",
       "完整详情": true
     },
     {
-      "排名": 59,
+      "排名": 53,
+      "ASIN编号": "B01FVRF920",
+      "商品名称": "Barkys 80136100614 肉干条 肉类棒 1公斤，1件，小号",
+      "品牌": "",
+      "评分": 4.8,
+      "评论数": 1580,
+      "价格(墨西哥比索)": 299.0,
+      "月销量": null,
+      "销量依据": "",
+      "上架时间": "",
+      "在售月数": null,
+      "变体数量": null,
+      "卖家": "",
+      "卖家类型": "",
+      "卖家所在地": "",
+      "卖家详细地址": "",
+      "配送方式": "",
+      "商品链接": "https://www.amazon.com.mx/dp/B01FVRF920",
+      "完整详情": false
+    },
+    {
+      "排名": 54,
+      "ASIN编号": "B0CW618SPM",
+      "商品名称": "MOXIMX 安全门，婴儿门，76-125 厘米，狗/宠物门，儿童安全门，免打孔，适用于楼梯",
+      "品牌": "",
+      "评分": 4.6,
+      "评论数": 271,
+      "价格(墨西哥比索)": 1081.49,
+      "月销量": null,
+      "销量依据": "",
+      "上架时间": "",
+      "在售月数": null,
+      "变体数量": null,
+      "卖家": "",
+      "卖家类型": "",
+      "卖家所在地": "",
+      "卖家详细地址": "",
+      "配送方式": "",
+      "商品链接": "https://www.amazon.com.mx/dp/B0CW618SPM",
+      "完整详情": false
+    },
+    {
+      "排名": 55,
       "ASIN编号": "B0BQTFBXHP",
-      "商品名称": "希尔思科学配方高龄犬鸡肉味小颗粒狗粮 6.8Kg",
+      "商品名称": "希尔思科学配方小颗粒老年犬鸡肉味狗粮 6.8kg",
       "品牌": "Hill's Science Diet",
       "评分": 4.7,
-      "评论数": 485,
+      "评论数": 486,
       "价格(墨西哥比索)": 1344.0,
       "月销量": 800,
       "销量依据": "亚马逊官方(上月购买量)",
@@ -77988,156 +78817,72 @@
       "完整详情": true
     },
     {
-      "排名": 60,
-      "ASIN编号": "B0929DKD6Z",
-      "商品名称": "Beneful普瑞纳成犬热带活力牛肉火鸡味10Kg",
-      "品牌": "Purina Beneful Sunrise",
-      "评分": 4.8,
-      "评论数": 1529,
-      "价格(墨西哥比索)": 527.0,
-      "月销量": 600,
-      "销量依据": "亚马逊官方(上月购买量)",
-      "上架时间": "2021-04-12",
-      "在售月数": 65,
-      "变体数量": 1,
-      "卖家": "Amazon México",
-      "卖家类型": "亚马逊自营",
-      "卖家所在地": "",
-      "卖家详细地址": "",
-      "配送方式": "亚马逊自营配送",
-      "商品链接": "https://www.amazon.com.mx/dp/B0929DKD6Z",
-      "完整详情": true
-    },
-    {
-      "排名": 61,
-      "ASIN编号": "B09232RF2N",
-      "商品名称": "Perfect Sense 老年犬粮 3kg | 含氨基葡萄糖和软骨素的天然狗粮颗粒 | 适合老年犬 | 小型犬",
-      "品牌": "Perfect Sense",
+      "排名": 56,
+      "ASIN编号": "B075NFDQR8",
+      "商品名称": "Cesar 成犬狗粮鲜封包 牛肉蔬菜味 75g/包 24包",
+      "品牌": "",
       "评分": 4.7,
-      "评论数": 718,
-      "价格(墨西哥比索)": 434.61,
-      "月销量": 300,
-      "销量依据": "亚马逊官方(上月购买量)",
-      "上架时间": "2019-09-17",
-      "在售月数": 84,
-      "变体数量": 3,
-      "卖家": "Amazon México",
-      "卖家类型": "亚马逊自营",
-      "卖家所在地": "",
-      "卖家详细地址": "",
-      "配送方式": "亚马逊自营配送",
-      "商品链接": "https://www.amazon.com.mx/dp/B09232RF2N",
-      "完整详情": true
-    },
-    {
-      "排名": 62,
-      "ASIN编号": "B018TYLZU2",
-      "商品名称": "Fancy Pets 狗狗训练垫 Doggie Grass GDE｜带托盘和格栅的仿真草坪｜除臭易清洁",
-      "品牌": "Fancy Pets",
-      "评分": 4.4,
-      "评论数": 10110,
-      "价格(墨西哥比索)": 509.0,
-      "月销量": 600,
-      "销量依据": "亚马逊官方(上月购买量)",
-      "上架时间": "2015-12-02",
-      "在售月数": 130,
-      "变体数量": 3,
-      "卖家": "Amazon México",
-      "卖家类型": "亚马逊自营",
-      "卖家所在地": "",
-      "卖家详细地址": "",
-      "配送方式": "亚马逊自营配送",
-      "商品链接": "https://www.amazon.com.mx/dp/B018TYLZU2",
-      "完整详情": true
-    },
-    {
-      "排名": 63,
-      "ASIN编号": "B00NLMJ6F4",
-      "商品名称": "Virbac Nutri-Plus 营养补充凝胶 120g 犬猫通用",
-      "品牌": "Virbac",
-      "评分": 4.9,
-      "评论数": 354,
-      "价格(墨西哥比索)": 297.6,
-      "月销量": 700,
-      "销量依据": "亚马逊官方(上月购买量)",
-      "上架时间": "2015-09-08",
-      "在售月数": 133,
-      "变体数量": 1,
-      "卖家": "ND Nova",
-      "卖家类型": "第三方",
-      "卖家所在地": "",
-      "卖家详细地址": "",
-      "配送方式": "FBA",
-      "商品链接": "https://www.amazon.com.mx/dp/B00NLMJ6F4",
-      "完整详情": true
-    },
-    {
-      "排名": 64,
-      "ASIN编号": "B07BCQNR3N",
-      "商品名称": "Kirkland Maspet 三文鱼宠物干粮 15.8kg",
-      "品牌": "Kirkland",
-      "评分": 4.7,
-      "评论数": 568,
-      "价格(墨西哥比索)": 664.0,
+      "评论数": 280,
+      "价格(墨西哥比索)": 249.89,
       "月销量": null,
       "销量依据": "",
       "上架时间": "",
       "在售月数": null,
-      "变体数量": 1,
+      "变体数量": null,
       "卖家": "",
       "卖家类型": "",
       "卖家所在地": "",
       "卖家详细地址": "",
       "配送方式": "",
-      "商品链接": "https://www.amazon.com.mx/dp/B07BCQNR3N",
+      "商品链接": "https://www.amazon.com.mx/dp/B075NFDQR8",
+      "完整详情": false
+    },
+    {
+      "排名": 57,
+      "ASIN编号": "B0GWHFXGK1",
+      "商品名称": "战术狗训练项圈，粉色，M",
+      "品牌": "DAQI",
+      "评分": 4.7,
+      "评论数": 983,
+      "价格(墨西哥比索)": 188.0,
+      "月销量": 100,
+      "销量依据": "亚马逊官方(上月购买量)",
+      "上架时间": "2022-04-03",
+      "在售月数": 54,
+      "变体数量": 14,
+      "卖家": "CHIYING",
+      "卖家类型": "第三方(中国)",
+      "卖家所在地": "中国",
+      "卖家详细地址": "中国/06000/广东省/龙岗区/深圳市/坂田街道万科城社区新天下百瑞达大厦四层401室",
+      "配送方式": "FBA",
+      "商品链接": "https://www.amazon.com.mx/dp/B0GWHFXGK1",
       "完整详情": true
     },
     {
-      "排名": 65,
-      "ASIN编号": "B0GNTXHVX3",
-      "商品名称": "Virbac Movoflex 小型犬关节活动补充剂",
-      "品牌": "Virbac",
+      "排名": 58,
+      "ASIN编号": "B09232RF2N",
+      "商品名称": "Perfect Sense 老年犬粮 3 kg | 含氨基葡萄糖和软骨素的天然颗粒 | 老年犬适用 | 小型犬",
+      "品牌": "",
       "评分": 4.7,
-      "评论数": 38,
-      "价格(墨西哥比索)": 319.0,
+      "评论数": 718,
+      "价格(墨西哥比索)": 434.61,
       "月销量": null,
       "销量依据": "",
-      "上架时间": "2026-02-17",
-      "在售月数": 7,
-      "变体数量": 3,
+      "上架时间": "",
+      "在售月数": null,
+      "变体数量": null,
       "卖家": "",
       "卖家类型": "",
       "卖家所在地": "",
       "卖家详细地址": "",
       "配送方式": "",
-      "商品链接": "https://www.amazon.com.mx/dp/B0GNTXHVX3",
-      "完整详情": true
+      "商品链接": "https://www.amazon.com.mx/dp/B09232RF2N",
+      "完整详情": false
     },
     {
-      "排名": 66,
-      "ASIN编号": "B0153V47YU",
-      "商品名称": "Nupec 狗粮，小型犬幼犬，含维生素E和硒，2公斤装。",
-      "品牌": "Nupec",
-      "评分": 4.8,
-      "评论数": 3176,
-      "价格(墨西哥比索)": 401.0,
-      "月销量": 700,
-      "销量依据": "亚马逊官方(上月购买量)",
-      "上架时间": "2015-10-06",
-      "在售月数": 132,
-      "变体数量": 1,
-      "卖家": "Amazon México",
-      "卖家类型": "亚马逊自营",
-      "卖家所在地": "",
-      "卖家详细地址": "",
-      "配送方式": "亚马逊自营配送",
-      "商品链接": "https://www.amazon.com.mx/dp/B0153V47YU",
-      "完整详情": true
-    },
-    {
-      "排名": 67,
+      "排名": 59,
       "ASIN编号": "B07L9JHXJR",
-      "商品名称": "Taste Of The Wild Pacific Stream 狗粮",
+      "商品名称": "Taste Of The Wild 太平洋溪流狗粮",
       "品牌": "Taste Of The Wild",
       "评分": 4.6,
       "评论数": 6660,
@@ -78156,9 +78901,114 @@
       "完整详情": true
     },
     {
-      "排名": 68,
+      "排名": 60,
+      "ASIN编号": "B07WZ2KN1V",
+      "商品名称": "Cloralex 宠物除臭 10升",
+      "品牌": "Cloralex",
+      "评分": 4.8,
+      "评论数": 958,
+      "价格(墨西哥比索)": 256.0,
+      "月销量": 600,
+      "销量依据": "亚马逊官方(上月购买量)",
+      "上架时间": "",
+      "在售月数": null,
+      "变体数量": 1,
+      "卖家": "Amazon México",
+      "卖家类型": "亚马逊自营",
+      "卖家所在地": "",
+      "卖家详细地址": "",
+      "配送方式": "亚马逊自营配送",
+      "商品链接": "https://www.amazon.com.mx/dp/B07WZ2KN1V",
+      "完整详情": true
+    },
+    {
+      "排名": 61,
+      "ASIN编号": "B0CF64R8Y1",
+      "商品名称": "Dogelthy 犬用肠胃护理补充剂，含益生元与益生菌 | 每勺含30亿+ CFU",
+      "品牌": "",
+      "评分": 4.6,
+      "评论数": 1192,
+      "价格(墨西哥比索)": 729.0,
+      "月销量": null,
+      "销量依据": "",
+      "上架时间": "",
+      "在售月数": null,
+      "变体数量": null,
+      "卖家": "",
+      "卖家类型": "",
+      "卖家所在地": "",
+      "卖家详细地址": "",
+      "配送方式": "",
+      "商品链接": "https://www.amazon.com.mx/dp/B0CF64R8Y1",
+      "完整详情": false
+    },
+    {
+      "排名": 62,
+      "ASIN编号": "B07NSD6XW3",
+      "商品名称": "Nupec 小型老年犬干粮，2千克，1包",
+      "品牌": "Nupec",
+      "评分": 4.9,
+      "评论数": 2282,
+      "价格(墨西哥比索)": 469.0,
+      "月销量": 900,
+      "销量依据": "亚马逊官方(上月购买量)",
+      "上架时间": "2019-03-18",
+      "在售月数": 90,
+      "变体数量": 1,
+      "卖家": "Amazon México",
+      "卖家类型": "亚马逊自营",
+      "卖家所在地": "",
+      "卖家详细地址": "",
+      "配送方式": "亚马逊自营配送",
+      "商品链接": "https://www.amazon.com.mx/dp/B07NSD6XW3",
+      "完整详情": true
+    },
+    {
+      "排名": 63,
+      "ASIN编号": "B09Z6QHGTG",
+      "商品名称": "猫狗LED指甲剪：照亮指甲或血线，修剪更安全。超锋利刀片适合厚指甲，快速感应防止过度修剪。适合猫狗。",
+      "品牌": "",
+      "评分": 4.7,
+      "评论数": 1724,
+      "价格(墨西哥比索)": 195.65,
+      "月销量": null,
+      "销量依据": "",
+      "上架时间": "",
+      "在售月数": null,
+      "变体数量": null,
+      "卖家": "",
+      "卖家类型": "",
+      "卖家所在地": "",
+      "卖家详细地址": "",
+      "配送方式": "",
+      "商品链接": "https://www.amazon.com.mx/dp/B09Z6QHGTG",
+      "完整详情": false
+    },
+    {
+      "排名": 64,
+      "ASIN编号": "B00NLMJ6F4",
+      "商品名称": "Virbac Nutri-Plus Gel 营养补充剂 120g 猫狗通用",
+      "品牌": "",
+      "评分": 4.9,
+      "评论数": 354,
+      "价格(墨西哥比索)": 297.6,
+      "月销量": null,
+      "销量依据": "",
+      "上架时间": "",
+      "在售月数": null,
+      "变体数量": null,
+      "卖家": "",
+      "卖家类型": "",
+      "卖家所在地": "",
+      "卖家详细地址": "",
+      "配送方式": "",
+      "商品链接": "https://www.amazon.com.mx/dp/B00NLMJ6F4",
+      "完整详情": false
+    },
+    {
+      "排名": 65,
       "ASIN编号": "B08QJNMHLZ",
-      "商品名称": "Arm & Hammer 全面护理犬用牙齿护理套装 | 2.5盎司鸡肉味含酶狗牙膏、牙刷和指套刷 | 小苏打强化配方，清新口气，控制牙垢",
+      "商品名称": "Arm & Hammer 全效护理犬用口腔护理套装 | 2.5盎司鸡肉味酶配方犬用牙膏、牙刷和指套牙刷 | 小苏打强化配方，清新口气并控制牙垢",
       "品牌": "ARM & HAMMER",
       "评分": 4.6,
       "评论数": 3410,
@@ -78177,135 +79027,219 @@
       "完整详情": true
     },
     {
-      "排名": 69,
-      "ASIN编号": "B09Z6QHGTG",
-      "商品名称": "猫狗LED灯指甲剪：照亮指甲或血线，修剪更安全。超锋利刀片适合厚指甲，快速感应防止过度修剪。猫狗适用。",
-      "品牌": "Elvess",
-      "评分": 4.6,
-      "评论数": 1723,
-      "价格(墨西哥比索)": 172.17,
-      "月销量": 900,
+      "排名": 66,
+      "ASIN编号": "B08B1XNGW1",
+      "商品名称": "Medical Solutions MS 伊丽莎白项圈 4号 (32厘米)",
+      "品牌": "Fancy Pets",
+      "评分": 4.4,
+      "评论数": 3084,
+      "价格(墨西哥比索)": 129.0,
+      "月销量": 50,
       "销量依据": "亚马逊官方(上月购买量)",
-      "上架时间": "2022-04-29",
-      "在售月数": 53,
-      "变体数量": 1,
-      "卖家": "elvess",
-      "卖家类型": "品牌方",
+      "上架时间": "2020-06-11",
+      "在售月数": 75,
+      "变体数量": 11,
+      "卖家": "Amazon México",
+      "卖家类型": "亚马逊自营",
       "卖家所在地": "",
       "卖家详细地址": "",
-      "配送方式": "FBA",
-      "商品链接": "https://www.amazon.com.mx/dp/B09Z6QHGTG",
+      "配送方式": "亚马逊自营配送",
+      "商品链接": "https://www.amazon.com.mx/dp/B08B1XNGW1",
       "完整详情": true
     },
     {
-      "排名": 70,
-      "ASIN编号": "B0CW618SPM",
-      "商品名称": "安全门，婴儿门，76-125厘米，狗/宠物门，儿童安全门，免打孔，适用于楼梯",
-      "品牌": "MOXIMX",
-      "评分": 4.6,
-      "评论数": 269,
-      "价格(墨西哥比索)": 1081.49,
-      "月销量": 300,
-      "销量依据": "亚马逊官方(上月购买量)",
-      "上架时间": "",
-      "在售月数": null,
-      "变体数量": 2,
-      "卖家": "duanyuUS",
-      "卖家类型": "第三方",
-      "卖家所在地": "",
-      "卖家详细地址": "",
-      "配送方式": "FBA",
-      "商品链接": "https://www.amazon.com.mx/dp/B0CW618SPM",
-      "完整详情": true
-    },
-    {
-      "排名": 71,
-      "ASIN编号": "B07WZ2KN1V",
-      "商品名称": "Cloralex 宠物除臭剂 10升",
-      "品牌": "Cloralex",
+      "排名": 67,
+      "ASIN编号": "B0153V47YU",
+      "商品名称": "Nupec 小型犬幼犬狗粮，含维生素E和硒，2公斤装。",
+      "品牌": "Nupec",
       "评分": 4.8,
-      "评论数": 957,
-      "价格(墨西哥比索)": 216.0,
-      "月销量": 600,
+      "评论数": 3176,
+      "价格(墨西哥比索)": 401.0,
+      "月销量": 700,
       "销量依据": "亚马逊官方(上月购买量)",
-      "上架时间": "",
-      "在售月数": null,
+      "上架时间": "2015-10-06",
+      "在售月数": 132,
       "变体数量": 1,
       "卖家": "Amazon México",
       "卖家类型": "亚马逊自营",
       "卖家所在地": "",
       "卖家详细地址": "",
       "配送方式": "亚马逊自营配送",
-      "商品链接": "https://www.amazon.com.mx/dp/B07WZ2KN1V",
+      "商品链接": "https://www.amazon.com.mx/dp/B0153V47YU",
       "完整详情": true
     },
     {
-      "排名": 72,
+      "排名": 68,
+      "ASIN编号": "B075NBKBBR",
+      "商品名称": "Cesar - 成年犬湿粮，牛肉汁口味，24包，每包75克。",
+      "品牌": "Cesar",
+      "评分": 4.7,
+      "评论数": 819,
+      "价格(墨西哥比索)": 249.89,
+      "月销量": 300,
+      "销量依据": "亚马逊官方(上月购买量)",
+      "上架时间": "2017-09-11",
+      "在售月数": 109,
+      "变体数量": 4,
+      "卖家": "Amazon México",
+      "卖家类型": "亚马逊自营",
+      "卖家所在地": "",
+      "卖家详细地址": "",
+      "配送方式": "亚马逊自营配送",
+      "商品链接": "https://www.amazon.com.mx/dp/B075NBKBBR",
+      "完整详情": true
+    },
+    {
+      "排名": 69,
       "ASIN编号": "B0HGXN7CHL",
-      "商品名称": "Alvenzo 犬用 易于使用",
+      "商品名称": "Alvenzo 狗狗用品 易用型",
       "品牌": "Xanmus",
-      "评分": 4.3,
+      "评分": 4.2,
       "评论数": null,
       "价格(墨西哥比索)": 379.99,
       "月销量": null,
       "销量依据": "",
       "上架时间": "2023-08-10",
-      "在售月数": 37,
+      "在售月数": 38,
       "变体数量": 1,
       "卖家": "wangqianyingdianzishangwu",
-      "卖家类型": "第三方",
-      "卖家所在地": "",
-      "卖家详细地址": "",
+      "卖家类型": "第三方(中国)",
+      "卖家所在地": "中国",
+      "卖家详细地址": "中国/350006/福建省/福州市/福州依强珠宝首饰有限公司提升改造项目2号楼703/福建省福州市仓山区金山工业区金洲北路13号",
       "配送方式": "",
       "商品链接": "https://www.amazon.com.mx/dp/B0HGXN7CHL",
       "完整详情": true
     },
     {
-      "排名": 73,
-      "ASIN编号": "B0723HRWJW",
-      "商品名称": "Nature's Miracle 宠物狗顽固污渍和异味高级去除剂 946ml",
+      "排名": 70,
+      "ASIN编号": "B09KQVCC67",
+      "商品名称": "Nature's Miracle 宠物狗尿液污渍酶清洁剂 946毫升",
       "品牌": "Nature's Miracle",
       "评分": 4.4,
-      "评论数": 23612,
-      "价格(墨西哥比索)": 299.0,
+      "评论数": 4718,
+      "价格(墨西哥比索)": 223.3,
       "月销量": 800,
       "销量依据": "亚马逊官方(上月购买量)",
-      "上架时间": "2017-06-29",
-      "在售月数": 111,
+      "上架时间": "2021-11-01",
+      "在售月数": 59,
       "变体数量": 3,
       "卖家": "Amazon México",
       "卖家类型": "亚马逊自营",
       "卖家所在地": "",
       "卖家详细地址": "",
       "配送方式": "亚马逊自营配送",
-      "商品链接": "https://www.amazon.com.mx/dp/B0723HRWJW",
+      "商品链接": "https://www.amazon.com.mx/dp/B09KQVCC67",
+      "完整详情": true
+    },
+    {
+      "排名": 71,
+      "ASIN编号": "B018TYLZU2",
+      "商品名称": "Fancy Pets 狗狗训练垫 Doggie Grass GDE | 带托盘和格栅的人造草坪 | 除臭易清洁",
+      "品牌": "Fancy Pets",
+      "评分": 4.4,
+      "评论数": 10110,
+      "价格(墨西哥比索)": 509.0,
+      "月销量": 600,
+      "销量依据": "亚马逊官方(上月购买量)",
+      "上架时间": "2015-12-02",
+      "在售月数": 130,
+      "变体数量": 3,
+      "卖家": "Amazon México",
+      "卖家类型": "亚马逊自营",
+      "卖家所在地": "",
+      "卖家详细地址": "",
+      "配送方式": "亚马逊自营配送",
+      "商品链接": "https://www.amazon.com.mx/dp/B018TYLZU2",
+      "完整详情": true
+    },
+    {
+      "排名": 72,
+      "ASIN编号": "B0GNTXPQQ3",
+      "商品名称": "Virbac Movoflex 犬用关节活动补充剂 中型犬",
+      "品牌": "Virbac",
+      "评分": 4.7,
+      "评论数": 38,
+      "价格(墨西哥比索)": 693.0,
+      "月销量": null,
+      "销量依据": "",
+      "上架时间": "2026-02-17",
+      "在售月数": 7,
+      "变体数量": 3,
+      "卖家": "",
+      "卖家类型": "",
+      "卖家所在地": "",
+      "卖家详细地址": "",
+      "配送方式": "",
+      "商品链接": "https://www.amazon.com.mx/dp/B0GNTXPQQ3",
+      "完整详情": true
+    },
+    {
+      "排名": 73,
+      "ASIN编号": "B07BDX6TWS",
+      "商品名称": "Perfect Sense 小型犬成犬狗粮 8kg – 100%天然，促进消化，富含Omega-3",
+      "品牌": "Perfect Sense",
+      "评分": 4.7,
+      "评论数": 854,
+      "价格(墨西哥比索)": 899.0,
+      "月销量": 200,
+      "销量依据": "亚马逊官方(上月购买量)",
+      "上架时间": "2018-03-12",
+      "在售月数": 103,
+      "变体数量": 3,
+      "卖家": "Amazon México",
+      "卖家类型": "亚马逊自营",
+      "卖家所在地": "",
+      "卖家详细地址": "",
+      "配送方式": "亚马逊自营配送",
+      "商品链接": "https://www.amazon.com.mx/dp/B07BDX6TWS",
       "完整详情": true
     },
     {
       "排名": 74,
-      "ASIN编号": "B0DF4TZZ82",
-      "商品名称": "Dogelthy 狗零食鸡爪脱水 100% 天然",
-      "品牌": "Dogelthy",
-      "评分": 4.4,
-      "评论数": 94,
-      "价格(墨西哥比索)": 215.1,
-      "月销量": 300,
-      "销量依据": "亚马逊官方(上月购买量)",
-      "上架时间": "2024-08-23",
-      "在售月数": 25,
-      "变体数量": 6,
-      "卖家": "Dogelthy",
-      "卖家类型": "品牌方",
-      "卖家所在地": "",
-      "卖家详细地址": "",
+      "ASIN编号": "B0DH27NZGB",
+      "商品名称": "HomeChi 狗狗恢复服，母狗手术服",
+      "品牌": "HomeChi",
+      "评分": 4.5,
+      "评论数": 483,
+      "价格(墨西哥比索)": 359.99,
+      "月销量": null,
+      "销量依据": "",
+      "上架时间": "2024-09-14",
+      "在售月数": 24,
+      "变体数量": 65,
+      "卖家": "ZJFF MX LLC",
+      "卖家类型": "第三方(中国)",
+      "卖家所在地": "中国",
+      "卖家详细地址": "中国/518129/广东省/龙岗区/深圳市/F栋六层609/坂田街道大发埔社区布龙路663号",
       "配送方式": "FBA",
-      "商品链接": "https://www.amazon.com.mx/dp/B0DF4TZZ82",
+      "商品链接": "https://www.amazon.com.mx/dp/B0DH27NZGB",
       "完整详情": true
     },
     {
       "排名": 75,
+      "ASIN编号": "B0929DKD6Z",
+      "商品名称": "普瑞纳Beneful成犬热带能量牛肉火鸡味10kg",
+      "品牌": "Purina Beneful Sunrise",
+      "评分": 4.8,
+      "评论数": 1530,
+      "价格(墨西哥比索)": 549.0,
+      "月销量": 600,
+      "销量依据": "亚马逊官方(上月购买量)",
+      "上架时间": "2021-04-12",
+      "在售月数": 65,
+      "变体数量": 1,
+      "卖家": "Amazon México",
+      "卖家类型": "亚马逊自营",
+      "卖家所在地": "",
+      "卖家详细地址": "",
+      "配送方式": "亚马逊自营配送",
+      "商品链接": "https://www.amazon.com.mx/dp/B0929DKD6Z",
+      "完整详情": true
+    },
+    {
+      "排名": 76,
       "ASIN编号": "B074M2D1LJ",
-      "商品名称": "Perfect Sense 中大型成犬优质犬粮 MLB 15 kg - 100%天然，含Omega-3、益生元和抗氧化剂 - 高消化率",
+      "商品名称": "Perfect Sense 成犬中大型犬 premium 狗粮 15 kg - 100%天然，含Omega 3、益生元和抗氧化剂 - 高消化性",
       "品牌": "Perfect Sense",
       "评分": 4.6,
       "评论数": 727,
@@ -78324,51 +79258,30 @@
       "完整详情": true
     },
     {
-      "排名": 76,
-      "ASIN编号": "B09KQVCC67",
-      "商品名称": "Nature's Miracle 狗狗尿液和污渍酶清洁剂 946毫升",
-      "品牌": "Nature's Miracle",
-      "评分": 4.4,
-      "评论数": 4711,
-      "价格(墨西哥比索)": 315.0,
-      "月销量": 700,
+      "排名": 77,
+      "ASIN编号": "B0D7XPXCSL",
+      "商品名称": "Tapo - TP-Link 2K 室内监控摄像头 云台版 用于婴儿监护、宠物、移动侦测、双向音频、存储 黑色 C211 2件装",
+      "品牌": "Tapo",
+      "评分": 4.5,
+      "评论数": 1963,
+      "价格(墨西哥比索)": 806.61,
+      "月销量": 300,
       "销量依据": "亚马逊官方(上月购买量)",
-      "上架时间": "2021-11-01",
-      "在售月数": 59,
-      "变体数量": 3,
+      "上架时间": "",
+      "在售月数": null,
+      "变体数量": 2,
       "卖家": "Amazon México",
       "卖家类型": "亚马逊自营",
       "卖家所在地": "",
       "卖家详细地址": "",
       "配送方式": "亚马逊自营配送",
-      "商品链接": "https://www.amazon.com.mx/dp/B09KQVCC67",
-      "完整详情": true
-    },
-    {
-      "排名": 77,
-      "ASIN编号": "B0BKK4GQTM",
-      "商品名称": "Raganet宠物运输包，适用于猫狗，便携包最大承重10公斤，尺寸：长42厘米 x 宽20厘米 x 高25厘米，旅行和车载背包，黑色",
-      "品牌": "Raganet",
-      "评分": 4.6,
-      "评论数": 1314,
-      "价格(墨西哥比索)": 189.0,
-      "月销量": 400,
-      "销量依据": "亚马逊官方(上月购买量)",
-      "上架时间": "2022-10-25",
-      "在售月数": 47,
-      "变体数量": 3,
-      "卖家": "Raga Basics",
-      "卖家类型": "第三方",
-      "卖家所在地": "",
-      "卖家详细地址": "",
-      "配送方式": "FBA",
-      "商品链接": "https://www.amazon.com.mx/dp/B0BKK4GQTM",
+      "商品链接": "https://www.amazon.com.mx/dp/B0D7XPXCSL",
       "完整详情": true
     },
     {
       "排名": 78,
       "ASIN编号": "B0155E0168",
-      "商品名称": "Fancy Pets 狗用不锈钢盘 8盎司/227克",
+      "商品名称": "Fancy Pets 不锈钢狗碗 8盎司/227克",
       "品牌": "Fancy Pets",
       "评分": 4.7,
       "评论数": 6686,
@@ -78389,12 +79302,12 @@
     {
       "排名": 79,
       "ASIN编号": "B088BH2WLC",
-      "商品名称": "Feandrea 狗床，毛绒地毯，直径60厘米，灰色",
+      "商品名称": "Feandrea 狗床，毛绒垫，直径60厘米，灰色",
       "品牌": "FEANDREA",
       "评分": 4.3,
-      "评论数": 5939,
-      "价格(墨西哥比索)": 314.99,
-      "月销量": 200,
+      "评论数": 5943,
+      "价格(墨西哥比索)": 349.99,
+      "月销量": 100,
       "销量依据": "亚马逊官方(上月购买量)",
       "上架时间": "2020-07-22",
       "在售月数": 74,
@@ -78409,32 +79322,11 @@
     },
     {
       "排名": 80,
-      "ASIN编号": "B0GTNCLNW2",
-      "商品名称": "宠物狗狗安全胸背带牵引绳1.5米（蓝色，M码）中小型大型犬适用",
-      "品牌": "UNA MASCOTA",
-      "评分": 4.8,
-      "评论数": 6,
-      "价格(墨西哥比索)": 219.0,
-      "月销量": null,
-      "销量依据": "",
-      "上架时间": "2026-03-24",
-      "在售月数": 6,
-      "变体数量": 66,
-      "卖家": "COMERSTAT",
-      "卖家类型": "第三方",
-      "卖家所在地": "",
-      "卖家详细地址": "",
-      "配送方式": "FBA",
-      "商品链接": "https://www.amazon.com.mx/dp/B0GTNCLNW2",
-      "完整详情": true
-    },
-    {
-      "排名": 81,
       "ASIN编号": "B00B5RFPYS",
-      "商品名称": "Arm & Hammer 高级护理犬用薄荷味去牙垢口腔喷雾 4盎司",
+      "商品名称": "Arm & Hammer 艾禾美 Advanced Care 犬用去牙垢口腔喷雾，薄荷味，4盎司",
       "品牌": "ARM & HAMMER",
       "评分": 4.5,
-      "评论数": 5687,
+      "评论数": 5688,
       "价格(墨西哥比索)": 131.21,
       "月销量": 600,
       "销量依据": "亚马逊官方(上月购买量)",
@@ -78450,96 +79342,96 @@
       "完整详情": true
     },
     {
-      "排名": 82,
-      "ASIN编号": "B0B76YCL74",
-      "商品名称": "猫狗梳子2件套，去毛器",
-      "品牌": "NEWKIBOU",
-      "评分": 4.6,
-      "评论数": 2665,
-      "价格(墨西哥比索)": 134.1,
-      "月销量": 300,
+      "排名": 81,
+      "ASIN编号": "B0723HRWJW",
+      "商品名称": "Nature's Miracle 宠物狗顽固污渍和异味高级去除剂 946ml",
+      "品牌": "Nature's Miracle",
+      "评分": 4.4,
+      "评论数": 23615,
+      "价格(墨西哥比索)": 299.0,
+      "月销量": 800,
       "销量依据": "亚马逊官方(上月购买量)",
-      "上架时间": "2022-07-21",
-      "在售月数": 50,
-      "变体数量": 2,
-      "卖家": "LSMEI",
-      "卖家类型": "第三方",
-      "卖家所在地": "",
-      "卖家详细地址": "",
-      "配送方式": "FBA",
-      "商品链接": "https://www.amazon.com.mx/dp/B0B76YCL74",
-      "完整详情": true
-    },
-    {
-      "排名": 83,
-      "ASIN编号": "B0D7XPXCSL",
-      "商品名称": "Tapo - TP-Link 2K 室内安全摄像头，带云台功能，适用于婴儿监视器、宠物，移动侦测，双向音频，存储，黑色，C211，2件",
-      "品牌": "Tapo",
-      "评分": 4.5,
-      "评论数": 1960,
-      "价格(墨西哥比索)": 798.07,
-      "月销量": 300,
-      "销量依据": "亚马逊官方(上月购买量)",
-      "上架时间": "",
-      "在售月数": null,
-      "变体数量": 2,
+      "上架时间": "2017-06-29",
+      "在售月数": 111,
+      "变体数量": 3,
       "卖家": "Amazon México",
       "卖家类型": "亚马逊自营",
       "卖家所在地": "",
       "卖家详细地址": "",
       "配送方式": "亚马逊自营配送",
-      "商品链接": "https://www.amazon.com.mx/dp/B0D7XPXCSL",
+      "商品链接": "https://www.amazon.com.mx/dp/B0723HRWJW",
       "完整详情": true
     },
     {
-      "排名": 84,
-      "ASIN编号": "B09Y1RNQXL",
-      "商品名称": "宝路 小型犬成犬湿粮包 鸡肉味 含天然食材 蛋白质和纤维 24包 每包100克",
-      "品牌": "Pedigree",
-      "评分": 4.8,
-      "评论数": 634,
-      "价格(墨西哥比索)": 228.0,
-      "月销量": 700,
+      "排名": 82,
+      "ASIN编号": "B0F9XKDYRV",
+      "商品名称": "冠能鳄鱼味狗零食100克 全犬种全年龄",
+      "品牌": "Purina Dog Chow Snacks",
+      "评分": 4.5,
+      "评论数": 34,
+      "价格(墨西哥比索)": 13.5,
+      "月销量": 200,
       "销量依据": "亚马逊官方(上月购买量)",
-      "上架时间": "2022-04-15",
-      "在售月数": 53,
+      "上架时间": "2025-05-26",
+      "在售月数": 16,
       "变体数量": 1,
       "卖家": "Amazon México",
       "卖家类型": "亚马逊自营",
       "卖家所在地": "",
       "卖家详细地址": "",
       "配送方式": "亚马逊自营配送",
-      "商品链接": "https://www.amazon.com.mx/dp/B09Y1RNQXL",
+      "商品链接": "https://www.amazon.com.mx/dp/B0F9XKDYRV",
       "完整详情": true
     },
     {
-      "排名": 85,
-      "ASIN编号": "B0DZC33MRF",
-      "商品名称": "Feandrea 三阶狗狗楼梯，防滑，57×40×40厘米",
-      "品牌": "FEANDREA",
-      "评分": 4.5,
-      "评论数": 2165,
-      "价格(墨西哥比索)": 536.84,
+      "排名": 83,
+      "ASIN编号": "B07MQP8RLK",
+      "商品名称": "Fancy Pets Medical Solutions 猫狗皮肤及脚垫保湿修复软膏",
+      "品牌": "Fancy Pets",
+      "评分": 4.7,
+      "评论数": 7843,
+      "价格(墨西哥比索)": 92.31,
       "月销量": 300,
       "销量依据": "亚马逊官方(上月购买量)",
-      "上架时间": "2025-06-20",
-      "在售月数": 15,
-      "变体数量": 7,
-      "卖家": "Amazon Estados Unidos",
+      "上架时间": "2019-01-11",
+      "在售月数": 92,
+      "变体数量": 1,
+      "卖家": "Amazon México",
       "卖家类型": "亚马逊自营",
       "卖家所在地": "",
       "卖家详细地址": "",
       "配送方式": "亚马逊自营配送",
-      "商品链接": "https://www.amazon.com.mx/dp/B0DZC33MRF",
+      "商品链接": "https://www.amazon.com.mx/dp/B07MQP8RLK",
       "完整详情": true
     },
     {
-      "排名": 86,
+      "排名": 84,
+      "ASIN编号": "B07BCQNR3N",
+      "商品名称": "Kirkland Maspet宠物三文鱼干粮15.8kg",
+      "品牌": "Kirkland",
+      "评分": 4.7,
+      "评论数": 568,
+      "价格(墨西哥比索)": 1184.08,
+      "月销量": null,
+      "销量依据": "",
+      "上架时间": "",
+      "在售月数": null,
+      "变体数量": 1,
+      "卖家": "",
+      "卖家类型": "",
+      "卖家所在地": "",
+      "卖家详细地址": "",
+      "配送方式": "",
+      "商品链接": "https://www.amazon.com.mx/dp/B07BCQNR3N",
+      "完整详情": true
+    },
+    {
+      "排名": 85,
       "ASIN编号": "B0DL98VSFP",
-      "商品名称": "540个便便袋，带分配器和夹子，薰衣草香味",
+      "商品名称": "540个带分配器和夹子的便便袋，薰衣草香味",
       "品牌": "ESRAIN",
       "评分": 4.8,
-      "评论数": 344,
+      "评论数": 345,
       "价格(墨西哥比索)": 288.99,
       "月销量": 800,
       "销量依据": "亚马逊官方(上月购买量)",
@@ -78547,104 +79439,41 @@
       "在售月数": null,
       "变体数量": 1,
       "卖家": "ESRAIN",
-      "卖家类型": "品牌方",
-      "卖家所在地": "",
-      "卖家详细地址": "",
+      "卖家类型": "品牌方(中国)",
+      "卖家所在地": "中国",
+      "卖家详细地址": "中国/518108/广东/宝安区/深圳市/金凯进厂区厂房一C403/石岩街道石龙社区",
       "配送方式": "FBA",
       "商品链接": "https://www.amazon.com.mx/dp/B0DL98VSFP",
       "完整详情": true
     },
     {
-      "排名": 87,
-      "ASIN编号": "B01FKNX4R2",
-      "商品名称": "Ganador 幼犬全犬种干粮 - 1 x 20 kg",
-      "品牌": "Ganador",
-      "评分": 4.7,
-      "评论数": 1160,
-      "价格(墨西哥比索)": 789.0,
-      "月销量": 400,
-      "销量依据": "亚马逊官方(上月购买量)",
-      "上架时间": "2016-11-24",
-      "在售月数": 118,
-      "变体数量": 1,
-      "卖家": "Amazon México",
-      "卖家类型": "亚马逊自营",
-      "卖家所在地": "",
-      "卖家详细地址": "",
-      "配送方式": "亚马逊自营配送",
-      "商品链接": "https://www.amazon.com.mx/dp/B01FKNX4R2",
-      "完整详情": true
-    },
-    {
-      "排名": 88,
-      "ASIN编号": "B0DH27NZGB",
-      "商品名称": "HomeChi 狗狗术后恢复服，母犬手术服",
-      "品牌": "HomeChi",
+      "排名": 86,
+      "ASIN编号": "B0C4LFMNQ5",
+      "商品名称": "狗狗猫咪指甲打磨器带LED灯，指甲剪2档速度",
+      "品牌": "AbaqCasa",
       "评分": 4.5,
-      "评论数": 483,
-      "价格(墨西哥比索)": 359.99,
-      "月销量": null,
-      "销量依据": "",
-      "上架时间": "2024-09-14",
-      "在售月数": 24,
-      "变体数量": 67,
-      "卖家": "ZJFF MX LLC",
-      "卖家类型": "第三方",
-      "卖家所在地": "",
-      "卖家详细地址": "",
+      "评论数": 416,
+      "价格(墨西哥比索)": 185.4,
+      "月销量": 500,
+      "销量依据": "亚马逊官方(上月购买量)",
+      "上架时间": "2023-05-08",
+      "在售月数": 41,
+      "变体数量": 1,
+      "卖家": "AbaqKalza",
+      "卖家类型": "第三方(中国)",
+      "卖家所在地": "中国",
+      "卖家详细地址": "中国/518100/广东/深圳市/二层C210/龙岗区坂田街道象角塘社区雪岗南路137号",
       "配送方式": "FBA",
-      "商品链接": "https://www.amazon.com.mx/dp/B0DH27NZGB",
+      "商品链接": "https://www.amazon.com.mx/dp/B0C4LFMNQ5",
       "完整详情": true
     },
     {
-      "排名": 89,
-      "ASIN编号": "B07BDX6TWS",
-      "商品名称": "Perfect Sense 小型犬成犬狗粮 8 kg – 100%天然，助消化，富含Omega 3",
-      "品牌": "Perfect Sense",
-      "评分": 4.7,
-      "评论数": 854,
-      "价格(墨西哥比索)": 899.0,
-      "月销量": 200,
-      "销量依据": "亚马逊官方(上月购买量)",
-      "上架时间": "2018-03-12",
-      "在售月数": 102,
-      "变体数量": 3,
-      "卖家": "Amazon México",
-      "卖家类型": "亚马逊自营",
-      "卖家所在地": "",
-      "卖家详细地址": "",
-      "配送方式": "亚马逊自营配送",
-      "商品链接": "https://www.amazon.com.mx/dp/B07BDX6TWS",
-      "完整详情": true
-    },
-    {
-      "排名": 90,
-      "ASIN编号": "B083MN8JX4",
-      "商品名称": "Ajax多用途宠物液体清洁剂 去除异味 2升",
-      "品牌": "AJAX",
-      "评分": 4.8,
-      "评论数": 3348,
-      "价格(墨西哥比索)": 69.0,
-      "月销量": 400,
-      "销量依据": "亚马逊官方(上月购买量)",
-      "上架时间": "",
-      "在售月数": null,
-      "变体数量": 3,
-      "卖家": "Amazon México",
-      "卖家类型": "亚马逊自营",
-      "卖家所在地": "",
-      "卖家详细地址": "",
-      "配送方式": "亚马逊自营配送",
-      "商品链接": "https://www.amazon.com.mx/dp/B083MN8JX4",
-      "完整详情": true
-    },
-    {
-      "排名": 91,
+      "排名": 87,
       "ASIN编号": "B0855ND74T",
-      "商品名称": "PetLovers 衣物粘毛器600张套装 - 超粘粘毛滚筒，宠物除毛滚筒 - 6件装",
+      "商品名称": "PetLovers 600张衣物除毛滚筒套装 - 超粘性除毛滚筒，宠物毛发去除滚筒 - 6个装",
       "品牌": "PetLovers",
       "评分": 4.7,
-      "评论数": 36962,
+      "评论数": 36968,
       "价格(墨西哥比索)": 499.0,
       "月销量": 300,
       "销量依据": "亚马逊官方(上月购买量)",
@@ -78652,20 +79481,20 @@
       "在售月数": null,
       "变体数量": 6,
       "卖家": "PetLovers MX",
-      "卖家类型": "品牌方",
-      "卖家所在地": "",
-      "卖家详细地址": "",
+      "卖家类型": "品牌方(美国)",
+      "卖家所在地": "美国",
+      "卖家详细地址": "美国/33702/佛罗里达州/圣彼得堡/7901 北4街 300室",
       "配送方式": "FBA",
       "商品链接": "https://www.amazon.com.mx/dp/B0855ND74T",
       "完整详情": true
     },
     {
-      "排名": 92,
+      "排名": 88,
       "ASIN编号": "B0BQX4HLCS",
-      "商品名称": "Raganet 中小型宠物便携围栏，宠物屋高58厘米×长78厘米，防水牛津布，室内外适用，安全耐用（灰色）",
+      "商品名称": "Raganet 中小型宠物便携围栏，宠物屋高58cm x 长78cm，牛津布防水，室内外适用，安全耐用（灰色）",
       "品牌": "Raganet",
       "评分": 4.6,
-      "评论数": 1099,
+      "评论数": 1101,
       "价格(墨西哥比索)": 249.0,
       "月销量": 500,
       "销量依据": "亚马逊官方(上月购买量)",
@@ -78681,93 +79510,30 @@
       "完整详情": true
     },
     {
-      "排名": 93,
-      "ASIN编号": "B01N0660ID",
-      "商品名称": "宝路洁齿棒 成犬零食 7支 口腔护理 牙齿清洁 对抗牙垢 小型犬",
-      "品牌": "Pedigree",
-      "评分": 4.8,
-      "评论数": 1140,
-      "价格(墨西哥比索)": 57.9,
-      "月销量": 400,
-      "销量依据": "亚马逊官方(上月购买量)",
-      "上架时间": "2016-11-08",
-      "在售月数": 119,
-      "变体数量": 2,
-      "卖家": "",
-      "卖家类型": "",
-      "卖家所在地": "",
-      "卖家详细地址": "",
-      "配送方式": "",
-      "商品链接": "https://www.amazon.com.mx/dp/B01N0660ID",
-      "完整详情": true
-    },
-    {
-      "排名": 94,
-      "ASIN编号": "B096N1C82L",
-      "商品名称": "普瑞纳One成犬小型犬鸡肉牛肉味3.5Kg",
-      "品牌": "Purina One Dry Perro",
-      "评分": 4.7,
-      "评论数": 275,
-      "价格(墨西哥比索)": 363.89,
-      "月销量": 700,
-      "销量依据": "亚马逊官方(上月购买量)",
-      "上架时间": "2021-06-04",
-      "在售月数": 64,
-      "变体数量": 1,
-      "卖家": "Amazon México",
-      "卖家类型": "亚马逊自营",
-      "卖家所在地": "",
-      "卖家详细地址": "",
-      "配送方式": "亚马逊自营配送",
-      "商品链接": "https://www.amazon.com.mx/dp/B096N1C82L",
-      "完整详情": true
-    },
-    {
-      "排名": 95,
-      "ASIN编号": "B0BDBVTS18",
-      "商品名称": "Raganet宠物车座套，汽车座椅套，沙发套。适用于狗和猫，后排座椅、后备箱或沙发通用，尺寸：130*145*40厘米，防水，黑色",
-      "品牌": "Raganet",
-      "评分": 4.2,
-      "评论数": 1743,
-      "价格(墨西哥比索)": 189.03,
-      "月销量": 200,
-      "销量依据": "亚马逊官方(上月购买量)",
-      "上架时间": "",
-      "在售月数": null,
-      "变体数量": 2,
-      "卖家": "Raga Basics",
-      "卖家类型": "第三方",
-      "卖家所在地": "",
-      "卖家详细地址": "",
+      "排名": 89,
+      "ASIN编号": "B0C4L2W5RB",
+      "商品名称": "小中大型犬安全胸背带 含1.5米牵引绳（红色含牵引绳，L码）",
+      "品牌": "UNA MASCOTA",
+      "评分": 4.5,
+      "评论数": 161,
+      "价格(墨西哥比索)": 219.0,
+      "月销量": null,
+      "销量依据": "",
+      "上架时间": "2023-05-08",
+      "在售月数": 41,
+      "变体数量": 67,
+      "卖家": "COMERSTAT",
+      "卖家类型": "第三方(墨西哥)",
+      "卖家所在地": "墨西哥",
+      "卖家详细地址": "墨西哥/06000/墨西哥城/墨西哥城/中心（1区）/中央大道拉萨罗·卡德纳斯 119 商铺 2 3",
       "配送方式": "FBA",
-      "商品链接": "https://www.amazon.com.mx/dp/B0BDBVTS18",
+      "商品链接": "https://www.amazon.com.mx/dp/B0C4L2W5RB",
       "完整详情": true
     },
     {
-      "排名": 96,
-      "ASIN编号": "B07YSXP3XF",
-      "商品名称": "Virbac Veggiedent FR3SH S 犬用洁牙条 5-10公斤，15条",
-      "品牌": "Virbac",
-      "评分": 4.6,
-      "评论数": 677,
-      "价格(墨西哥比索)": 259.0,
-      "月销量": 300,
-      "销量依据": "亚马逊官方(上月购买量)",
-      "上架时间": "2021-08-10",
-      "在售月数": 61,
-      "变体数量": 3,
-      "卖家": "Virbac",
-      "卖家类型": "品牌方",
-      "卖家所在地": "",
-      "卖家详细地址": "",
-      "配送方式": "FBA",
-      "商品链接": "https://www.amazon.com.mx/dp/B07YSXP3XF",
-      "完整详情": true
-    },
-    {
-      "排名": 97,
+      "排名": 90,
       "ASIN编号": "B07X148WCW",
-      "商品名称": "Purina One成猫中大型鸡肉牛肉味7Kg",
+      "商品名称": "普瑞纳ONE成年中型和大型犬鸡肉牛肉味7公斤",
       "品牌": "WeTap",
       "评分": 4.5,
       "评论数": 734,
@@ -78786,55 +79552,34 @@
       "完整详情": true
     },
     {
-      "排名": 98,
-      "ASIN编号": "B0H1JCRNNB",
-      "商品名称": "Dogelthy狗狗过敏天然补充剂",
-      "品牌": "Dogelthy",
-      "评分": 4.4,
-      "评论数": 145,
-      "价格(墨西哥比索)": 449.1,
-      "月销量": 300,
-      "销量依据": "亚马逊官方(上月购买量)",
-      "上架时间": "2026-05-12",
-      "在售月数": 4,
-      "变体数量": 2,
-      "卖家": "Dogelthy",
-      "卖家类型": "品牌方",
-      "卖家所在地": "",
-      "卖家详细地址": "",
-      "配送方式": "FBA",
-      "商品链接": "https://www.amazon.com.mx/dp/B0H1JCRNNB",
-      "完整详情": true
-    },
-    {
-      "排名": 99,
-      "ASIN编号": "B075NLFVH8",
-      "商品名称": "宝路洁齿棒 成犬零食 7支 口腔护理 清洁牙齿 对抗牙垢",
+      "排名": 91,
+      "ASIN编号": "B09Y1RNQXL",
+      "商品名称": "Pedigree - 小型犬狗粮湿粮包，鸡肉口味，含天然成分、蛋白质和纤维，24包，每包100克",
       "品牌": "Pedigree",
       "评分": 4.8,
-      "评论数": 573,
-      "价格(墨西哥比索)": 60.0,
-      "月销量": 400,
+      "评论数": 635,
+      "价格(墨西哥比索)": 228.0,
+      "月销量": 700,
       "销量依据": "亚马逊官方(上月购买量)",
-      "上架时间": "2017-09-11",
-      "在售月数": 108,
-      "变体数量": 2,
+      "上架时间": "2022-04-15",
+      "在售月数": 53,
+      "变体数量": 1,
       "卖家": "Amazon México",
       "卖家类型": "亚马逊自营",
       "卖家所在地": "",
       "卖家详细地址": "",
       "配送方式": "亚马逊自营配送",
-      "商品链接": "https://www.amazon.com.mx/dp/B075NLFVH8",
+      "商品链接": "https://www.amazon.com.mx/dp/B09Y1RNQXL",
       "完整详情": true
     },
     {
-      "排名": 100,
+      "排名": 92,
       "ASIN编号": "B0DKLT7Y8K",
-      "商品名称": "Waggys Relax 犬用天然舒缓压力与焦虑片 60粒",
+      "商品名称": "Waggys Relax天然舒缓犬用压力与焦虑，60粒",
       "品牌": "Waggys",
       "评分": 4.4,
-      "评论数": 222,
-      "价格(墨西哥比索)": 349.0,
+      "评论数": 223,
+      "价格(墨西哥比索)": 296.65,
       "月销量": 600,
       "销量依据": "亚马逊官方(上月购买量)",
       "上架时间": "2024-10-23",
@@ -78846,6 +79591,174 @@
       "卖家详细地址": "",
       "配送方式": "FBA",
       "商品链接": "https://www.amazon.com.mx/dp/B0DKLT7Y8K",
+      "完整详情": true
+    },
+    {
+      "排名": 93,
+      "ASIN编号": "B0B76YCL74",
+      "商品名称": "猫狗毛刷2件套，去毛器",
+      "品牌": "NEWKIBOU",
+      "评分": 4.6,
+      "评论数": 2666,
+      "价格(墨西哥比索)": 134.1,
+      "月销量": 400,
+      "销量依据": "亚马逊官方(上月购买量)",
+      "上架时间": "2022-07-21",
+      "在售月数": 50,
+      "变体数量": 2,
+      "卖家": "LSMEI",
+      "卖家类型": "第三方(中国)",
+      "卖家所在地": "中国",
+      "卖家详细地址": "中国/518000/深圳市/罗湖区/嘉北社区嘉宾路2008号东佳大厦505/南湖街道",
+      "配送方式": "FBA",
+      "商品链接": "https://www.amazon.com.mx/dp/B0B76YCL74",
+      "完整详情": true
+    },
+    {
+      "排名": 94,
+      "ASIN编号": "B09NF9NPZ6",
+      "商品名称": "Canine Chews 狗零食牛肉条 100%牛肉 100支（混合装）",
+      "品牌": "Canine Chews",
+      "评分": 4.5,
+      "评论数": 265,
+      "价格(墨西哥比索)": 199.0,
+      "月销量": 200,
+      "销量依据": "亚马逊官方(上月购买量)",
+      "上架时间": "2023-09-28",
+      "在售月数": 36,
+      "变体数量": 5,
+      "卖家": "Tienda Oficial de Canine Chews",
+      "卖家类型": "品牌方(墨西哥)",
+      "卖家所在地": "墨西哥",
+      "卖家详细地址": "墨西哥/20905/阿瓜斯卡连特斯/赫苏斯 玛丽亚/1/查塞拉 100",
+      "配送方式": "FBA",
+      "商品链接": "https://www.amazon.com.mx/dp/B09NF9NPZ6",
+      "完整详情": true
+    },
+    {
+      "排名": 95,
+      "ASIN编号": "B07YSXP3XF",
+      "商品名称": "维克 Veggiedent FR3SH S 犬用洁齿条 5-10kg，15条",
+      "品牌": "Virbac",
+      "评分": 4.6,
+      "评论数": 679,
+      "价格(墨西哥比索)": 259.0,
+      "月销量": 200,
+      "销量依据": "亚马逊官方(上月购买量)",
+      "上架时间": "2021-08-10",
+      "在售月数": 62,
+      "变体数量": 3,
+      "卖家": "Virbac",
+      "卖家类型": "品牌方",
+      "卖家所在地": "",
+      "卖家详细地址": "",
+      "配送方式": "FBA",
+      "商品链接": "https://www.amazon.com.mx/dp/B07YSXP3XF",
+      "完整详情": true
+    },
+    {
+      "排名": 96,
+      "ASIN编号": "B01FKNX4R2",
+      "商品名称": "Ganador 幼犬全犬种干粮 - 20公斤",
+      "品牌": "Ganador",
+      "评分": 4.7,
+      "评论数": 1161,
+      "价格(墨西哥比索)": 789.0,
+      "月销量": 400,
+      "销量依据": "亚马逊官方(上月购买量)",
+      "上架时间": "2016-11-24",
+      "在售月数": 118,
+      "变体数量": 1,
+      "卖家": "Amazon México",
+      "卖家类型": "亚马逊自营",
+      "卖家所在地": "",
+      "卖家详细地址": "",
+      "配送方式": "亚马逊自营配送",
+      "商品链接": "https://www.amazon.com.mx/dp/B01FKNX4R2",
+      "完整详情": true
+    },
+    {
+      "排名": 97,
+      "ASIN编号": "B01BKECCNM",
+      "商品名称": "Hill's Science Diet 狗用湿粮 鸡肉味 12包 354克",
+      "品牌": "Hill's Science Diet",
+      "评分": 4.6,
+      "评论数": 1006,
+      "价格(墨西哥比索)": 1349.0,
+      "月销量": 200,
+      "销量依据": "亚马逊官方(上月购买量)",
+      "上架时间": "2016-03-07",
+      "在售月数": 127,
+      "变体数量": 5,
+      "卖家": "Amazon México",
+      "卖家类型": "亚马逊自营",
+      "卖家所在地": "",
+      "卖家详细地址": "",
+      "配送方式": "亚马逊自营配送",
+      "商品链接": "https://www.amazon.com.mx/dp/B01BKECCNM",
+      "完整详情": true
+    },
+    {
+      "排名": 98,
+      "ASIN编号": "B0G2CGCRN5",
+      "商品名称": "Dogelthy 犬用天然抗过敏补充剂 抗过敏配方 无瘙痒与不适 支持免疫系统、皮肤和消化健康 猪肉味 270克",
+      "品牌": "Dogelthy",
+      "评分": 4.4,
+      "评论数": 145,
+      "价格(墨西哥比索)": 859.0,
+      "月销量": 200,
+      "销量依据": "亚马逊官方(上月购买量)",
+      "上架时间": "2025-11-14",
+      "在售月数": 10,
+      "变体数量": 2,
+      "卖家": "Dogelthy",
+      "卖家类型": "品牌方",
+      "卖家所在地": "",
+      "卖家详细地址": "",
+      "配送方式": "FBA",
+      "商品链接": "https://www.amazon.com.mx/dp/B0G2CGCRN5",
+      "完整详情": true
+    },
+    {
+      "排名": 99,
+      "ASIN编号": "B075NLFVH8",
+      "商品名称": "Pedigree - DENTASTIX 成犬零食，7支装，口腔护理，清洁牙齿，对抗牙垢",
+      "品牌": "Pedigree",
+      "评分": 4.8,
+      "评论数": 574,
+      "价格(墨西哥比索)": 60.0,
+      "月销量": 400,
+      "销量依据": "亚马逊官方(上月购买量)",
+      "上架时间": "2017-09-11",
+      "在售月数": 109,
+      "变体数量": 2,
+      "卖家": "Amazon México",
+      "卖家类型": "亚马逊自营",
+      "卖家所在地": "",
+      "卖家详细地址": "",
+      "配送方式": "亚马逊自营配送",
+      "商品链接": "https://www.amazon.com.mx/dp/B075NLFVH8",
+      "完整详情": true
+    },
+    {
+      "排名": 100,
+      "ASIN编号": "B005CUTWDE",
+      "商品名称": "Wahl - 宠物用100%天然燕麦洗发水 #820004T",
+      "品牌": "Wahl",
+      "评分": 4.8,
+      "评论数": 35576,
+      "价格(墨西哥比索)": 179.19,
+      "月销量": 200,
+      "销量依据": "亚马逊官方(上月购买量)",
+      "上架时间": "2012-08-09",
+      "在售月数": 170,
+      "变体数量": 5,
+      "卖家": "Amazon México",
+      "卖家类型": "亚马逊自营",
+      "卖家所在地": "",
+      "卖家详细地址": "",
+      "配送方式": "亚马逊自营配送",
+      "商品链接": "https://www.amazon.com.mx/dp/B005CUTWDE",
       "完整详情": true
     }
   ]
